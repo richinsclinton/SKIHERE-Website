@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKI HERE — Financial Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #002E5D;
+  --navy-dark: #001f42;
+  --orange: #E45122;
+  --orange-hover: #c9411a;
+  --white: #FFFFFF;
+  --snow: #F5F5F5;
+  --powder: #D9E9F7;
+  --charcoal: #333333;
+  --mid-gray: #666666;
+  --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --body: 'Barlow', system-ui, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--navy); }
+.nav-stripe { height: 4px; display: flex; }
+.nav-stripe .n1 { flex: 1; background: var(--navy); }
+.nav-stripe .o1 { width: 100px; background: var(--orange); }
+.nav-stripe .n2 { flex: 1; background: var(--navy); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 3rem; }
+.nav-logo { font-family: var(--display); font-size: 1.75rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; text-decoration: none; }
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.15s; }
+.nav-links a:hover { color: var(--white); }
+.nav-active { color: var(--orange) !important; }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 0.45rem 1.1rem; }
+
+/* PAGE HEADER */
+.page-header { background: var(--navy); padding: 8rem 3rem 4rem; position: relative; overflow: hidden; }
+.page-header-accent { position: absolute; bottom: 20px; right: -60px; width: 500px; height: 4px; background: var(--orange); transform: rotate(-5deg); transform-origin: right center; }
+.page-header-content { max-width: 1100px; margin: 0 auto; }
+.page-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+.page-eyebrow::before { content: ''; display: block; width: 24px; height: 3px; background: var(--orange); }
+.page-title { font-family: var(--display); font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; color: var(--white); line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+.page-sub { font-size: 1rem; color: rgba(255,255,255,0.65); font-weight: 300; max-width: 600px; line-height: 1.65; }
+
+/* SUMMARY METRICS */
+.metrics-strip { background: var(--orange); }
+.metrics-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; }
+.metric { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.2); flex: 1; min-width: 160px; }
+.metric:last-child { border-right: none; }
+.metric-num { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; line-height: 1; }
+.metric-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-top: 0.3rem; line-height: 1.4; }
+
+/* SECTIONS */
+section { padding: 5rem 3rem; }
+.container { max-width: 1100px; margin: 0 auto; }
+.eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.75rem; }
+.section-title { font-family: var(--display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: var(--navy); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+.section-note { font-size: 0.82rem; color: var(--mid-gray); font-style: italic; margin-bottom: 2rem; line-height: 1.55; padding: 0.75rem 1rem; border-left: 3px solid var(--powder); background: var(--snow); }
+
+/* FINANCIAL TABLES */
+.fin-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+.fin-table thead tr { background: var(--navy); }
+.fin-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
+.fin-table th:not(:first-child) { text-align: right; }
+.fin-table td { font-size: 0.9rem; padding: 0.65rem 1rem; border-bottom: 1px solid var(--snow); color: var(--charcoal); vertical-align: top; }
+.fin-table td:not(:first-child) { text-align: right; font-weight: 700; color: var(--navy); }
+.fin-table tr.total td { border-top: 3px solid var(--navy); border-bottom: none; font-weight: 700; font-size: 0.95rem; padding-top: 0.85rem; background: var(--snow); }
+.fin-table tr.section-head td { background: var(--powder); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); padding: 0.5rem 1rem; }
+.fin-table tr.surplus td { background: rgba(0,46,93,0.05); color: var(--navy); font-weight: 700; }
+.fin-table tr.surplus td:not(:first-child) { color: var(--orange); }
+.fin-table tr.deficit td:not(:first-child) { color: #8B0000; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; align-items: start; }
+
+/* PHASE CARDS */
+.phase-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+.phase-card { padding: 2rem; border-top: 5px solid var(--navy); background: var(--snow); }
+.phase-card:nth-child(1) { border-top-color: var(--orange); background: var(--navy); }
+.phase-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.5rem; }
+.phase-card:nth-child(1) .phase-label { color: var(--orange); }
+.phase-card:nth-child(2) .phase-label, .phase-card:nth-child(3) .phase-label { color: var(--navy); opacity: 0.6; }
+.phase-name { font-family: var(--display); font-size: 1.5rem; font-weight: 900; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.25rem; }
+.phase-card:nth-child(1) .phase-name { color: var(--white); }
+.phase-cost { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: var(--orange); letter-spacing: -0.02em; line-height: 1; margin-bottom: 1rem; }
+.phase-desc { font-size: 0.85rem; color: var(--mid-gray); line-height: 1.6; }
+.phase-card:nth-child(1) .phase-desc { color: rgba(255,255,255,0.65); }
+.phase-timeline { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-top: 0.75rem; }
+
+/* FUNDING */
+.funding-section { background: var(--snow); }
+.funding-stack { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem; }
+.funding-row { display: flex; align-items: center; gap: 1rem; }
+.funding-label { font-size: 0.88rem; color: var(--charcoal); min-width: 260px; }
+.funding-bar-wrap { flex: 1; background: rgba(0,46,93,0.08); height: 28px; }
+.funding-bar { height: 100%; display: flex; align-items: center; padding-left: 0.75rem; }
+.funding-bar span { font-size: 0.75rem; font-weight: 700; color: var(--white); }
+.funding-amount { font-size: 0.88rem; font-weight: 700; color: var(--navy); min-width: 80px; text-align: right; }
+.funding-notes { font-size: 0.78rem; color: var(--mid-gray); min-width: 220px; }
+.funding-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.funding-table thead tr { background: var(--navy); }
+.funding-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
+.funding-table th:nth-child(2) { text-align: right; }
+.funding-table td { font-size: 0.88rem; padding: 0.7rem 1rem; border-bottom: 1px solid rgba(0,46,93,0.08); color: var(--charcoal); vertical-align: top; line-height: 1.5; }
+.funding-table td:nth-child(2) { text-align: right; font-weight: 700; color: var(--navy); white-space: nowrap; }
+.funding-table tr.total-row td { border-top: 3px solid var(--navy); font-weight: 700; background: var(--powder); }
+.funding-table tr.gap-row td { color: var(--orange); font-weight: 700; }
+
+/* RISK TABLE */
+.risk-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.risk-table thead tr { background: var(--navy); }
+.risk-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
+.risk-table td { font-size: 0.88rem; padding: 0.8rem 1rem; border-bottom: 1px solid var(--snow); vertical-align: top; line-height: 1.55; }
+.risk-table td:first-child { font-weight: 700; color: var(--navy); width: 35%; }
+.risk-table td:last-child { color: var(--mid-gray); }
+
+/* HIGHLIGHT CARDS */
+.highlight-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+.hl-card-navy { background: var(--navy); padding: 2rem; }
+.hl-card-orange { background: var(--orange); padding: 2rem; }
+.hl-card-light { background: var(--snow); padding: 2rem; border-top: 4px solid var(--navy); }
+.hl-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.35rem; }
+.hl-card-navy .hl-label { color: rgba(255,255,255,0.5); }
+.hl-card-orange .hl-label { color: rgba(255,255,255,0.7); }
+.hl-card-light .hl-label { color: var(--orange); }
+.hl-num { font-family: var(--display); font-size: 3rem; font-weight: 900; letter-spacing: -0.02em; line-height: 1; margin-bottom: 0.5rem; }
+.hl-card-navy .hl-num { color: var(--white); }
+.hl-card-orange .hl-num { color: var(--white); }
+.hl-card-light .hl-num { color: var(--navy); }
+.hl-desc { font-size: 0.85rem; line-height: 1.55; }
+.hl-card-navy .hl-desc { color: rgba(255,255,255,0.6); }
+.hl-card-orange .hl-desc { color: rgba(255,255,255,0.85); }
+.hl-card-light .hl-desc { color: var(--mid-gray); }
+
+/* GOVERNANCE TABLE */
+.gov-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+.gov-table thead tr { background: var(--navy); }
+.gov-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
+.gov-table td { font-size: 0.85rem; padding: 0.8rem 1rem; border-bottom: 1px solid var(--snow); vertical-align: top; line-height: 1.55; color: var(--charcoal); }
+.gov-table td:first-child { font-weight: 700; color: var(--navy); }
+
+/* DIVIDER */
+.div-stripe { height: 10px; display: flex; }
+
+/* FOOTER */
+footer { background: var(--navy-dark); }
+.footer-stripe { height: 6px; display: flex; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; padding: 2rem 3rem; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--display); font-size: 1.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; }
+.footer-nav { display: flex; gap: 1.5rem; }
+.footer-nav a { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.15s; }
+.footer-nav a:hover { color: rgba(255,255,255,0.7); }
+.footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.25); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-inner { padding: 0.85rem 1.25rem; }
+  .nav-links { display: none; }
+  section { padding: 3.5rem 1.25rem; }
+  .page-header { padding: 7rem 1.25rem 3rem; }
+  .two-col, .three-col, .phase-cards, .highlight-cards { grid-template-columns: 1fr; gap: 1.5rem; }
+  .metric { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+}
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+.page-title { animation: fadeUp 0.6s ease both; }
+.page-sub { animation: fadeUp 0.6s 0.15s ease both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-stripe"><div class="n1"></div><div class="o1"></div><div class="n2"></div></div>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">SKI HERE</a>
+    <div class="nav-links">
+      <a href="index.html#problem">The Problem</a>
+      <a href="index.html#proposal">The Proposal</a>
+      <a href="index.html#precedent">Precedent</a>
+      <a href="index.html#story">About</a>
+      <a href="financials.html" class="nav-active">Financial Plan</a>
+      <a href="index.html#contact" class="nav-cta">Get Involved</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-accent"></div>
+  <div class="page-header-content">
+    <div class="page-eyebrow">Financial Plan</div>
+    <h1 class="page-title">The numbers<br>behind the vision</h1>
+    <p class="page-sub">All figures are illustrative estimates for planning and discussion purposes. Site selection has not been finalized — values are based on an example northern Wasatch site. A formal feasibility study would refine all assumptions. The companion Excel workbook contains editable inputs.</p>
+  </div>
+</div>
+
+<!-- METRICS STRIP -->
+<div class="div-stripe"><div style="flex:1; background:var(--navy);"></div><div style="width:120px; background:var(--orange);"></div><div style="flex:1; background:var(--navy);"></div></div>
+<div class="metrics-strip">
+  <div class="metrics-inner">
+    <div class="metric">
+      <div class="metric-num">$73.6M</div>
+      <div class="metric-label">Total capital required (all phases)</div>
+    </div>
+    <div class="metric">
+      <div class="metric-num">$64.3M</div>
+      <div class="metric-label">Identified funding (~87% of total)</div>
+    </div>
+    <div class="metric">
+      <div class="metric-num">$5.7M</div>
+      <div class="metric-label">Year 1 projected revenue</div>
+    </div>
+    <div class="metric">
+      <div class="metric-num">Yr 2–3</div>
+      <div class="metric-label">Target financial sustainability</div>
+    </div>
+    <div class="metric">
+      <div class="metric-num">180K</div>
+      <div class="metric-label">Stabilized annual skier visits (Yr 6+)</div>
+    </div>
+  </div>
+</div>
+<div class="div-stripe"><div style="flex:1; background:var(--navy);"></div><div style="width:80px; background:var(--orange);"></div><div style="flex:1; background:var(--navy);"></div></div>
+
+<!-- CAPITAL COSTS -->
+<section id="capital">
+  <div class="container">
+    <div class="eyebrow">Section 1</div>
+    <h2 class="section-title">Estimated capital costs</h2>
+    <div class="section-note">Key cost drivers: access road ($15M), lifts ($22.5M, ~31% of hard costs), and base lodge ($9M). Land acquisition is $0 under an assumed USFS Special Use Permit for the illustrative northern Wasatch site. If a private land site is selected, acquisition costs would be added.</div>
+
+    <div class="two-col">
+      <table class="fin-table">
+        <thead><tr><th>Cost Item</th><th>Estimated Cost</th></tr></thead>
+        <tbody>
+          <tr><td>Land Acquisition (USFS SUP assumed)</td><td>$0</td></tr>
+          <tr><td>Lift Installation (5 fixed-grip quads @ $4.5M)</td><td>$22,500,000</td></tr>
+          <tr><td>Magic Carpet / Surface Lift</td><td>$400,000</td></tr>
+          <tr><td>Trail Development (650 acres @ $8K)</td><td>$5,200,000</td></tr>
+          <tr><td>Snowmaking System</td><td>$5,500,000</td></tr>
+          <tr><td>Base Lodge (~30,000 sq ft, no-frills)</td><td>$9,000,000</td></tr>
+          <tr><td>Parking</td><td>$1,500,000</td></tr>
+          <tr><td>Access Road (illustrative site)</td><td>$15,000,000</td></tr>
+          <tr><td>Grooming Equipment (2 snowcats)</td><td>$1,200,000</td></tr>
+          <tr><td>Rental Fleet (prior-season used)</td><td>$150,000</td></tr>
+          <tr><td>Snowmobiles & Off-Road Vehicles</td><td>$200,000</td></tr>
+          <tr><td>Permitting & Design</td><td>$2,000,000</td></tr>
+          <tr><td>Construction Contingency (18%)</td><td>$10,917,000</td></tr>
+          <tr class="total"><td>Total Capital Requirement</td><td>$73,567,000</td></tr>
+        </tbody>
+      </table>
+
+      <div>
+        <div class="phase-cards" style="grid-template-columns:1fr; gap:1rem;">
+          <div class="phase-card" style="border-top-color:var(--orange); background:var(--navy);">
+            <div class="phase-label">Phase 1 — Pilot</div>
+            <div class="phase-name">Opening day</div>
+            <div class="phase-cost">$50–55M</div>
+            <p class="phase-desc">3 lifts + magic carpet, ~500 acres, full base lodge, access road, snowmaking. Full operational opening.</p>
+            <div class="phase-timeline">Target: 2029 opening</div>
+          </div>
+          <div class="phase-card" style="background:var(--snow);">
+            <div class="phase-label" style="color:var(--navy); opacity:0.6;">Phase 2 — Expansion</div>
+            <div class="phase-name" style="color:var(--navy);">Full terrain</div>
+            <div class="phase-cost">$20–25M</div>
+            <p class="phase-desc" style="color:var(--mid-gray);">2 additional lifts, remaining ~500 acres. Triggered once Phase 1 demonstrates financial sustainability.</p>
+            <div class="phase-timeline">Years 4–6</div>
+          </div>
+          <div class="phase-card" style="background:var(--snow); border-top-color:var(--orange);">
+            <div class="phase-label" style="color:var(--navy); opacity:0.6;">Phase 3+ — Growth</div>
+            <div class="phase-name" style="color:var(--navy);">Further expansion</div>
+            <div class="phase-cost">TBD</div>
+            <p class="phase-desc" style="color:var(--mid-gray);">Additional terrain into adjacent drainages if the site supports it. Managed access if overcrowding occurs.</p>
+            <div class="phase-timeline">Years 7+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATING COSTS -->
+<div class="div-stripe"><div style="flex:1; background:var(--navy);"></div><div style="width:160px; background:var(--orange);"></div><div style="flex:1; background:var(--navy);"></div></div>
+<section style="background:var(--snow);" id="operations">
+  <div class="container">
+    <div class="eyebrow">Section 2</div>
+    <h2 class="section-title">Annual operating costs</h2>
+    <div class="section-note">Costs are structured into Controllable and Non-Controllable categories per industry best practice. Variable labor scales daily with skier visit counts, protecting margin in slow periods. All costs escalate at 3% annually.</div>
+
+    <table class="fin-table">
+      <thead><tr><th>Operating Line Item</th><th>Year 1</th><th>Year 6 (Stabilized)</th></tr></thead>
+      <tbody>
+        <tr class="section-head"><td colspan="3">Controllable — Fixed Labor</td></tr>
+        <tr><td>Fixed Labor (fully loaded, incl. benefits)</td><td>$774,090</td><td>$898,000</td></tr>
+        <tr class="section-head"><td colspan="3">Controllable — Variable Labor</td></tr>
+        <tr><td>Variable Labor (fully loaded, incl. benefits)</td><td>$1,139,208</td><td>$1,520,000</td></tr>
+        <tr class="total"><td>Total Controllable Labor</td><td>$1,913,298</td><td>$2,418,000</td></tr>
+        <tr class="section-head"><td colspan="3">Non-Controllable Expenses</td></tr>
+        <tr><td>Lift Operations & Maintenance</td><td>$800,000</td><td>$928,000</td></tr>
+        <tr><td>Snowmaking & Grooming (operating)</td><td>$350,000</td><td>$406,000</td></tr>
+        <tr><td>Utilities (electricity, water)</td><td>$250,000</td><td>$290,000</td></tr>
+        <tr><td>Insurance (GL + Workers Comp)</td><td>$500,000</td><td>$580,000</td></tr>
+        <tr><td>USFS Land Use Fee</td><td>$150,000</td><td>$174,000</td></tr>
+        <tr><td>F&B Cost of Goods (~35% of F&B revenue)</td><td>$252,000</td><td>$567,000</td></tr>
+        <tr><td>Marketing & Outreach</td><td>$150,000</td><td>$174,000</td></tr>
+        <tr><td>Maintenance & Repairs</td><td>$200,000</td><td>$232,000</td></tr>
+        <tr><td>Summer Maintenance Staff</td><td>$175,000</td><td>$203,000</td></tr>
+        <tr><td>Snowmobile & Vehicle Operating Costs</td><td>$40,000</td><td>$46,000</td></tr>
+        <tr class="total"><td>Total Annual Operating Costs</td><td>$4,780,000</td><td>$6,002,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- REVENUE PROJECTIONS -->
+<section id="revenue">
+  <div class="container">
+    <div class="eyebrow">Section 3</div>
+    <h2 class="section-title">Revenue projections</h2>
+    <div class="section-note">Pricing is set to remain meaningfully below the Utah market while reflecting the resort's superior terrain and vertical drop. The $59 resident day ticket is the most affordable for a quality Utah mountain. Revenue grows as word-of-mouth builds and school district partnerships expand.</div>
+
+    <div class="highlight-cards">
+      <div class="hl-card-navy">
+        <div class="hl-label">Year 1 total revenue</div>
+        <div class="hl-num">$5.7M</div>
+        <div class="hl-desc">80,000 skier visits. Operating surplus of ~$940K. A conservative starting point — well below the resort's 180,000 stabilized capacity ceiling.</div>
+      </div>
+      <div class="hl-card-orange">
+        <div class="hl-label">Year 5 total revenue</div>
+        <div class="hl-num">$10.3M</div>
+        <div class="hl-desc">147,000 skier visits. Operating surplus of ~$4.7M. Resort is self-sustaining and generating meaningful surplus to service bond debt.</div>
+      </div>
+      <div class="hl-card-light">
+        <div class="hl-label">Year 10 total revenue</div>
+        <div class="hl-num">$12.3M</div>
+        <div class="hl-desc">Stabilized at 180,000 visits/year. Operating surplus of ~$5.9M annually — fully covering bond service costs with margin remaining.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem;">
+      <table class="fin-table">
+        <thead>
+          <tr><th>Revenue Stream</th><th>Year 1</th><th>Year 5</th><th>Year 10</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Skier Visits</td><td>80,000</td><td>147,000</td><td>180,000</td></tr>
+          <tr><td>Lift Ticket Revenue — Resident ($59)</td><td>$1,975,000</td><td>$3,500,000</td><td>$4,100,000</td></tr>
+          <tr><td>Lift Ticket Revenue — Non-Resident ($119)</td><td>$990,000</td><td>$1,750,000</td><td>$2,050,000</td></tr>
+          <tr><td>Season Pass Revenue ($750 res. / $1,250 non-res.)</td><td>$700,000</td><td>$1,280,000</td><td>$1,565,000</td></tr>
+          <tr><td>Rental Revenue</td><td>$1,260,000</td><td>$2,315,000</td><td>$2,835,000</td></tr>
+          <tr><td>Food & Beverage Revenue</td><td>$720,000</td><td>$1,323,000</td><td>$1,620,000</td></tr>
+          <tr><td>School Program Revenue ($15/student)</td><td>$75,000</td><td>$110,000</td><td>$177,000</td></tr>
+          <tr class="total"><td>Total Revenue</td><td>$5,720,000</td><td>$10,278,000</td><td>$12,347,000</td></tr>
+          <tr><td>Total Operating Costs</td><td>($4,780,000)</td><td>($5,540,000)</td><td>($6,408,000)</td></tr>
+          <tr class="surplus"><td>Operating Surplus / (Deficit)</td><td>$940,000</td><td>$4,738,000</td><td>$5,939,000</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.7rem; color:var(--mid-gray); margin-top:0.75rem; font-style:italic;">Revenue figures are illustrative estimates from the companion Excel model. Financial sustainability target is Year 2–3. The Excel workbook allows full sensitivity testing on all assumptions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FUNDING -->
+<div class="div-stripe"><div style="flex:1; background:var(--navy);"></div><div style="width:200px; background:var(--orange);"></div><div style="flex:1; background:var(--navy);"></div></div>
+<section class="funding-section" id="funding">
+  <div class="container">
+    <div class="eyebrow">Section 4</div>
+    <h2 class="section-title">Funding sources</h2>
+    <div class="section-note">Utah has a strong ecosystem of recreation and infrastructure funding tools. The model identifies eight near-term sources totaling $64.25M — covering approximately 87% of total capital requirements. A diversified funding stack reduces reliance on any single mechanism and strengthens the legislative case.</div>
+
+    <table class="funding-table">
+      <thead>
+        <tr><th>Funding Source</th><th>Amount</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>State Legislative Appropriation / Bond</td><td>$25,000,000</td><td>Primary mechanism. Mirrors proven NY ORDA public ski area operating model.</td></tr>
+        <tr><td>State Government Bonds (30-yr municipal)</td><td>$20,000,000</td><td>~4% rate; ~$1.5M annual debt service, covered by operating surplus from Year 3+.</td></tr>
+        <tr><td>2034 Olympic Venue Development Funding</td><td>$10,000,000</td><td>Access road serves Olympic-area transportation goals — a natural funding bridge.</td></tr>
+        <tr><td>Tourism Revenue Subsidy (Resort Operators)</td><td>$5,000,000</td><td>Public access reinvestment from Utah resort tax revenue generated by major multi-resort pass operators.</td></tr>
+        <tr><td>Land & Water Conservation Fund (LWCF)</td><td>$2,500,000</td><td>50% federal match; NPS-administered. Perpetual public recreation use required — aligns perfectly with project mission. Utah Division of Outdoor Recreation purview.</td></tr>
+        <tr><td>Utah Outdoor Recreation Grant</td><td>$1,000,000</td><td>Regional Asset Tier; up to $1M. Utah Division of Outdoor Recreation administers.</td></tr>
+        <tr><td>Philanthropic / Corporate Sponsorship</td><td>$500,000</td><td>Ski industry partners, school districts, local businesses.</td></tr>
+        <tr><td>Pre-Opening Season Pass Sales (Founding)</td><td>$250,000</td><td>Founding member passes at $499; early working capital before opening day.</td></tr>
+        <tr class="total-row"><td>Total Identified Funding</td><td>$64,250,000</td><td>~87% of total capital requirement of $73,567,000.</td></tr>
+        <tr class="gap-row"><td>Remaining Gap</td><td>$9,317,000</td><td>Addressable via phased construction, additional bond capacity, or enhanced Olympic funding.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- RISK -->
+<section id="risk">
+  <div class="container">
+    <div class="eyebrow">Section 5</div>
+    <h2 class="section-title">Key risks & mitigations</h2>
+
+    <table class="risk-table">
+      <thead><tr><th>Risk</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Low snowfall years</td>
+          <td>Base elevation of ~7,200 ft significantly reduces risk vs. existing low-elevation Utah resorts. Snowmaking system in capital plan covers key lower-mountain terrain. High-elevation site selection criterion in formal feasibility study.</td>
+        </tr>
+        <tr>
+          <td>Visit volume below projections</td>
+          <td>Year 1 target of 80K is conservative — well below stabilized 180K ceiling. School program provides guaranteed demand floor from Day 1. Non-resident pricing is a direct lever to increase visit volume if needed.</td>
+        </tr>
+        <tr>
+          <td>Overcrowding if demand exceeds capacity</td>
+          <td>Overcrowding at a financially solvent resort is proof of concept, not failure. Response options: lottery-style day ticket reservation system or Phase 2 terrain expansion trigger.</td>
+        </tr>
+        <tr>
+          <td>Permitting & environmental review delays</td>
+          <td>18% construction contingency included. NEPA review assumed at 2 years, built into 2029 target opening timeline (1 yr feasibility, 2 yrs permitting/design, 1 yr construction).</td>
+        </tr>
+        <tr>
+          <td>Access road cost overrun</td>
+          <td>Road cost buffered at $15M. Existing road infrastructure at candidate sites may reduce new construction required. Final road cost determined in site feasibility study.</td>
+        </tr>
+        <tr>
+          <td>Political / market pushback from existing resorts</td>
+          <td>Resident-only pricing and terrain differentiation target a non-overlapping market segment. Overcrowding relief at existing resorts is a shared benefit that can be used to frame the proposal as complementary, not competitive.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- GOVERNANCE -->
+<div class="div-stripe"><div style="flex:1; background:var(--navy);"></div><div style="width:140px; background:var(--orange);"></div><div style="flex:1; background:var(--navy);"></div></div>
+<section style="background:var(--snow);" id="governance">
+  <div class="container">
+    <div class="eyebrow">Section 6</div>
+    <h2 class="section-title">Operating models worth evaluating</h2>
+    <p style="font-size:0.98rem; color:var(--mid-gray); max-width:680px; line-height:1.7; margin-bottom:2rem;">Three governance structures are worth evaluating in a formal feasibility study, each with different implications for state exposure, pricing flexibility, and long-term sustainability.</p>
+
+    <table class="gov-table">
+      <thead><tr><th>Model</th><th>Description</th><th>Pros</th><th>Cons</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>State Authority<br><span style="font-size:0.7rem; color:var(--orange); font-weight:700; letter-spacing:0.06em; text-transform:uppercase;">Recommended</span></td>
+          <td>State creates a public ski authority that owns and operates the resort with a professional management board. Mirrors ORDA/Gore Mountain model.</td>
+          <td style="color:#1a6b36;">Full pricing control; mission-driven; access to state capital; strongest precedent</td>
+          <td style="color:#8B0000;">State absorbs operating risk; requires legislative action</td>
+        </tr>
+        <tr>
+          <td>Public-Private Partnership</td>
+          <td>State owns land and core infrastructure; private operator manages day-to-day under a resident-pricing mandate.</td>
+          <td style="color:#1a6b36;">Reduces state operational burden; brings private management expertise</td>
+          <td style="color:#8B0000;">Mission drift risk over time; less long-term pricing control</td>
+        </tr>
+        <tr>
+          <td>Nonprofit Operator</td>
+          <td>State funds capital; a nonprofit entity manages operations with a public-benefit charter.</td>
+          <td style="color:#1a6b36;">Mission-aligned by structure; lean operations; community ownership culture</td>
+          <td style="color:#8B0000;">Fundraising complexity; harder to scale; less access to state capital</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--navy); padding:4rem 3rem; text-align:center;">
+  <div class="container">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.45);">Questions or feedback?</div>
+    <h2 style="font-family:var(--display); font-size:clamp(2rem,4vw,3.5rem); font-weight:900; color:var(--white); letter-spacing:-0.02em; margin-bottom:1rem;">The companion Excel model<br>is available on request</h2>
+    <p style="font-size:0.98rem; color:rgba(255,255,255,0.6); max-width:520px; margin:0 auto 2.5rem; line-height:1.7;">All figures in this summary come from a fully editable Excel workbook with live formulas for sensitivity testing. Reach out to discuss the assumptions or request the working model.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="mailto:clint@example.com" style="display:inline-block; background:var(--orange); color:var(--white); font-family:var(--body); font-size:0.88rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.9rem 2rem; text-decoration:none;">Request the Excel model</a>
+      <a href="index.html" style="display:inline-block; background:transparent; color:var(--white); font-family:var(--body); font-size:0.88rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.88rem 2rem; border:2px solid rgba(255,255,255,0.3); text-decoration:none;">Back to the proposal</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer-stripe" style="display:flex;"><div style="flex:1; background:var(--navy);"></div><div style="width:120px; background:var(--orange);"></div><div style="flex:1; background:var(--navy);"></div></div>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">SKI HERE</div>
+      <div style="font-size:0.7rem; color:rgba(255,255,255,0.25); margin-top:0.25rem;">Utah Public Ski Area Pilot Project</div>
+    </div>
+    <div class="footer-nav">
+      <a href="index.html">Proposal</a>
+      <a href="financials.html">Financial Plan</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-copy">Sources: Kem C. Gardner Policy Institute; NSAA; ORDA public records; U.S. BLS; Utah resort public pricing data</div>
+  </div>
+</footer>
+
+</body>
+</html>
