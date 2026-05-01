@@ -1,0 +1,311 @@
+# SKI HERE — Utah Public Ski Area Pilot Project
+
+A proposal for a Utah state-sponsored public ski area with resident-first pricing.
+Live site: https://skihere.org/
+
+---
+
+## The headline
+
+The greatest snow on earth should belong to every Utahn.
+
+Utah families are being priced out of the mountains they grew up in. This is a proposal to change that — permanently.
+
+## At-a-glance economics
+
+| Metric | Value | Source |
+|---|---|---|
+| Skier spending in Utah, 2024–25 | $2.51B | Kem C. Gardner Policy Institute |
+| Share of skier days from Utah residents | 43% | Gardner Institute, 2024–25 |
+| Peak Utah resort day ticket, 2024–25 | $299 | Powder Magazine, 2024 |
+| Per-capita resort access change since 1990 | –48% | U.S. Census / Ski Utah |
+| Projected 2034 Olympic economic output | $6.6B | Gardner Institute, July 2024 |
+
+---
+
+## The Problem
+
+### Two problems, one solution
+
+Utah's ski industry is thriving. Utah families are being left behind.
+
+Over two decades, lift ticket prices have risen at more than twice the rate of inflation — while Utah's population has nearly doubled with no new major resort to absorb the demand. High prices and overcrowding are two symptoms of the same market failure: demand has dramatically outgrown supply, and private operators have no incentive to fix it.
+
+### Problem 1 — The price barrier
+
+Utah's top resorts now charge up to $299 per day at peak season, with mid-tier options exceeding $159. A family of four skiing for a single day faces lift ticket costs alone exceeding $600 — before equipment, lessons, food, or travel.
+
+Bundle passes help frequent multi-resort skiers, but are designed for travelers — not the Utah family that wants to ski their home mountain a handful of times each winter. The model that generates revenue for the state has inadvertently priced out the residents who live closest to the mountains.
+
+Existing affordable options serve beginners, but avid skiers won't bring their families there — the terrain doesn't challenge or inspire intermediate and advanced riders. These resorts also sit at low elevations, forcing closures in poor snow years precisely when budget-conscious families need them most.
+
+### Lift ticket price growth, 2000–2025
+
+| Year | Avg. window ticket |
+|---|---|
+| 2000 | $48 |
+| 2005 | $63 |
+| 2010 | $72 |
+| 2015 | $96 |
+| 2020 | $108 |
+| 2025 | $165 |
+| If prices tracked CPI | $90 |
+
+Lift ticket prices up ~240% since 2000. CPI over the same period: ~87%.
+
+### Problem 2 — The supply crisis
+
+Utah's population has grown from 1.7 million in 1990 to roughly 3.5 million today — yet the number of ski resorts has held nearly constant at approximately 15 statewide. Per capita, Utahns have half the resort access they did a generation ago.
+
+The explosion in backcountry skiing, chronic powder-day overcrowding, and years of debate over canyon infrastructure upgrades are all symptoms of the same structural constraint: demand has far outgrown supply. Multi-resort pass models have compounded this further — directing large volumes of out-of-state traffic toward Utah's fixed mountain capacity.
+
+The average age of a Utah skier is now 48. If nothing changes, the 2034 Olympics will showcase world-class skiing to a Utah audience that can no longer afford to participate.
+
+| Metric | 1990 | 2025 | Change |
+|---|---|---|---|
+| Utah Population | 1.7M | 3.5M | +106% |
+| Utah Ski Resorts | ~14 | ~15 | +7% |
+| Resorts per 100K residents | 0.82 | 0.43 | −48% |
+| Annual Skier Days | ~3M | 6.5M | +117% |
+
+Sources: U.S. Census Bureau; Ski Utah; Kem C. Gardner Policy Institute.
+
+---
+
+## The Proposal
+
+### A state-sponsored public ski area, built for Utah families first
+
+Utah should commission a feasibility study and pilot program for a resident-first public ski area. Not another luxury destination — a mountain that prioritizes terrain, reliable snow, and prices that Utah families can actually afford.
+
+#### Six pillars
+
+1. **Resident-first pricing.** $59 adult day ticket for Utah residents — well below any comparable Utah mountain resort. $750 resident season pass for a resort with more terrain and vertical than any currently affordable Utah option.
+2. **Serious terrain.** 1,000 skiable acres with 2,500 ft of vertical drop in Phase 1. Base elevation ~7,200 ft ensures reliable snowpack. Five fixed-grip quad chairs plus a magic carpet — efficient, proven, cost-effective.
+3. **Simple infrastructure.** ~30,000 sq ft functional base lodge. Cafeteria-style food and beverage. Prior-season rental fleet. Costs are kept low by eliminating luxury amenities — what remains is what skiers actually care about.
+4. **School programs.** Partnership with Utah public schools to deliver low-cost ski education at $15 per student. 5,000 participants projected in Year 1, growing 10% annually. Getting kids on skis young is the most reliable way to create lifelong participants.
+5. **Overcrowding relief.** Adding resort capacity distributes demand across a broader base of terrain, reducing lift lines and congestion at Utah's existing resorts. Even visitors who never ski the public resort benefit from less crowded conditions at the mountains they already frequent.
+6. **Phased development.** Phase 1 targets a 2029 opening with 3 lifts + magic carpet, ~500 acres, and full base lodge. Phase 2 adds 2 additional lifts and remaining terrain once financial sustainability is demonstrated. Reduces upfront state risk.
+
+### Pricing
+
+| Ticket Type | Resident | Non-Resident |
+|---|---|---|
+| Adult Day Ticket | $59 | $119 |
+| Child (Under 12) | $30 | $30 |
+| Season Pass — Unlimited | $750 | $1,250 |
+| School Program Rate | $15 / student | — |
+
+The most affordable quality-terrain day ticket and season pass available to Utah residents. Out-of-state visitors are welcome at market rates, funding operations and resident access. A state-sponsored resort would not cannibalize high-revenue tourist traffic — it would create an entirely new on-ramp for Utahns.
+
+### Illustrative site specifications — Northern Wasatch Range
+
+| Spec | Value |
+|---|---|
+| Skiable Acres (Phase 1) | 1,000 acres (200 ac/lift) |
+| Vertical Drop | 2,500 ft (base ~7,200 ft; summit ~9,700 ft) |
+| Lifts (Phase 1) | 5 fixed-grip quads + 1 magic carpet |
+| Distance from SLC | ~30–35 miles (no canyon road dependency) |
+| Land Jurisdiction | Wasatch-Cache National Forest (USFS SUP) |
+| Target Opening | 2029 (Phase 1) |
+| Stabilized Annual Visits | 180,000 (Year 6+) |
+
+Site specifications are illustrative. Final site subject to formal feasibility study. Values broadly applicable to comparable northern Wasatch sites.
+
+---
+
+## Precedent
+
+### A proven model. Not a radical idea.
+
+State-owned and municipally supported ski areas have operated successfully for decades. Utah need not invent this from scratch — and Utah has already voted for the underlying principle in two other recreation contexts.
+
+### Gore Mountain / ORDA — New York State, USA
+
+- New York State owns and operates two major ski areas through a public authority — the Olympic Regional Development Authority (ORDA)
+- One resort has 450+ skiable acres and a 2,500 ft vertical, hosting over 300,000 skier days annually
+- Justified by regional economic impact — not standalone profitability. The same case Utah can make.
+- Recognized as among the top value ski destinations in the U.S. Resident-friendly season pass program.
+- Has operated successfully for decades in one of America's most populous states
+
+### European municipal ski areas — Austria · France · Switzerland · Scandinavia
+
+- Municipalities and regional governments have long operated ski areas as public utilities
+- Built to keep the sport accessible to local residents, not to maximize per-ticket revenue
+- Community ownership of lift infrastructure ensures locals aren't priced out by international tourism
+- Often run modest deficits, offset by broader tourism and economic benefit to the region
+- Proven over generations that public ski infrastructure builds lasting sporting culture
+
+### Utah already does this — for golf
+
+Cities and counties across Utah operate public golf courses at below-market rates to keep the sport accessible to local residents. Salt Lake County, Davis County, and Utah County all maintain publicly subsidized golf facilities. This proposal applies the identical operating model to skiing.
+
+### Utah already does this — for hunting
+
+Utah's Division of Wildlife Resources uses a tiered pricing structure where residents pay significantly lower permit fees than out-of-state hunters and anglers. The policy rationale is identical: Utah's natural resources belong first to Utahns. A public ski area extends this well-established principle to winter recreation.
+
+In 2013, Utah became the first state in the nation to establish an Office of Outdoor Recreation. Since then, 24 other states have followed. A public ski area pilot project would again position Utah at the forefront — showing the rest of the country how to keep skiing accessible in an era of consolidation and price inflation.
+
+---
+
+## 2034 Winter Olympics
+
+### Utah's moment — and a responsibility
+
+When the 2002 Olympics came to Snowbasin and Park City, most Utahns could see themselves in those athletes — because they skied too. If nothing changes, the 2034 Games will showcase world-class skiing to a Utah audience that can no longer afford to participate. That is a legacy Utah cannot afford to leave.
+
+- $6.6B projected Olympic economic output
+- 42,000 job-years of employment created
+- 2029 target opening year for Phase 1
+- The time to start is now
+
+---
+
+## Financial Plan
+
+All figures are illustrative estimates for planning and discussion purposes. Site selection has not been finalized — values are based on an example northern Wasatch site. A formal feasibility study would refine all assumptions. The companion Excel workbook contains editable inputs.
+
+### Summary metrics
+
+- Total capital required (all phases): **$73.6M**
+- Identified funding (~87% of total): **$64.3M**
+- Year 1 projected revenue: **$5.7M**
+- Target financial sustainability: **Year 2–3**
+- Stabilized annual skier visits (Year 6+): **180,000**
+
+### Section 1 — Estimated capital costs
+
+Key cost drivers: access road ($15M), lifts ($22.5M, ~31% of hard costs), and base lodge ($9M). Land acquisition is $0 under an assumed USFS Special Use Permit for the illustrative northern Wasatch site. If a private land site is selected, acquisition costs would be added.
+
+| Cost Item | Estimated Cost |
+|---|---|
+| Land Acquisition (USFS SUP assumed) | $0 |
+| Lift Installation (5 fixed-grip quads @ $4.5M) | $22,500,000 |
+| Magic Carpet / Surface Lift | $400,000 |
+| Trail Development (650 acres @ $8K) | $5,200,000 |
+| Snowmaking System | $5,500,000 |
+| Base Lodge (~30,000 sq ft, no-frills) | $9,000,000 |
+| Parking | $1,500,000 |
+| Access Road (illustrative site) | $15,000,000 |
+| Grooming Equipment (2 snowcats) | $1,200,000 |
+| Rental Fleet (prior-season used) | $150,000 |
+| Snowmobiles & Off-Road Vehicles | $200,000 |
+| Permitting & Design | $2,000,000 |
+| Construction Contingency (18%) | $10,917,000 |
+| **Total Capital Requirement** | **$73,567,000** |
+
+#### Phase breakdown
+
+- **Phase 1 — Pilot (Opening day):** $50–55M. 3 lifts + magic carpet, ~500 acres, full base lodge, access road, snowmaking. Full operational opening. Target 2029.
+- **Phase 2 — Expansion (Full terrain):** $20–25M. 2 additional lifts, remaining ~500 acres. Triggered once Phase 1 demonstrates financial sustainability. Years 4–6.
+- **Phase 3+ — Growth (Further expansion):** TBD. Additional terrain into adjacent drainages if the site supports it. Managed access if overcrowding occurs. Years 7+.
+
+### Section 2 — Annual operating costs
+
+Costs are structured into Controllable and Non-Controllable categories per industry best practice. Variable labor scales daily with skier visit counts, protecting margin in slow periods. All costs escalate at 3% annually.
+
+| Operating Line Item | Year 1 | Year 6 (Stabilized) |
+|---|---|---|
+| Fixed Labor (fully loaded, incl. benefits) | $774,090 | $898,000 |
+| Variable Labor (fully loaded, incl. benefits) | $1,139,208 | $1,520,000 |
+| **Total Controllable Labor** | **$1,913,298** | **$2,418,000** |
+| Lift Operations & Maintenance | $800,000 | $928,000 |
+| Snowmaking & Grooming (operating) | $350,000 | $406,000 |
+| Utilities (electricity, water) | $250,000 | $290,000 |
+| Insurance (GL + Workers Comp) | $500,000 | $580,000 |
+| USFS Land Use Fee | $150,000 | $174,000 |
+| F&B Cost of Goods (~35% of F&B revenue) | $252,000 | $567,000 |
+| Marketing & Outreach | $150,000 | $174,000 |
+| Maintenance & Repairs | $200,000 | $232,000 |
+| Summer Maintenance Staff | $175,000 | $203,000 |
+| Snowmobile & Vehicle Operating Costs | $40,000 | $46,000 |
+| **Total Annual Operating Costs** | **$4,780,000** | **$6,002,000** |
+
+### Section 3 — Revenue projections
+
+Pricing is set to remain meaningfully below the Utah market while reflecting the resort's superior terrain and vertical drop. The $59 resident day ticket is the most affordable for a quality Utah mountain. Revenue grows as word-of-mouth builds and school district partnerships expand.
+
+| Revenue Stream | Year 1 | Year 5 | Year 10 |
+|---|---|---|---|
+| Skier Visits | 80,000 | 147,000 | 180,000 |
+| Lift Ticket Revenue — Resident ($59) | $1,975,000 | $3,500,000 | $4,100,000 |
+| Lift Ticket Revenue — Non-Resident ($119) | $990,000 | $1,750,000 | $2,050,000 |
+| Season Pass Revenue ($750 res. / $1,250 non-res.) | $700,000 | $1,280,000 | $1,565,000 |
+| Rental Revenue | $1,260,000 | $2,315,000 | $2,835,000 |
+| Food & Beverage Revenue | $720,000 | $1,323,000 | $1,620,000 |
+| School Program Revenue ($15/student) | $75,000 | $110,000 | $177,000 |
+| **Total Revenue** | **$5,720,000** | **$10,278,000** | **$12,347,000** |
+| Total Operating Costs | ($4,780,000) | ($5,540,000) | ($6,408,000) |
+| **Operating Surplus / (Deficit)** | **$940,000** | **$4,738,000** | **$5,939,000** |
+
+### Section 4 — Funding sources
+
+Utah has a strong ecosystem of recreation and infrastructure funding tools. The model identifies eight near-term sources totaling $64.25M — covering approximately 87% of total capital requirements. A diversified funding stack reduces reliance on any single mechanism and strengthens the legislative case.
+
+| Funding Source | Amount | Notes |
+|---|---|---|
+| State Legislative Appropriation / Bond | $25,000,000 | Primary mechanism. Mirrors proven NY ORDA public ski area operating model. |
+| State Government Bonds (30-yr municipal) | $20,000,000 | ~4% rate; ~$1.5M annual debt service, covered by operating surplus from Year 3+. |
+| 2034 Olympic Venue Development Funding | $10,000,000 | Access road serves Olympic-area transportation goals — a natural funding bridge. |
+| Tourism Revenue Subsidy (Resort Operators) | $5,000,000 | Public access reinvestment from Utah resort tax revenue generated by major multi-resort pass operators. |
+| Land & Water Conservation Fund (LWCF) | $2,500,000 | 50% federal match; NPS-administered. Perpetual public recreation use required. Utah Division of Outdoor Recreation purview. |
+| Utah Outdoor Recreation Grant | $1,000,000 | Regional Asset Tier; up to $1M. Utah Division of Outdoor Recreation administers. |
+| Philanthropic / Corporate Sponsorship | $500,000 | Ski industry partners, school districts, local businesses. |
+| Pre-Opening Season Pass Sales (Founding) | $250,000 | Founding member passes at $499; early working capital before opening day. |
+| **Total Identified Funding** | **$64,250,000** | ~87% of total capital requirement of $73,567,000. |
+| Remaining Gap | $9,317,000 | Addressable via phased construction, additional bond capacity, or enhanced Olympic funding. |
+
+### Section 5 — Key risks & mitigations
+
+| Risk | Mitigation |
+|---|---|
+| Low snowfall years | Base elevation of ~7,200 ft significantly reduces risk vs. existing low-elevation Utah resorts. Snowmaking system in capital plan covers key lower-mountain terrain. High-elevation site selection criterion in formal feasibility study. |
+| Visit volume below projections | Year 1 target of 80K is conservative — well below stabilized 180K ceiling. School program provides guaranteed demand floor from Day 1. Non-resident pricing is a direct lever to increase visit volume if needed. |
+| Overcrowding if demand exceeds capacity | Overcrowding at a financially solvent resort is proof of concept, not failure. Response options: lottery-style day ticket reservation system or Phase 2 terrain expansion trigger. |
+| Permitting & environmental review delays | 18% construction contingency included. NEPA review assumed at 2 years, built into 2029 target opening timeline (1 yr feasibility, 2 yrs permitting/design, 1 yr construction). |
+| Access road cost overrun | Road cost buffered at $15M. Existing road infrastructure at candidate sites may reduce new construction required. Final road cost determined in site feasibility study. |
+| Political / market pushback from existing resorts | Resident-only pricing and terrain differentiation target a non-overlapping market segment. Overcrowding relief at existing resorts is a shared benefit that can be used to frame the proposal as complementary, not competitive. |
+
+### Section 6 — Operating models worth evaluating
+
+Three governance structures are worth evaluating in a formal feasibility study, each with different implications for state exposure, pricing flexibility, and long-term sustainability.
+
+| Model | Description | Pros | Cons |
+|---|---|---|---|
+| **State Authority (Recommended)** | State creates a public ski authority that owns and operates the resort with a professional management board. Mirrors ORDA/Gore Mountain model. | Full pricing control; mission-driven; access to state capital; strongest precedent | State absorbs operating risk; requires legislative action |
+| Public-Private Partnership | State owns land and core infrastructure; private operator manages day-to-day under a resident-pricing mandate. | Reduces state operational burden; brings private management expertise | Mission drift risk over time; less long-term pricing control |
+| Nonprofit Operator | State funds capital; a nonprofit entity manages operations with a public-benefit charter. | Mission-aligned by structure; lean operations; community ownership culture | Fundraising complexity; harder to scale; less access to state capital |
+
+---
+
+## Proposed next steps
+
+This is not a request to immediately build a ski resort. It is a request for Utah's elected leaders to begin understanding whether this investment is feasible — and what form it should take.
+
+1. **Feasibility study (12–18 months):** Commission an independent study examining potential sites, capital costs, operating models, revenue projections, and legal frameworks.
+2. **Site identification (concurrent):** Identify candidate locations with sufficient elevation, vertical drop, and terrain variety. State or federal land ownership reduces capital requirements.
+3. **Stakeholder engagement (months 6–18):** Convene a working group of ski professionals, school districts, local governments, environmental stakeholders, and Utah families.
+4. **Pilot program design (months 12–24):** Design a phased pilot beginning with Phase 1 infrastructure — demonstrating the model before full capital commitment is required.
+5. **Legislative pathway (months 18–30):** Identify the appropriate legislative and funding vehicle to establish a public ski authority, drawing on Utah's existing outdoor recreation framework.
+
+---
+
+## Get involved
+
+Utah families deserve access to the mountains they call home. Whether you're a legislator, a ski industry partner, a school administrator, or simply a Utahn who believes the Greatest Snow on Earth should belong to everyone — your voice matters.
+
+Contact: info@skihere.org
+
+---
+
+## Sources
+
+- Kem C. Gardner Policy Institute (Utah ski-industry economic impact, July 2024 Olympic projections)
+- National Ski Areas Association (NSAA)
+- Olympic Regional Development Authority (ORDA) public records — Gore Mountain operating model
+- U.S. Bureau of Labor Statistics (CPI inflation series)
+- Ski Utah / U.S. Census Bureau (Utah resort and population data)
+- Utah resort public pricing data
+- Powder Magazine (peak day-ticket pricing reference, 2024)
+
+All figures in the financial plan are illustrative estimates from a companion Excel workbook with live formulas for sensitivity testing. Available on request: info@skihere.org

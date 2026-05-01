@@ -3,7 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SKI HERE — Financial Plan</title>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#002E5D">
+<title>Financial Plan — SKI HERE Utah Public Ski Area</title>
+<meta name="description" content="Capital costs ($73.6M), operating costs, revenue projections, and funding sources ($64.3M identified) for SKI HERE — Utah's proposed resident-first public ski area opening 2029.">
+<link rel="canonical" href="https://skihere.org/financials">
+
+<meta property="og:title" content="Financial Plan — SKI HERE Utah Public Ski Area">
+<meta property="og:description" content="Capital, operations, revenue, and funding plan for SKI HERE. $73.6M total capital with $64.3M identified across eight funding sources.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://skihere.org/financials">
+<meta property="og:site_name" content="SKI HERE">
+<meta property="og:image" content="https://skihere.org/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SKI HERE — Utah Public Ski Area Pilot Project">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Financial Plan — SKI HERE Utah Public Ski Area">
+<meta name="twitter:description" content="Capital, operations, revenue, and funding plan for SKI HERE. $73.6M total capital with $64.3M identified.">
+<meta name="twitter:image" content="https://skihere.org/og-card.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://skihere.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Financial Plan", "item": "https://skihere.org/financials" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "SKI HERE — Financial Plan",
+      "description": "Capital costs, operating costs, revenue projections, funding sources, risks, and governance models for the SKI HERE Utah public ski area pilot project.",
+      "url": "https://skihere.org/financials",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://skihere.org/#website" },
+      "about": { "@id": "https://skihere.org/#organization" },
+      "publisher": { "@id": "https://skihere.org/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the total capital cost for SKI HERE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Approximately $73.6M for all phases. Phase 1 (the opening-day pilot) is $50–55M, Phase 2 (full terrain expansion) is $20–25M, and Phase 3+ growth is to be determined. The Phase 1 estimate includes 18% construction contingency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much funding has been identified?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$64.25M, or about 87% of the total capital requirement, across eight near-term sources. The remaining $9.3M gap is addressable via phased construction, additional bond capacity, or enhanced Olympic funding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the main funding sources?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "State legislative appropriation/bond ($25M), 30-year municipal bonds ($20M), 2034 Olympic venue development funding ($10M), tourism revenue subsidy from resort operators ($5M), Land & Water Conservation Fund ($2.5M), Utah Outdoor Recreation Grant ($1M), philanthropic and corporate sponsorship ($500K), and pre-opening founding season pass sales ($250K)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is SKI HERE projected to be financially sustainable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Year 2 to Year 3. Year 1 projects $5.7M revenue against $4.78M operating costs (operating surplus of approximately $940K). By Year 5, revenue grows to roughly $10.3M with a $4.7M surplus, sufficient to service bond debt. Stabilized at 180,000 annual skier visits in Year 6+."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which governance model is recommended?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A state authority modeled on New York's Olympic Regional Development Authority (ORDA) is the recommended structure. The state would create a public ski authority with a professional management board to own and operate the resort, providing full pricing control, mission alignment, and access to state capital."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
@@ -160,7 +254,19 @@ footer { background: var(--navy-dark); }
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .nav-inner { padding: 0.85rem 1.25rem; }
-  .nav-links { display: none; }
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex: 1;
+    justify-content: flex-end;
+    margin-left: 1rem;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: 0.05em; white-space: nowrap; }
+  .nav-cta { padding: 0.4rem 0.85rem !important; }
   section { padding: 3.5rem 1.25rem; }
   .page-header { padding: 7rem 1.25rem 3rem; }
   .two-col, .three-col, .phase-cards, .highlight-cards { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -178,17 +284,19 @@ footer { background: var(--navy-dark); }
 <nav>
   <div class="nav-stripe"><div class="n1"></div><div class="o1"></div><div class="n2"></div></div>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">SKI HERE</a>
+    <a href="/" class="nav-logo">SKI HERE</a>
     <div class="nav-links">
-      <a href="index.html#problem">The Problem</a>
-      <a href="index.html#proposal">The Proposal</a>
-      <a href="index.html#precedent">Precedent</a>
-      <a href="index.html#story">About</a>
-      <a href="financials.html" class="nav-active">Financial Plan</a>
-      <a href="index.html#contact" class="nav-cta">Get Involved</a>
+      <a href="/#problem">The Problem</a>
+      <a href="/#proposal">The Proposal</a>
+      <a href="/#precedent">Precedent</a>
+      <a href="/#story">About</a>
+      <a href="/financials" class="nav-active">Financial Plan</a>
+      <a href="/#contact" class="nav-cta">Get Involved</a>
     </div>
   </div>
 </nav>
+
+<main>
 
 <!-- PAGE HEADER -->
 <div class="page-header">
@@ -473,11 +581,13 @@ footer { background: var(--navy-dark); }
     <h2 style="font-family:var(--display); font-size:clamp(2rem,4vw,3.5rem); font-weight:900; color:var(--white); letter-spacing:-0.02em; margin-bottom:1rem;">The companion Excel model<br>is available on request</h2>
     <p style="font-size:0.98rem; color:rgba(255,255,255,0.6); max-width:520px; margin:0 auto 2.5rem; line-height:1.7;">All figures in this summary come from a fully editable Excel workbook with live formulas for sensitivity testing. Reach out to discuss the assumptions or request the working model.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="mailto:clint@example.com" style="display:inline-block; background:var(--orange); color:var(--white); font-family:var(--body); font-size:0.88rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.9rem 2rem; text-decoration:none;">Request the Excel model</a>
-      <a href="index.html" style="display:inline-block; background:transparent; color:var(--white); font-family:var(--body); font-size:0.88rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.88rem 2rem; border:2px solid rgba(255,255,255,0.3); text-decoration:none;">Back to the proposal</a>
+      <a href="mailto:info@skihere.org" style="display:inline-block; background:var(--orange); color:var(--white); font-family:var(--body); font-size:0.88rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.9rem 2rem; text-decoration:none;">Request the Excel model</a>
+      <a href="/" style="display:inline-block; background:transparent; color:var(--white); font-family:var(--body); font-size:0.88rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.88rem 2rem; border:2px solid rgba(255,255,255,0.3); text-decoration:none;">Back to the proposal</a>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <div class="footer-stripe" style="display:flex;"><div style="flex:1; background:var(--navy);"></div><div style="width:120px; background:var(--orange);"></div><div style="flex:1; background:var(--navy);"></div></div>
@@ -488,9 +598,9 @@ footer { background: var(--navy-dark); }
       <div style="font-size:0.7rem; color:rgba(255,255,255,0.25); margin-top:0.25rem;">Utah Public Ski Area Pilot Project</div>
     </div>
     <div class="footer-nav">
-      <a href="index.html">Proposal</a>
-      <a href="financials.html">Financial Plan</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="/">Proposal</a>
+      <a href="/financials">Financial Plan</a>
+      <a href="/#contact">Contact</a>
     </div>
     <div class="footer-copy">Sources: Kem C. Gardner Policy Institute; NSAA; ORDA public records; U.S. BLS; Utah resort public pricing data</div>
   </div>

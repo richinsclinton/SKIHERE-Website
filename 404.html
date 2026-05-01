@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#002E5D">
+<title>Page not found — SKI HERE</title>
+<meta name="description" content="The page you were looking for can't be found. Return to the SKI HERE homepage or view the financial plan.">
+<link rel="canonical" href="https://skihere.org/404">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #002E5D;
+  --orange: #E45122;
+  --orange-hover: #c9411a;
+  --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --body: 'Barlow', system-ui, sans-serif;
+}
+html, body { height: 100%; }
+body {
+  font-family: var(--body);
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.nav-stripe { height: 4px; display: flex; }
+.nav-stripe .n { flex: 1; background: var(--navy); }
+.nav-stripe .o { width: 100px; background: var(--orange); }
+header { padding: 1rem 3rem; }
+.logo { font-family: var(--display); font-weight: 900; font-size: 1.75rem; color: #fff; letter-spacing: -0.02em; text-decoration: none; }
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.mountain {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
+  opacity: 0.08;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath d='M0,320 L0,220 L200,80 L360,180 L480,60 L640,160 L760,20 L900,140 L1040,70 L1200,160 L1320,100 L1440,150 L1440,320 Z' fill='white'/%3E%3C/svg%3E") no-repeat bottom/cover;
+  pointer-events: none;
+}
+.content { max-width: 720px; text-align: center; position: relative; z-index: 1; }
+.eyebrow {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 1.25rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+}
+.eyebrow::before, .eyebrow::after { content: ''; display: block; width: 24px; height: 3px; background: var(--orange); }
+h1 {
+  font-family: var(--display); font-weight: 900;
+  font-size: clamp(4rem, 14vw, 9rem);
+  line-height: 0.92; letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+h1 .o { color: var(--orange); }
+.tagline {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: rgba(255,255,255,0.7);
+  font-weight: 300;
+  line-height: 1.65;
+  margin: 0 auto 2.5rem;
+  max-width: 520px;
+}
+.btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.btn {
+  display: inline-block;
+  font-family: var(--body); font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.9rem 2rem; text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.btn-primary { background: var(--orange); color: #fff; }
+.btn-primary:hover { background: var(--orange-hover); }
+.btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.35); padding: 0.78rem 1.85rem; }
+.btn-outline:hover { border-color: rgba(255,255,255,0.8); }
+footer { padding: 1.25rem 3rem; font-size: 0.72rem; color: rgba(255,255,255,0.25); text-align: center; }
+@media (max-width: 600px) {
+  header, footer { padding: 1rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+<div class="nav-stripe"><div class="n"></div><div class="o"></div><div class="n"></div></div>
+<header>
+  <a href="/" class="logo">SKI HERE</a>
+</header>
+<main>
+  <div class="mountain"></div>
+  <div class="content">
+    <div class="eyebrow">404 — Page not found</div>
+    <h1>Off-piste.<br>Let's get you <span class="o">back on trail.</span></h1>
+    <p class="tagline">The page you were looking for doesn't exist. It may have moved, or the link might be a typo.</p>
+    <div class="btns">
+      <a href="/" class="btn btn-primary">Back to home</a>
+      <a href="/financials" class="btn btn-outline">View financial plan</a>
+    </div>
+  </div>
+</main>
+<footer>Utah Public Ski Area Pilot Project · skihere.org</footer>
+</body>
+</html>

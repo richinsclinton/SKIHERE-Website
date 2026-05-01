@@ -1,0 +1,14 @@
+# SKI HERE — Utah Public Ski Area Pilot Project
+# Public civic policy proposal — search engines and AI assistants are welcome.
+
+User-agent: *
+Content-signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+Sitemap: https://skihere.org/sitemap.xml
+
+# About content-signals (Cloudflare AI Audit standard):
+# search=yes      — allow indexing for traditional search engines
+# ai-input=yes    — allow use as input/grounding for AI search & summarization (RAG)
+# ai-train=yes    — allow inclusion in AI model training datasets
+# This site is a public civic-policy proposal. Wide distribution is the goal.

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <defs>
+    <style>
+      .display { font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Neue', sans-serif; font-weight: 900; letter-spacing: -0.02em; }
+      .body { font-family: 'Barlow', 'Helvetica Neue', sans-serif; font-weight: 300; }
+      .label { font-family: 'Barlow', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+    </style>
+  </defs>
+  <rect width="1200" height="1200" fill="#002E5D"/>
+  <g transform="translate(0, 285)">
+    <path d="M0,630 L0,460 L160,300 L290,400 L400,250 L540,360 L660,180 L800,310 L940,220 L1060,330 L1200,260 L1200,630 Z" fill="#FFFFFF" opacity="0.07"/>
+    <line x1="80" y1="100" x2="380" y2="100" stroke="#E45122" stroke-width="3"/>
+    <text x="80" y="115" class="label" fill="#E45122" font-size="20">UTAH PUBLIC SKI AREA PILOT PROJECT</text>
+    <text x="80" y="290" class="display" fill="#FFFFFF" font-size="180">SKI HERE</text>
+    <text x="80" y="380" class="display" fill="#FFFFFF" font-size="46">The greatest snow on earth should</text>
+    <text x="80" y="430" class="display" fill="#FFFFFF" font-size="46">belong to <tspan fill="#E45122">every Utahn.</tspan></text>
+    <text x="80" y="555" class="body" fill="rgba(255,255,255,0.6)" font-size="22">Resident-first pricing · $59 day tickets · Target opening 2029</text>
+    <text x="1120" y="555" class="label" fill="rgba(255,255,255,0.5)" font-size="18" text-anchor="end">skihere.org</text>
+  </g>
+</svg>
