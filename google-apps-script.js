@@ -3,7 +3,7 @@
 // Deploy settings: Execute as = Me, Who has access = Anyone
 
 var SPREADSHEET_ID = '1WQxWu1aMZcjJ6GqNHnmFCvgHFj5Vjfi7BwtKgdSA1GY';
-var SHEET_NAME = 'SKI HERE Records';
+var SHEET_NAME = 'Signups';
 
 function doPost(e) {
   try {
