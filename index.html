@@ -932,7 +932,7 @@ footer { background: var(--navy-dark); }
 <script>
 var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzdllNLcf-bk-sKBKAuu12CHO6PChUrwI4EZ_FcTvjcjwi4MTidui7basrw5WZCuKxEtA/exec';
 
-async function handleNewsletterSubmit(e) {
+function handleNewsletterSubmit(e) {
   e.preventDefault();
   var form    = document.getElementById('newsletterForm');
   var success = document.getElementById('newsletterSuccess');
@@ -940,50 +940,30 @@ async function handleNewsletterSubmit(e) {
   var name    = document.getElementById('nlName').value.trim();
   var email   = document.getElementById('nlEmail').value.trim();
 
-  // Disable button while request is in flight
   submit.disabled = true;
   submit.textContent = 'Signing up…';
 
-  try {
-    var res = await fetch(APPS_SCRIPT_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: name, email: email })
-    });
+  // no-cors avoids the preflight CORS block from Google Apps Script
+  fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: name, email: email })
+  }).catch(function() {});
 
-    var json = await res.json();
-
-    if (res.ok && json.success) {
-      form.style.display = 'none';
-      success.style.display = 'block';
-      // Auto-close after 3 s and reset the form for next use
-      setTimeout(function() {
-        document.getElementById('newsletterModal').classList.remove('open');
-        setTimeout(function() {
-          form.style.display = '';
-          success.style.display = 'none';
-          form.reset();
-          submit.disabled = false;
-          submit.textContent = 'Sign me up';
-        }, 400);
-      }, 3000);
-    } else {
-      throw new Error(json.error || 'Submission failed');
-    }
-  } catch (err) {
-    submit.disabled = false;
-    submit.textContent = 'Sign me up';
-    // Show inline error below the button
-    var existing = form.querySelector('.modal-error');
-    if (!existing) {
-      var errorEl = document.createElement('p');
-      errorEl.className = 'modal-error';
-      errorEl.style.cssText = 'color:#c0392b;font-size:0.82rem;margin-top:0.6rem;text-align:center;';
-      form.appendChild(errorEl);
-      existing = errorEl;
-    }
-    existing.textContent = 'Something went wrong — please try again or email info@skihere.org.';
-  }
+  // Show success immediately — data is sent fire-and-forget
+  form.style.display = 'none';
+  success.style.display = 'block';
+  setTimeout(function() {
+    document.getElementById('newsletterModal').classList.remove('open');
+    setTimeout(function() {
+      form.style.display = '';
+      success.style.display = 'none';
+      form.reset();
+      submit.disabled = false;
+      submit.textContent = 'Sign me up';
+    }, 400);
+  }, 3000);
 }
 
 document.addEventListener('keydown', function(e) {
