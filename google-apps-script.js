@@ -1,21 +1,14 @@
 // Google Apps Script — SKI HERE Newsletter Signup
 // Paste this entire file into script.google.com, then deploy as a web app.
-// See NEWSLETTER_SETUP.md for full instructions.
+// Deploy settings: Execute as = Me, Who has access = Anyone
 
-var SHEET_NAME = 'Signups'; // Change if you want a different tab name
+var SPREADSHEET_ID = '1WQxWu1aMZcjJ6GqNHnmFCvgHFj5Vjfi7BwtKgdSA1GY';
+var SHEET_NAME = 'Signups';
 
 function doPost(e) {
-  var corsHeaders = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Content-Type': 'application/json'
-  };
-
   try {
-    var data = JSON.parse(e.postData.contents);
-    var name  = (data.name  || '').toString().trim();
-    var email = (data.email || '').toString().trim();
+    var name  = (e.parameter.name  || '').toString().trim();
+    var email = (e.parameter.email || '').toString().trim();
 
     if (!name || !email) {
       return ContentService
@@ -23,18 +16,16 @@ function doPost(e) {
         .setMimeType(ContentService.MimeType.JSON);
     }
 
-    var ss    = SpreadsheetApp.getActiveSpreadsheet();
+    var ss    = SpreadsheetApp.openById(SPREADSHEET_ID);
     var sheet = ss.getSheetByName(SHEET_NAME);
 
-    // Create the sheet and header row if it does not exist yet
     if (!sheet) {
       sheet = ss.insertSheet(SHEET_NAME);
       sheet.appendRow(['Timestamp', 'Name', 'Email']);
       sheet.setFrozenRows(1);
     }
 
-    var timestamp = new Date().toISOString();
-    sheet.appendRow([timestamp, name, email]);
+    sheet.appendRow([new Date().toISOString(), name, email]);
 
     return ContentService
       .createTextOutput(JSON.stringify({ success: true }))
@@ -47,9 +38,8 @@ function doPost(e) {
   }
 }
 
-// Required to handle the browser pre-flight OPTIONS request that fetch() sends
 function doGet(e) {
   return ContentService
-    .createTextOutput(JSON.stringify({ success: false, error: 'GET not supported. POST only.' }))
+    .createTextOutput(JSON.stringify({ success: false, error: 'GET not supported.' }))
     .setMimeType(ContentService.MimeType.JSON);
 }
