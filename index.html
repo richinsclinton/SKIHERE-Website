@@ -404,6 +404,24 @@ footer { background: var(--navy-dark); }
   .econ-inner { flex-direction: column; }
 }
 
+/* FAQ */
+.faq-section { background: var(--snow); }
+.faq-list { margin-top: 3rem; border-top: 1px solid rgba(0,46,93,0.12); }
+.faq-item { border-bottom: 1px solid rgba(0,46,93,0.12); }
+.faq-q {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  padding: 1.4rem 0; background: none; border: none; cursor: pointer;
+  font-family: var(--body); font-size: 1rem; font-weight: 700;
+  color: var(--navy); text-align: left; gap: 1.5rem; transition: color 0.15s;
+}
+.faq-q:hover { color: var(--orange); }
+.faq-icon { font-size: 1.4rem; flex-shrink: 0; color: var(--orange); line-height: 1; transition: transform 0.2s; font-weight: 300; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { display: none; padding: 0 2rem 1.5rem 0; font-size: 0.95rem; color: var(--mid-gray); line-height: 1.75; max-width: 760px; }
+.faq-item.open .faq-a { display: block; }
+.faq-a a { color: var(--orange); text-decoration: none; font-weight: 700; }
+.faq-a a:hover { text-decoration: underline; }
+
 /* ANIMATIONS */
 @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
 .hero-eyebrow { animation: fadeUp 0.5s ease both; }
@@ -522,7 +540,7 @@ footer { background: var(--navy-dark); }
       <a href="/#proposal">The Proposal</a>
       <a href="/#precedent">Precedent</a>
       <a href="/financials">Financial Plan</a>
-      
+      <a href="/#faq">FAQ</a>
     </div>
   </div>
 </nav>
@@ -855,6 +873,82 @@ footer { background: var(--navy-dark); }
   </div>
 </section>
 
+<!-- FAQ -->
+<div class="div-stripe"><div class="n" style="flex:1"></div><div class="o" style="width:120px"></div><div class="n" style="flex:1"></div></div>
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="eyebrow">Frequently Asked Questions</div>
+    <h2 class="section-title">Common questions, straight answers</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Where would it be built?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Several potential sites have been identified. We've kept them confidential for now, but all are near Utah population centers, offer easy access, and have excellent terrain.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          When would it open?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">The target is 2029 — giving the resort time to establish operations before serving as an accessible, resident-first venue during the 2034 Winter Olympics.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Would this increase taxes?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Ideally, no. Initial capital could be covered through existing funding programs without raising taxes. Once operational, lean infrastructure is designed to make the resort self-sustaining — revenue stays in the resort, not a state budget line.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Utah already has some affordable resorts. How is this different?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Two key differences: higher-elevation terrain that's less susceptible to poor snow years and genuinely exciting for avid skiers — and no shareholder obligation. Revenue is reinvested in the resort, not distributed to investors.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Won't other resorts be upset?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">We believe the opposite. Increasing accessibility grows the total base of skiers, which ultimately benefits all resorts. Getting more Utah families on the mountain creates lifelong participants — and future customers for every resort in the state.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What if it becomes too crowded?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Then the need was real. Crowding would be evidence the project was justified — and expansion would be considered at that point.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Won't out-of-state visitors be upset about paying more?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Resident-first pricing is already widely accepted — hunting tags, locals discounts, university town pricing all follow the same model. Visitor prices would still be competitive with current Utah resort rates. And out-of-state visitors have plenty of world-class options at Park City, Alta, Snowbird, and beyond.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How can I help?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><a href="#" onclick="event.preventDefault();document.getElementById('newsletterModal').classList.add('open')">Sign the petition</a> and tell your friends and family. Public support is what moves this from proposal to reality.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <div class="div-stripe"><div class="n" style="flex:1"></div><div class="o" style="width:320px"></div><div class="n" style="flex:1"></div></div>
 <section class="cta-section" id="contact" style="background:var(--orange); padding:6rem 3rem; text-align:center; position:relative; overflow:hidden;">
@@ -888,7 +982,7 @@ footer { background: var(--navy-dark); }
       <a href="#proposal">The Proposal</a>
       <a href="#precedent">Precedent</a>
       <a href="/financials">Financial Plan</a>
-      
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="footer-copy">Utah Public Ski Area Pilot Project</div>
@@ -1029,6 +1123,13 @@ function handleContactSubmit(e) {
       submit.textContent = 'Send Message';
     }, 400);
   }, 3000);
+}
+
+function toggleFaq(btn) {
+  var item = btn.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
 }
 
 document.addEventListener('keydown', function(e) {
