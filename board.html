@@ -119,9 +119,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.15s; }
 .nav-links a:hover { color: var(--white); }
-.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 0.45rem 1.1rem; transition: background 0.15s !important; }
-.nav-cta:hover { background: var(--orange-hover) !important; }
-
 /* PAGE HEADER */
 .page-header {
   background: var(--navy);
@@ -155,16 +152,16 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .board-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3.5rem; }
 
 /* BOARD CARD */
-.board-card { background: var(--snow); border-top: 5px solid var(--navy); padding: 0; overflow: hidden; }
+.board-card { background: var(--snow); border-top: 5px solid var(--navy); padding: 0; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .board-card:nth-child(even) { border-top-color: var(--orange); }
 .board-card-photo {
-  width: 100%; aspect-ratio: 4/3;
+  width: 120px; height: 120px; border-radius: 50%; margin: 2rem auto 0;
   background: var(--powder);
   display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
 }
 .board-card-initials {
-  font-family: var(--display); font-size: 9rem; font-weight: 900;
+  font-family: var(--display); font-size: 3rem; font-weight: 900;
   color: rgba(0,46,93,0.15); letter-spacing: -0.04em; line-height: 1;
   user-select: none;
 }
@@ -184,7 +181,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .photo-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,46,93,0.35); }
 .board-card:nth-child(even) .photo-label { color: rgba(228,81,34,0.4); }
 
-.board-card-info { padding: 1.75rem 2rem 2rem; }
+.board-card-info { text-align: center; padding: 1.25rem 2rem 2rem; }
 .board-card-role { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
 .board-card-name { font-family: var(--display); font-size: 2rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 0.75rem; }
 .board-card-name.placeholder { color: rgba(0,46,93,0.3); font-style: italic; }
@@ -217,7 +214,6 @@ footer { background: var(--navy-dark); }
   .nav-links { gap: 1rem; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; flex: 1; justify-content: flex-end; margin-left: 1rem; }
   .nav-links::-webkit-scrollbar { display: none; }
   .nav-links a { font-size: 0.7rem; letter-spacing: 0.05em; white-space: nowrap; }
-  .nav-cta { padding: 0.4rem 0.85rem !important; }
   .page-header { padding: 8rem 1.25rem 4rem; }
   .board-section { padding: 4rem 1.25rem; }
   .board-grid { grid-template-columns: 1fr; }
@@ -256,7 +252,6 @@ footer { background: var(--navy-dark); }
       <a href="/#precedent">Precedent</a>
       <a href="/financials">Financial Plan</a>
       <a href="/board" style="color:var(--white);">Board</a>
-      <a href="/#contact" class="nav-cta">Get Involved</a>
     </div>
   </div>
 </nav>

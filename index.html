@@ -170,14 +170,12 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.15s; }
 .nav-links a:hover { color: var(--white); }
-.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 0.45rem 1.1rem; transition: background 0.15s !important; }
-.nav-cta:hover { background: var(--orange-hover) !important; }
-
 /* HERO */
 .hero {
   min-height: 100vh;
   background: var(--navy);
-  display: flex; flex-direction: column; justify-content: flex-end;
+  display: flex; flex-direction: column; justify-content: center;
+  align-items: center; text-align: center;
   padding: 10rem 3rem 5rem;
   position: relative; overflow: hidden;
 }
@@ -197,15 +195,15 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
   width: 400px; height: 2px; background: rgba(228,81,34,0.3);
   transform: rotate(-7deg); transform-origin: right center;
 }
-.hero-content { max-width: 1100px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
-.hero-stats-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
-.hero-bg-stat { position: absolute; font-family: var(--display); font-weight: 900; color: rgba(255,255,255,0.04); letter-spacing: -0.03em; line-height: 1; user-select: none; }
-.hero-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+.hero-content { max-width: 1100px; margin: 0 auto; width: 100%; position: relative; z-index: 1; text-align: center; }
+.hero-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; justify-content: center; }
 .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 3px; background: var(--orange); }
 .hero h1 { font-family: var(--display); font-size: clamp(4.5rem, 10vw, 9rem); font-weight: 900; color: var(--white); line-height: 0.92; letter-spacing: -0.02em; margin-bottom: 1.75rem; }
 .hero h1 .o { color: var(--orange); }
-.hero-tagline { font-size: clamp(1rem, 1.8vw, 1.2rem); color: rgba(255,255,255,0.7); font-weight: 300; max-width: 560px; line-height: 1.65; margin-bottom: 2.5rem; }
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-tagline { font-size: clamp(1rem, 1.8vw, 1.2rem); color: rgba(255,255,255,0.7); font-weight: 300; max-width: 560px; line-height: 1.65; margin-bottom: 2.5rem; margin-left: auto; margin-right: auto; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.btn-take-action { display: inline-block; background: var(--orange); color: var(--white); font-family: var(--display); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; padding: 1.1rem 3.5rem; text-decoration: none; transition: background 0.15s; margin-bottom: 2rem; }
+.btn-take-action:hover { background: var(--orange-hover); }
 .btn-primary { display: inline-block; background: var(--orange); color: var(--white); font-family: var(--body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.9rem 2rem; text-decoration: none; transition: background 0.15s; }
 .btn-primary:hover { background: var(--orange-hover); }
 .btn-outline-white { display: inline-block; background: transparent; color: var(--white); font-family: var(--body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.88rem 2rem; border: 2px solid rgba(255,255,255,0.35); text-decoration: none; transition: border-color 0.15s; }
@@ -383,7 +381,6 @@ footer { background: var(--navy-dark); }
   }
   .nav-links::-webkit-scrollbar { display: none; }
   .nav-links a { font-size: 0.7rem; letter-spacing: 0.05em; white-space: nowrap; }
-  .nav-cta { padding: 0.4rem 0.85rem !important; }
   section { padding: 4rem 1.25rem; }
   .hero { padding: 8rem 1.25rem 4rem; }
   .two-col, .two-col-wide, .problem-cards, .precedent-cards, .analogy-strip { grid-template-columns: 1fr; gap: 2rem; }
@@ -495,6 +492,7 @@ footer { background: var(--navy-dark); }
 .modal-success-body {
   font-size: 0.9rem; color: var(--mid-gray); line-height: 1.6;
 }
+.modal-field textarea:focus { border-color: var(--navy); background: var(--white); }
 </style>
 </head>
 <body>
@@ -513,7 +511,6 @@ footer { background: var(--navy-dark); }
       <a href="/#precedent">Precedent</a>
       <a href="/financials">Financial Plan</a>
       <a href="/board">Board</a>
-      <a href="#contact" class="nav-cta">Get Involved</a>
     </div>
   </div>
 </nav>
@@ -523,19 +520,14 @@ footer { background: var(--navy-dark); }
 <!-- HERO -->
 <section class="hero">
 
-  <div class="hero-stats-bg" aria-hidden="true">
-    <span class="hero-bg-stat" style="top:18%; right:8%; font-size:clamp(4rem,8vw,7rem);">$59</span>
-    <span class="hero-bg-stat" style="top:38%; right:18%; font-size:clamp(3rem,6vw,5.5rem);">2029</span>
-    <span class="hero-bg-stat" style="top:55%; right:5%; font-size:clamp(3.5rem,7vw,6rem);">$750</span>
-  </div>
   <div class="hero-accent" aria-hidden="true"></div>
   <div class="hero-accent2" aria-hidden="true"></div>
   <div class="hero-content">
     <div class="hero-eyebrow">Utah Public Ski Area Pilot Project</div>
     <h1>The greatest snow<br>on earth should<br>belong to <span class="o">every Utahn.</span></h1>
+    <button class="btn-take-action" onclick="document.getElementById('newsletterModal').classList.add('open')">Add Your Voice</button>
     <p class="hero-tagline">Utah families are being priced out of the mountains they grew up in. This is a proposal to change that — permanently.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="document.getElementById('newsletterModal').classList.add('open')" style="cursor:pointer;">Stay Informed</button>
       <a href="/financials" class="btn-outline-white">View financial plan</a>
       <a href="#proposal" class="btn-outline-orange">Read the proposal</a>
     </div>
@@ -871,7 +863,7 @@ footer { background: var(--navy-dark); }
     <h2 style="font-family:var(--display); font-size:clamp(3rem, 7vw, 6rem); font-weight:900; color:var(--white); letter-spacing:-0.02em; line-height:0.92; margin-bottom:1.5rem;">Join the<br>effort.</h2>
     <p style="font-size:1.05rem; color:rgba(255,255,255,0.88); max-width:580px; margin:0 auto 2.75rem; line-height:1.7; font-weight:300;">Utah families deserve access to the mountains they call home. Whether you're a legislator, a ski industry partner, a school administrator, or simply a Utahn who believes the Greatest Snow on Earth should belong to everyone — your voice matters.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-      <a href="mailto:info@skihere.org" style="display:inline-block; background:var(--white); color:var(--orange); font-family:var(--body); font-size:0.9rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:1rem 2.25rem; text-decoration:none; transition:background 0.15s;">Get in Touch</a>
+      <button onclick="document.getElementById('contactModal').classList.add('open')" style="display:inline-block; background:var(--white); color:var(--orange); font-family:var(--body); font-size:0.9rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:1rem 2.25rem; text-decoration:none; transition:background 0.15s; border:none; cursor:pointer;">Get in Touch</button>
       <a href="/financials" style="display:inline-block; background:transparent; color:var(--white); font-family:var(--body); font-size:0.9rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.98rem 2.25rem; border:2px solid rgba(255,255,255,0.5); text-decoration:none; transition:border-color 0.15s;">View Financial Plan</a>
     </div>
   </div>
@@ -904,11 +896,11 @@ footer { background: var(--navy-dark); }
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-header">
       <button class="modal-close" onclick="document.getElementById('newsletterModal').classList.remove('open')" aria-label="Close">&times;</button>
-      <div class="modal-eyebrow">Stay Informed</div>
-      <div class="modal-title" id="modalTitle">Be first to hear<br>when this moves forward.</div>
+      <div class="modal-eyebrow">Add Your Voice</div>
+      <div class="modal-title" id="modalTitle">Join the petition.<br>Make your voice count.</div>
     </div>
     <div class="modal-body">
-      <p class="modal-desc">Sign up for updates on the SKI HERE pilot project — legislation, site news, and ways to get involved. No spam, ever.</p>
+      <p class="modal-desc">Add your name to the growing list of Utahns calling on state leaders to commission a public ski area feasibility study. We'll keep you updated as the campaign moves forward.</p>
       <form id="newsletterForm" onsubmit="handleNewsletterSubmit(event)">
         <div class="modal-field">
           <label for="nlName">Your name</label>
@@ -918,12 +910,50 @@ footer { background: var(--navy-dark); }
           <label for="nlEmail">Email address</label>
           <input type="email" id="nlEmail" name="email" placeholder="you@example.com" required autocomplete="email">
         </div>
+        <div class="modal-field" style="display:flex; align-items:flex-start; gap:0.75rem;">
+          <input type="checkbox" id="nlSupport" name="support" required style="margin-top:0.2rem; width:16px; height:16px; flex-shrink:0; accent-color:var(--orange);">
+          <label for="nlSupport" style="font-size:0.82rem; color:var(--mid-gray); line-height:1.5; font-weight:400; letter-spacing:0; text-transform:none;">I support the SKI HERE mission and want my name included in the petition to Utah legislators.</label>
+        </div>
         <button type="submit" class="modal-submit">Sign me up</button>
       </form>
       <div class="modal-success" id="newsletterSuccess">
         <div class="modal-success-icon">⛷️</div>
-        <div class="modal-success-title">You're on the list.</div>
-        <p class="modal-success-body">We'll be in touch when SKI HERE moves forward. Thanks for supporting affordable skiing for Utah families.</p>
+        <div class="modal-success-title">Your voice has been added.</div>
+        <p class="modal-success-body">Thank you for supporting affordable skiing for Utah families. We'll be in touch as the campaign moves forward.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div class="modal-overlay" id="contactModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="modal-header">
+      <button class="modal-close" onclick="document.getElementById('contactModal').classList.remove('open')" aria-label="Close">&times;</button>
+      <div class="modal-eyebrow">Get in Touch</div>
+      <div class="modal-title" id="contactModalTitle">Send us a note.</div>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc">Questions, ideas, or want to get more involved? We'd love to hear from you.</p>
+      <form id="contactForm" onsubmit="handleContactSubmit(event)">
+        <div class="modal-field">
+          <label for="ctName">Your name</label>
+          <input type="text" id="ctName" name="name" placeholder="First and last name" required autocomplete="name">
+        </div>
+        <div class="modal-field">
+          <label for="ctEmail">Email address</label>
+          <input type="email" id="ctEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <div class="modal-field">
+          <label for="ctMessage">Your message</label>
+          <textarea id="ctMessage" name="message" placeholder="Questions, ideas, or how you'd like to get involved..." required rows="4" style="width:100%; padding:0.75rem 1rem; border:2px solid var(--snow); font-family:var(--body); font-size:0.95rem; color:var(--charcoal); outline:none; transition:border-color 0.15s; background:var(--snow); resize:vertical;"></textarea>
+        </div>
+        <button type="submit" class="modal-submit">Send Message</button>
+      </form>
+      <div class="modal-success" id="contactSuccess">
+        <div class="modal-success-icon">✉️</div>
+        <div class="modal-success-title">Message received.</div>
+        <p class="modal-success-body">Thanks for reaching out. We'll get back to you soon.</p>
       </div>
     </div>
   </div>
@@ -964,8 +994,44 @@ function handleNewsletterSubmit(e) {
   }, 3000);
 }
 
+var CONTACT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzdllNLcf-bk-sKBKAuu12CHO6PChUrwI4EZ_FcTvjcjwi4MTidui7basrw5WZCuKxEtA/exec';
+
+function handleContactSubmit(e) {
+  e.preventDefault();
+  var form    = document.getElementById('contactForm');
+  var success = document.getElementById('contactSuccess');
+  var submit  = form.querySelector('.modal-submit');
+  var name    = document.getElementById('ctName').value.trim();
+  var email   = document.getElementById('ctEmail').value.trim();
+  var message = document.getElementById('ctMessage').value.trim();
+
+  submit.disabled = true;
+  submit.textContent = 'Sending…';
+
+  fetch(CONTACT_SCRIPT_URL, {
+    method: 'POST',
+    body: new URLSearchParams({ type: 'contact', name: name, email: email, message: message })
+  }).catch(function() {});
+
+  form.style.display = 'none';
+  success.style.display = 'block';
+  setTimeout(function() {
+    document.getElementById('contactModal').classList.remove('open');
+    setTimeout(function() {
+      form.style.display = '';
+      success.style.display = 'none';
+      form.reset();
+      submit.disabled = false;
+      submit.textContent = 'Send Message';
+    }, 400);
+  }, 3000);
+}
+
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') document.getElementById('newsletterModal').classList.remove('open');
+  if (e.key === 'Escape') {
+    document.getElementById('newsletterModal').classList.remove('open');
+    document.getElementById('contactModal').classList.remove('open');
+  }
 });
 
 // SCROLL REVEAL — Intersection Observer with stagger by sibling index
