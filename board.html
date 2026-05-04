@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#002E5D">
+<title>Board of Directors — SKI HERE</title>
+<meta name="description" content="Meet the SKI HERE board of directors leading the Utah Public Ski Area Pilot Project.">
+<link rel="canonical" href="https://skihere.org/board">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #002E5D;
+  --navy-dark: #001f42;
+  --orange: #E45122;
+  --orange-hover: #c9411a;
+  --white: #FFFFFF;
+  --snow: #F5F5F5;
+  --powder: #D9E9F7;
+  --charcoal: #333333;
+  --mid-gray: #666666;
+  --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --body: 'Barlow', system-ui, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--navy); }
+.nav-stripe { height: 4px; display: flex; }
+.nav-stripe .n1 { flex: 1; background: var(--navy); }
+.nav-stripe .o1 { width: 100px; background: var(--orange); }
+.nav-stripe .n2 { flex: 1; background: var(--navy); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 3rem; }
+.nav-logo { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; text-decoration: none; }
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.15s; }
+.nav-links a:hover { color: var(--white); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 0.45rem 1.1rem; transition: background 0.15s !important; }
+.nav-cta:hover { background: var(--orange-hover) !important; }
+
+/* PAGE HEADER */
+.page-header {
+  background: var(--navy);
+  padding: 10rem 3rem 5rem;
+  position: relative; overflow: hidden;
+}
+.page-header-accent {
+  position: absolute; bottom: 120px; right: -80px;
+  width: 600px; height: 4px; background: var(--orange);
+  transform: rotate(-7deg); transform-origin: right center;
+}
+.page-header-accent2 {
+  position: absolute; bottom: 140px; right: -80px;
+  width: 400px; height: 2px; background: rgba(228,81,34,0.3);
+  transform: rotate(-7deg); transform-origin: right center;
+}
+.page-header-content { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+.page-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+.page-eyebrow::before { content: ''; display: block; width: 24px; height: 3px; background: var(--orange); }
+.page-header h1 { font-family: var(--display); font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; color: var(--white); line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+.page-header-body { font-size: clamp(1rem, 1.6vw, 1.15rem); color: rgba(255,255,255,0.7); font-weight: 300; max-width: 580px; line-height: 1.65; }
+
+/* DIV STRIPE */
+.div-stripe { height: 10px; display: flex; }
+.div-stripe .n { flex: 1; background: var(--navy); }
+.div-stripe .o { background: var(--orange); }
+
+/* BOARD SECTION */
+.board-section { padding: 6rem 3rem; background: var(--white); }
+.container { max-width: 1100px; margin: 0 auto; }
+.board-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3.5rem; }
+
+/* BOARD CARD */
+.board-card { background: var(--snow); border-top: 5px solid var(--navy); padding: 0; overflow: hidden; }
+.board-card:nth-child(even) { border-top-color: var(--orange); }
+.board-card-photo {
+  width: 100%; aspect-ratio: 4/3;
+  background: var(--powder);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.board-card-initials {
+  font-family: var(--display); font-size: 6rem; font-weight: 900;
+  color: rgba(0,46,93,0.15); letter-spacing: -0.04em; line-height: 1;
+  user-select: none;
+}
+.board-card:nth-child(even) .board-card-initials { color: rgba(228,81,34,0.12); }
+.board-card-photo-placeholder {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;
+}
+.photo-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(0,46,93,0.1);
+  display: flex; align-items: center; justify-content: center;
+}
+.board-card:nth-child(even) .photo-icon { background: rgba(228,81,34,0.1); }
+.photo-icon svg { width: 28px; height: 28px; fill: rgba(0,46,93,0.3); }
+.board-card:nth-child(even) .photo-icon svg { fill: rgba(228,81,34,0.3); }
+.photo-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,46,93,0.35); }
+.board-card:nth-child(even) .photo-label { color: rgba(228,81,34,0.4); }
+
+.board-card-info { padding: 1.75rem 2rem 2rem; }
+.board-card-role { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
+.board-card-name { font-family: var(--display); font-size: 2rem; font-weight: 900; color: var(--navy); letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 0.75rem; }
+.board-card-name.placeholder { color: rgba(0,46,93,0.3); font-style: italic; }
+.board-card-bio { font-size: 0.88rem; color: var(--mid-gray); line-height: 1.65; }
+
+/* PLACEHOLDER CARD */
+.board-card.vacant { border-top-color: rgba(0,46,93,0.2); }
+.board-card.vacant .board-card-photo { background: #f0f0f0; }
+.board-card.vacant .board-card-initials { color: rgba(0,0,0,0.06); }
+.board-card.vacant .photo-icon { background: rgba(0,0,0,0.06); }
+.board-card.vacant .photo-icon svg { fill: rgba(0,0,0,0.15); }
+.board-card.vacant .photo-label { color: rgba(0,0,0,0.2); }
+.board-card.vacant .board-card-role { color: rgba(0,46,93,0.4); }
+
+/* FOOTER */
+footer { background: var(--navy-dark); }
+.footer-stripe { height: 6px; display: flex; }
+.footer-stripe .n { flex: 1; background: var(--navy); }
+.footer-stripe .o { width: 120px; background: var(--orange); }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; padding: 2rem 3rem; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--display); font-size: 1.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; }
+.footer-nav { display: flex; gap: 1.5rem; }
+.footer-nav a { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.15s; }
+.footer-nav a:hover { color: var(--white); }
+.footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.65); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-inner { padding: 0.85rem 1.25rem; }
+  .nav-links { gap: 1rem; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; flex: 1; justify-content: flex-end; margin-left: 1rem; }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: 0.05em; white-space: nowrap; }
+  .nav-cta { padding: 0.4rem 0.85rem !important; }
+  .page-header { padding: 8rem 1.25rem 4rem; }
+  .board-section { padding: 4rem 1.25rem; }
+  .board-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+.page-eyebrow { animation: fadeUp 0.5s ease both; }
+.page-header h1 { animation: fadeUp 0.6s 0.1s ease both; }
+.page-header-body { animation: fadeUp 0.6s 0.2s ease both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-stripe"><div class="n1"></div><div class="o1"></div><div class="n2"></div></div>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">SKI HERE</a>
+    <div class="nav-links">
+      <a href="/#problem">The Problem</a>
+      <a href="/#proposal">The Proposal</a>
+      <a href="/#precedent">Precedent</a>
+      <a href="/financials">Financial Plan</a>
+      <a href="/board" style="color:var(--white);">Board</a>
+      <a href="/#contact" class="nav-cta">Get Involved</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-accent"></div>
+  <div class="page-header-accent2"></div>
+  <div class="page-header-content">
+    <div class="page-eyebrow">Leadership</div>
+    <h1>Board of<br>Directors</h1>
+    <p class="page-header-body">The SKI HERE pilot project is guided by a board committed to making Utah's mountains accessible to every Utah family.</p>
+  </div>
+</div>
+
+<div class="div-stripe"><div class="n" style="flex:1"></div><div class="o" style="width:160px"></div><div class="n" style="flex:1"></div></div>
+
+<!-- BOARD MEMBERS -->
+<section class="board-section">
+  <div class="container">
+    <div class="eyebrow" style="font-size:0.72rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--orange); margin-bottom:0.5rem;">The Team</div>
+    <h2 style="font-family:var(--display); font-size:clamp(2.2rem,4vw,3.4rem); font-weight:900; color:var(--navy); line-height:1.05; letter-spacing:-0.02em;">People who believe the mountain<br>should belong to everyone.</h2>
+
+    <div class="board-grid">
+
+      <!-- Clint Richins -->
+      <div class="board-card">
+        <div class="board-card-photo">
+          <div class="board-card-photo-placeholder">
+            <div class="board-card-initials">CR</div>
+            <div class="photo-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            <span class="photo-label">Photo coming soon</span>
+          </div>
+        </div>
+        <div class="board-card-info">
+          <div class="board-card-role">Board Chair</div>
+          <div class="board-card-name">Clint Richins</div>
+          <p class="board-card-bio">Placeholder bio — Clint's background, relevant experience, and connection to the SKI HERE mission.</p>
+        </div>
+      </div>
+
+      <!-- Carson Garrett -->
+      <div class="board-card">
+        <div class="board-card-photo">
+          <div class="board-card-photo-placeholder">
+            <div class="board-card-initials">CG</div>
+            <div class="photo-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            <span class="photo-label">Photo coming soon</span>
+          </div>
+        </div>
+        <div class="board-card-info">
+          <div class="board-card-role">Chief Technology Officer</div>
+          <div class="board-card-name">Carson Garrett</div>
+          <p class="board-card-bio">Placeholder bio — Carson's background, relevant experience, and connection to the SKI HERE mission.</p>
+        </div>
+      </div>
+
+      <!-- CFO - Vacant -->
+      <div class="board-card vacant">
+        <div class="board-card-photo">
+          <div class="board-card-photo-placeholder">
+            <div class="board-card-initials">—</div>
+            <div class="photo-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            <span class="photo-label">Position open</span>
+          </div>
+        </div>
+        <div class="board-card-info">
+          <div class="board-card-role">Chief Financial Officer</div>
+          <div class="board-card-name placeholder">To be announced</div>
+          <p class="board-card-bio">We are seeking a CFO with experience in public finance, municipal bonds, or nonprofit financial management to join the SKI HERE board.</p>
+        </div>
+      </div>
+
+      <!-- Attorney - Vacant -->
+      <div class="board-card vacant">
+        <div class="board-card-photo">
+          <div class="board-card-photo-placeholder">
+            <div class="board-card-initials">—</div>
+            <div class="photo-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            <span class="photo-label">Position open</span>
+          </div>
+        </div>
+        <div class="board-card-info">
+          <div class="board-card-role">General Counsel</div>
+          <div class="board-card-name placeholder">To be announced</div>
+          <p class="board-card-bio">We are seeking an attorney with expertise in public land use, USFS special use permits, or Utah state legislative process to advise the board.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<div class="footer-stripe"><div class="n"></div><div class="o"></div><div class="n"></div></div>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">SKI HERE</div>
+      <div style="font-size:0.7rem; color:rgba(255,255,255,0.65); margin-top:0.25rem;">Utah Public Ski Area Pilot Project</div>
+    </div>
+    <div class="footer-nav">
+      <a href="/#problem">The Problem</a>
+      <a href="/#proposal">The Proposal</a>
+      <a href="/#precedent">Precedent</a>
+      <a href="/financials">Financial Plan</a>
+      <a href="/board">Board</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-copy">Utah Public Ski Area Pilot Project</div>
+  </div>
+</footer>
+
+</body>
+</html>

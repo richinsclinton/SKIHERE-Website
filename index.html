@@ -163,7 +163,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .nav-stripe .o1 { width: 100px; background: var(--orange); }
 .nav-stripe .n2 { flex: 1; background: var(--navy); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 3rem; }
-.nav-logo { font-family: var(--display); font-size: 1.75rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; text-decoration: none; }
+.nav-logo { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; text-decoration: none; }
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.15s; }
 .nav-links a:hover { color: var(--white); }
@@ -394,6 +394,89 @@ footer { background: var(--navy-dark); }
 .hero h1 { animation: fadeUp 0.6s 0.1s ease both; }
 .hero-tagline { animation: fadeUp 0.6s 0.2s ease both; }
 .hero-btns { animation: fadeUp 0.6s 0.3s ease both; }
+
+/* NEWSLETTER MODAL */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,20,45,0.82);
+  backdrop-filter: blur(4px);
+  align-items: center; justify-content: center;
+  padding: 1.5rem;
+}
+.modal-overlay.open { display: flex; }
+.modal-card {
+  background: var(--white);
+  max-width: 480px; width: 100%;
+  position: relative;
+  animation: fadeUp 0.25s ease both;
+}
+.modal-header {
+  background: var(--navy);
+  padding: 2.25rem 2.25rem 2rem;
+  position: relative;
+}
+.modal-header::after {
+  content: '';
+  position: absolute; bottom: 0; left: 2.25rem;
+  width: 48px; height: 4px; background: var(--orange);
+}
+.modal-close {
+  position: absolute; top: 1rem; right: 1rem;
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,0.5); font-size: 1.4rem; line-height: 1;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.15s;
+}
+.modal-close:hover { color: var(--white); }
+.modal-eyebrow {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem;
+}
+.modal-title {
+  font-family: var(--display); font-size: 2rem; font-weight: 900;
+  color: var(--white); letter-spacing: -0.01em; line-height: 1.1;
+}
+.modal-body { padding: 2rem 2.25rem 2.25rem; }
+.modal-desc {
+  font-size: 0.9rem; color: var(--mid-gray); line-height: 1.65; margin-bottom: 1.5rem;
+}
+.modal-field { margin-bottom: 1rem; }
+.modal-field label {
+  display: block; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--navy); margin-bottom: 0.4rem;
+}
+.modal-field input {
+  width: 100%; padding: 0.75rem 1rem;
+  border: 2px solid var(--snow); font-family: var(--body);
+  font-size: 0.95rem; color: var(--charcoal);
+  outline: none; transition: border-color 0.15s;
+  background: var(--snow);
+}
+.modal-field input:focus { border-color: var(--navy); background: var(--white); }
+.modal-submit {
+  width: 100%; margin-top: 0.5rem;
+  background: var(--orange); color: var(--white);
+  border: none; cursor: pointer;
+  font-family: var(--body); font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.9rem 2rem; transition: background 0.15s;
+}
+.modal-submit:hover { background: var(--orange-hover); }
+.modal-success {
+  display: none; text-align: center; padding: 1rem 0 0.5rem;
+}
+.modal-success-icon {
+  font-size: 2.5rem; margin-bottom: 0.75rem;
+}
+.modal-success-title {
+  font-family: var(--display); font-size: 1.6rem; font-weight: 900;
+  color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem;
+}
+.modal-success-body {
+  font-size: 0.9rem; color: var(--mid-gray); line-height: 1.6;
+}
 </style>
 </head>
 <body>
@@ -417,7 +500,7 @@ footer { background: var(--navy-dark); }
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-mountain"></div>
+
   <div class="hero-accent"></div>
   <div class="hero-accent2"></div>
   <div class="hero-content">
@@ -425,8 +508,9 @@ footer { background: var(--navy-dark); }
     <h1>The greatest snow<br>on earth should<br>belong to <span class="o">every Utahn.</span></h1>
     <p class="hero-tagline">Utah families are being priced out of the mountains they grew up in. This is a proposal to change that — permanently.</p>
     <div class="hero-btns">
-      <a href="#proposal" class="btn-primary">Read the proposal</a>
+      <button class="btn-primary" onclick="document.getElementById('newsletterModal').classList.add('open')" style="cursor:pointer;">Stay Informed</button>
       <a href="/financials" class="btn-outline-white">View financial plan</a>
+      <a href="#proposal" class="btn-outline-white" style="border-color:var(--orange); color:var(--orange);">Read the proposal</a>
     </div>
   </div>
 </section>
@@ -786,6 +870,53 @@ footer { background: var(--navy-dark); }
     <div class="footer-copy">Utah Public Ski Area Pilot Project</div>
   </div>
 </footer>
+
+<!-- NEWSLETTER MODAL -->
+<div class="modal-overlay" id="newsletterModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <button class="modal-close" onclick="document.getElementById('newsletterModal').classList.remove('open')" aria-label="Close">&times;</button>
+      <div class="modal-eyebrow">Stay Informed</div>
+      <div class="modal-title" id="modalTitle">Be first to hear<br>when this moves forward.</div>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc">Sign up for updates on the SKI HERE pilot project — legislation, site news, and ways to get involved. No spam, ever.</p>
+      <form id="newsletterForm" onsubmit="handleNewsletterSubmit(event)">
+        <div class="modal-field">
+          <label for="nlName">Your name</label>
+          <input type="text" id="nlName" name="name" placeholder="First and last name" required autocomplete="name">
+        </div>
+        <div class="modal-field">
+          <label for="nlEmail">Email address</label>
+          <input type="email" id="nlEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+        </div>
+        <button type="submit" class="modal-submit">Sign me up</button>
+      </form>
+      <div class="modal-success" id="newsletterSuccess">
+        <div class="modal-success-icon">⛷️</div>
+        <div class="modal-success-title">You're on the list.</div>
+        <p class="modal-success-body">We'll be in touch when SKI HERE moves forward. Thanks for supporting affordable skiing for Utah families.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleNewsletterSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('newsletterForm');
+  const success = document.getElementById('newsletterSuccess');
+  form.style.display = 'none';
+  success.style.display = 'block';
+  setTimeout(() => {
+    document.getElementById('newsletterModal').classList.remove('open');
+    setTimeout(() => { form.style.display = ''; success.style.display = 'none'; form.reset(); }, 400);
+  }, 3000);
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') document.getElementById('newsletterModal').classList.remove('open');
+});
+</script>
 
 </body>
 </html>
