@@ -3,11 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#002E5D">
-<title>Board of Directors — SKI HERE</title>
-<meta name="description" content="Meet the SKI HERE board of directors leading the Utah Public Ski Area Pilot Project.">
+<title>Board of Directors — SKI HERE Utah Public Ski Area</title>
+<meta name="description" content="Meet the leadership team behind SKI HERE — the Utah public ski area pilot project proposing affordable skiing for Utah residents at $59 day tickets, opening 2029.">
 <link rel="canonical" href="https://skihere.org/board">
+
+<meta property="og:title" content="Board of Directors — SKI HERE Utah Public Ski Area">
+<meta property="og:description" content="The people leading the SKI HERE pilot — a Utah state-sponsored public ski area with resident-first pricing. $59 day tickets, target opening 2029.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://skihere.org/board">
+<meta property="og:site_name" content="SKI HERE">
+<meta property="og:image" content="https://skihere.org/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SKI HERE — Utah Public Ski Area Pilot Project">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Board of Directors — SKI HERE Utah Public Ski Area">
+<meta name="twitter:description" content="The people leading the SKI HERE pilot — a Utah state-sponsored public ski area with resident-first pricing. $59 day tickets, target opening 2029.">
+<meta name="twitter:image" content="https://skihere.org/og-card.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://skihere.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Board of Directors", "item": "https://skihere.org/board" }
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://skihere.org/board#webpage",
+      "url": "https://skihere.org/board",
+      "name": "Board of Directors — SKI HERE Utah Public Ski Area",
+      "description": "Leadership team of the SKI HERE pilot project — a Utah state-sponsored resident-first public ski area proposal targeting a 2029 opening.",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://skihere.org/#website" },
+      "about": { "@id": "https://skihere.org/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://skihere.org/#organization",
+      "name": "SKI HERE",
+      "alternateName": "Utah Public Ski Area Pilot Project",
+      "url": "https://skihere.org/",
+      "description": "A proposal for a Utah state-sponsored public ski area with resident-first pricing, targeting a 2029 opening in the northern Wasatch Range.",
+      "areaServed": { "@type": "State", "name": "Utah" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@skihere.org",
+        "contactType": "general inquiry"
+      },
+      "member": [
+        {
+          "@type": "OrganizationRole",
+          "member": {
+            "@type": "Person",
+            "name": "Clint Richins"
+          },
+          "roleName": "Board Chair"
+        },
+        {
+          "@type": "OrganizationRole",
+          "member": {
+            "@type": "Person",
+            "name": "Carson Garrett"
+          },
+          "roleName": "Chief Technology Officer"
+        }
+      ]
+    }
+  ]
+}
+</script>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
@@ -21,8 +93,8 @@
 :root {
   --navy: #002E5D;
   --navy-dark: #001f42;
-  --orange: #E45122;
-  --orange-hover: #c9411a;
+  --orange: #C8501F;
+  --orange-hover: #a83e18;
   --white: #FFFFFF;
   --snow: #F5F5F5;
   --powder: #D9E9F7;
@@ -42,6 +114,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .nav-stripe .n2 { flex: 1; background: var(--navy); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 3rem; }
 .nav-logo { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; text-decoration: none; }
+.nav-logo-wrap { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
+.nav-logo-sub { font-family: var(--body); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 0.15rem; }
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.15s; }
 .nav-links a:hover { color: var(--white); }
@@ -90,7 +164,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
   position: relative; overflow: hidden;
 }
 .board-card-initials {
-  font-family: var(--display); font-size: 6rem; font-weight: 900;
+  font-family: var(--display); font-size: 9rem; font-weight: 900;
   color: rgba(0,46,93,0.15); letter-spacing: -0.04em; line-height: 1;
   user-select: none;
 }
@@ -112,7 +186,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 
 .board-card-info { padding: 1.75rem 2rem 2rem; }
 .board-card-role { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
-.board-card-name { font-family: var(--display); font-size: 2rem; font-weight: 900; color: var(--navy); letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 0.75rem; }
+.board-card-name { font-family: var(--display); font-size: 2rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 0.75rem; }
 .board-card-name.placeholder { color: rgba(0,46,93,0.3); font-style: italic; }
 .board-card-bio { font-size: 0.88rem; color: var(--mid-gray); line-height: 1.65; }
 
@@ -153,6 +227,17 @@ footer { background: var(--navy-dark); }
 .page-eyebrow { animation: fadeUp 0.5s ease both; }
 .page-header h1 { animation: fadeUp 0.6s 0.1s ease both; }
 .page-header-body { animation: fadeUp 0.6s 0.2s ease both; }
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 </head>
 <body>
@@ -161,7 +246,10 @@ footer { background: var(--navy-dark); }
 <nav>
   <div class="nav-stripe"><div class="n1"></div><div class="o1"></div><div class="n2"></div></div>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">SKI HERE</a>
+    <a href="/" class="nav-logo-wrap">
+      <span class="nav-logo">SKI HERE</span>
+      <span class="nav-logo-sub">Utah Public Ski Area</span>
+    </a>
     <div class="nav-links">
       <a href="/#problem">The Problem</a>
       <a href="/#proposal">The Proposal</a>
@@ -197,73 +285,57 @@ footer { background: var(--navy-dark); }
     <div class="board-grid">
 
       <!-- Clint Richins -->
-      <div class="board-card">
-        <div class="board-card-photo">
+      <div class="board-card reveal">
+        <div class="board-card-photo" aria-hidden="true">
           <div class="board-card-photo-placeholder">
             <div class="board-card-initials">CR</div>
-            <div class="photo-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-            </div>
-            <span class="photo-label">Photo coming soon</span>
           </div>
         </div>
         <div class="board-card-info">
           <div class="board-card-role">Board Chair</div>
-          <div class="board-card-name">Clint Richins</div>
+          <h3 class="board-card-name">Clint Richins</h3>
           <p class="board-card-bio">Placeholder bio — Clint's background, relevant experience, and connection to the SKI HERE mission.</p>
         </div>
       </div>
 
       <!-- Carson Garrett -->
-      <div class="board-card">
-        <div class="board-card-photo">
+      <div class="board-card reveal">
+        <div class="board-card-photo" aria-hidden="true">
           <div class="board-card-photo-placeholder">
             <div class="board-card-initials">CG</div>
-            <div class="photo-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-            </div>
-            <span class="photo-label">Photo coming soon</span>
           </div>
         </div>
         <div class="board-card-info">
           <div class="board-card-role">Chief Technology Officer</div>
-          <div class="board-card-name">Carson Garrett</div>
+          <h3 class="board-card-name">Carson Garrett</h3>
           <p class="board-card-bio">Placeholder bio — Carson's background, relevant experience, and connection to the SKI HERE mission.</p>
         </div>
       </div>
 
       <!-- CFO - Vacant -->
-      <div class="board-card vacant">
-        <div class="board-card-photo">
+      <div class="board-card vacant reveal">
+        <div class="board-card-photo" aria-hidden="true">
           <div class="board-card-photo-placeholder">
             <div class="board-card-initials">—</div>
-            <div class="photo-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-            </div>
-            <span class="photo-label">Position open</span>
           </div>
         </div>
         <div class="board-card-info">
           <div class="board-card-role">Chief Financial Officer</div>
-          <div class="board-card-name placeholder">To be announced</div>
+          <h3 class="board-card-name placeholder">To be announced</h3>
           <p class="board-card-bio">We are seeking a CFO with experience in public finance, municipal bonds, or nonprofit financial management to join the SKI HERE board.</p>
         </div>
       </div>
 
       <!-- Attorney - Vacant -->
-      <div class="board-card vacant">
-        <div class="board-card-photo">
+      <div class="board-card vacant reveal">
+        <div class="board-card-photo" aria-hidden="true">
           <div class="board-card-photo-placeholder">
             <div class="board-card-initials">—</div>
-            <div class="photo-icon">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
-            </div>
-            <span class="photo-label">Position open</span>
           </div>
         </div>
         <div class="board-card-info">
           <div class="board-card-role">General Counsel</div>
-          <div class="board-card-name placeholder">To be announced</div>
+          <h3 class="board-card-name placeholder">To be announced</h3>
           <p class="board-card-bio">We are seeking an attorney with expertise in public land use, USFS special use permits, or Utah state legislative process to advise the board.</p>
         </div>
       </div>
@@ -293,6 +365,30 @@ footer { background: var(--navy-dark); }
     <div class="footer-copy">Utah Public Ski Area Pilot Project</div>
   </div>
 </footer>
+
+<script>
+// SCROLL REVEAL — Intersection Observer with stagger by sibling index
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var siblings = el.parentElement ? Array.from(el.parentElement.children).filter(function(c) {
+          return c.classList.contains('reveal');
+        }) : [];
+        var idx = siblings.indexOf(el);
+        el.style.transitionDelay = (idx >= 0 ? idx * 100 : 0) + 'ms';
+        el.classList.add('visible');
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    observer.observe(el);
+  });
+})();
+</script>
 
 </body>
 </html>

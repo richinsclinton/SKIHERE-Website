@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="keywords" content="Utah public ski area, affordable skiing Utah, Utah ski resort 2029, resident-first ski area, SKI HERE, Wasatch ski area, Utah lift ticket prices, public ski resort Utah">
 <meta name="theme-color" content="#002E5D">
 <title>SKI HERE — Utah Public Ski Area Pilot Project</title>
 <meta name="description" content="A Utah state-sponsored public ski area pilot — resident-first day tickets at $59, $750 season pass, target opening 2029. Read the proposal and financial plan.">
@@ -138,8 +139,8 @@
 :root {
   --navy: #002E5D;
   --navy-dark: #001f42;
-  --orange: #E45122;
-  --orange-hover: #c9411a;
+  --orange: #C8501F;
+  --orange-hover: #a83e18;
   --white: #FFFFFF;
   --snow: #F5F5F5;
   --powder: #D9E9F7;
@@ -164,6 +165,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .nav-stripe .n2 { flex: 1; background: var(--navy); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 3rem; }
 .nav-logo { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; text-decoration: none; }
+.nav-logo-wrap { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
+.nav-logo-sub { font-family: var(--body); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 0.15rem; }
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.15s; }
 .nav-links a:hover { color: var(--white); }
@@ -195,6 +198,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
   transform: rotate(-7deg); transform-origin: right center;
 }
 .hero-content { max-width: 1100px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+.hero-stats-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.hero-bg-stat { position: absolute; font-family: var(--display); font-weight: 900; color: rgba(255,255,255,0.04); letter-spacing: -0.03em; line-height: 1; user-select: none; }
 .hero-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
 .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 3px; background: var(--orange); }
 .hero h1 { font-family: var(--display); font-size: clamp(4.5rem, 10vw, 9rem); font-weight: 900; color: var(--white); line-height: 0.92; letter-spacing: -0.02em; margin-bottom: 1.75rem; }
@@ -205,6 +210,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .btn-primary:hover { background: var(--orange-hover); }
 .btn-outline-white { display: inline-block; background: transparent; color: var(--white); font-family: var(--body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.88rem 2rem; border: 2px solid rgba(255,255,255,0.35); text-decoration: none; transition: border-color 0.15s; }
 .btn-outline-white:hover { border-color: rgba(255,255,255,0.8); }
+.btn-outline-orange { display: inline-block; background: transparent; color: var(--orange); font-family: var(--body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.88rem 2rem; border: 2px solid var(--orange); text-decoration: none; transition: border-color 0.15s, color 0.15s; cursor: pointer; }
+.btn-outline-orange:hover { border-color: var(--orange-hover); color: var(--orange-hover); }
 
 /* ECON BANNER */
 .econ-banner { background: var(--powder); }
@@ -212,13 +219,13 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .econ-stat { padding: 2rem 2.5rem; border-right: 1px solid rgba(0,46,93,0.12); flex: 1; min-width: 160px; }
 .econ-stat:last-child { border-right: none; }
 .econ-num { font-family: var(--display); font-size: 2.6rem; font-weight: 900; color: var(--navy); letter-spacing: -0.02em; line-height: 1; }
-.econ-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); opacity: 0.55; margin-top: 0.3rem; line-height: 1.4; }
-.econ-source { font-size: 0.62rem; color: var(--navy); opacity: 0.35; margin-top: 0.2rem; }
+.econ-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); opacity: 0.72; margin-top: 0.3rem; line-height: 1.4; }
+.econ-source { font-size: 0.72rem; color: var(--navy); opacity: 0.6; margin-top: 0.2rem; }
 
 /* SECTION LAYOUT */
 section { padding: 6rem 3rem; }
 .container { max-width: 1100px; margin: 0 auto; }
-.eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.75rem; }
+.eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.75rem; }
 .section-title { font-family: var(--display); font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 900; color: var(--navy); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
 .section-body { font-size: 1rem; color: var(--mid-gray); line-height: 1.7; font-weight: 400; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
@@ -233,11 +240,11 @@ section { padding: 6rem 3rem; }
 .problem-card.accent { border-top-color: var(--orange); }
 .problem-card-num { font-family: var(--display); font-size: 3rem; font-weight: 900; color: rgba(0,46,93,0.1); line-height: 1; margin-bottom: 0.25rem; letter-spacing: -0.03em; }
 .problem-card.accent .problem-card-num { color: rgba(228,81,34,0.1); }
-.problem-card-title { font-family: var(--display); font-size: 1.4rem; font-weight: 900; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.75rem; }
+.problem-card-title { font-family: var(--display); font-size: 1.4rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.75rem; }
 .problem-card-body { font-size: 0.92rem; color: var(--mid-gray); line-height: 1.65; }
 /* supply table */
 .supply-table { width: 100%; border-collapse: collapse; margin-top: 2.5rem; }
-.supply-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); text-align: left; padding: 0 0 0.75rem; border-bottom: 2px solid var(--orange); }
+.supply-table th { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); text-align: left; padding: 0 0 0.75rem; border-bottom: 2px solid var(--orange); }
 .supply-table td { font-size: 0.92rem; padding: 0.7rem 0.5rem; border-bottom: 1px solid var(--snow); color: var(--charcoal); }
 .supply-table td:first-child { font-weight: 700; color: var(--navy); padding-left: 0; }
 .supply-table td.change-pos { color: var(--orange); font-weight: 700; }
@@ -245,13 +252,13 @@ section { padding: 6rem 3rem; }
 /* chart */
 .chart-card { background: var(--navy); padding: 2.5rem; position: relative; overflow: hidden; }
 .chart-corner { position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 50px 50px 0; border-color: transparent var(--orange) transparent transparent; }
-.chart-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.75rem; }
+.chart-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 1.75rem; }
 .bar-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.85rem; }
 .bar-yr { font-size: 0.7rem; font-weight: 700; color: rgba(255,255,255,0.65); width: 36px; flex-shrink: 0; }
 .bar-track { flex: 1; background: rgba(255,255,255,0.08); height: 24px; }
 .bar-fill { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 7px; }
 .bar-fill span { font-size: 0.68rem; font-weight: 700; }
-.chart-note { font-size: 0.68rem; color: rgba(255,255,255,0.3); margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; font-style: italic; }
+.chart-note { font-size: 0.75rem; color: rgba(255,255,255,0.55); margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; }
 .chart-legend { display: flex; gap: 1.25rem; margin-bottom: 1.25rem; }
 .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; color: rgba(255,255,255,0.55); font-weight: 700; }
 .legend-dot { width: 10px; height: 10px; flex-shrink: 0; }
@@ -263,7 +270,7 @@ section { padding: 6rem 3rem; }
 .pillar:nth-child(even) { border-top-color: var(--orange); }
 .pillar-num { font-family: var(--display); font-size: 3rem; font-weight: 900; color: var(--powder); line-height: 1; margin-bottom: 0.4rem; letter-spacing: -0.03em; }
 .pillar:nth-child(even) .pillar-num { color: rgba(228,81,34,0.1); }
-.pillar-title { font-family: var(--display); font-size: 1.35rem; font-weight: 900; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.75rem; }
+.pillar-title { font-family: var(--display); font-size: 1.35rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.75rem; }
 .pillar-body { font-size: 0.9rem; color: var(--mid-gray); line-height: 1.65; }
 
 /* PRICING TABLE */
@@ -280,7 +287,7 @@ section { padding: 6rem 3rem; }
 .pricing-comparison { margin-top: 1rem; font-size: 0.82rem; color: var(--mid-gray); font-style: italic; }
 .resort-profile { background: var(--navy); padding: 2.5rem; }
 .profile-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
-.profile-title { font-family: var(--display); font-size: 1.8rem; font-weight: 900; color: var(--white); letter-spacing: -0.01em; margin-bottom: 1.5rem; }
+.profile-title { font-family: var(--display); font-size: 1.8rem; font-weight: 700; color: var(--white); letter-spacing: -0.01em; margin-bottom: 1.5rem; }
 .profile-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .profile-row:last-child { border-bottom: none; }
 .profile-key { font-size: 0.82rem; color: rgba(255,255,255,0.5); font-weight: 400; }
@@ -293,13 +300,13 @@ section { padding: 6rem 3rem; }
 .precedent-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
 .prec-card { background: rgba(255,255,255,0.05); border-left: 4px solid var(--orange); padding: 2rem; }
 .prec-loc { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
-.prec-name { font-family: var(--display); font-size: 1.7rem; font-weight: 900; color: var(--white); letter-spacing: -0.01em; margin-bottom: 1.25rem; }
+.prec-name { font-family: var(--display); font-size: 1.7rem; font-weight: 700; color: var(--white); letter-spacing: -0.01em; margin-bottom: 1.25rem; }
 .prec-list { list-style: none; }
 .prec-list li { font-size: 0.88rem; color: rgba(255,255,255,0.65); padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; gap: 0.6rem; line-height: 1.5; }
 .prec-list li::before { content: '—'; color: var(--orange); flex-shrink: 0; font-weight: 700; }
 .analogy-strip { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .analogy-card { background: rgba(255,255,255,0.04); padding: 1.75rem; border-top: 3px solid rgba(255,255,255,0.1); }
-.analogy-title { font-family: var(--display); font-size: 1.2rem; font-weight: 900; color: var(--white); margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+.analogy-title { font-family: var(--display); font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; letter-spacing: -0.01em; }
 .analogy-body { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
 
 /* OLYMPIC */
@@ -321,8 +328,8 @@ section { padding: 6rem 3rem; }
 .badge-name { font-family: var(--display); font-size: 2rem; font-weight: 900; color: var(--white); letter-spacing: -0.01em; }
 .badge-role { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-top: 0.25rem; }
 .badge-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
-.badge-tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.3rem 0.65rem; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); }
-.story-quote { font-family: var(--display); font-size: 1.9rem; font-weight: 900; color: var(--navy); letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 1.5rem; padding-left: 1.5rem; border-left: 5px solid var(--orange); }
+.badge-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.3rem 0.65rem; background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75); }
+.story-quote { font-family: var(--display); font-size: 1.9rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 1.5rem; padding-left: 1.5rem; border-left: 5px solid var(--orange); }
 .story-text { font-size: 0.98rem; color: var(--mid-gray); line-height: 1.75; margin-bottom: 1rem; }
 
 /* NEXT STEPS */
@@ -333,7 +340,7 @@ section { padding: 6rem 3rem; }
 .step:nth-child(even) { border-top-color: var(--orange); }
 .step-num { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: rgba(0,46,93,0.1); line-height: 1; margin-bottom: 0.5rem; letter-spacing: -0.03em; }
 .step:nth-child(even) .step-num { color: rgba(228,81,34,0.12); }
-.step-title { font-family: var(--display); font-size: 1.1rem; font-weight: 900; color: var(--navy); margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+.step-title { font-family: var(--display); font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; letter-spacing: -0.01em; }
 .step-body { font-size: 0.82rem; color: var(--mid-gray); line-height: 1.6; }
 .step-timeline { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-top: 0.75rem; }
 
@@ -354,7 +361,7 @@ footer { background: var(--navy-dark); }
 .footer-nav { display: flex; gap: 1.5rem; }
 .footer-nav a { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.15s; }
 .footer-nav a:hover { color: var(--white); }
-.footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.65); }
+.footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.75); }
 
 /* DIVIDER */
 .div-stripe { height: 10px; display: flex; }
@@ -394,6 +401,17 @@ footer { background: var(--navy-dark); }
 .hero h1 { animation: fadeUp 0.6s 0.1s ease both; }
 .hero-tagline { animation: fadeUp 0.6s 0.2s ease both; }
 .hero-btns { animation: fadeUp 0.6s 0.3s ease both; }
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* NEWSLETTER MODAL */
 .modal-overlay {
@@ -485,12 +503,16 @@ footer { background: var(--navy-dark); }
 <nav>
   <div class="nav-stripe"><div class="n1"></div><div class="o1"></div><div class="n2"></div></div>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">SKI HERE</a>
+    <a href="/" class="nav-logo-wrap">
+      <span class="nav-logo">SKI HERE</span>
+      <span class="nav-logo-sub">Utah Public Ski Area</span>
+    </a>
     <div class="nav-links">
       <a href="/#problem">The Problem</a>
       <a href="/#proposal">The Proposal</a>
       <a href="/#precedent">Precedent</a>
       <a href="/financials">Financial Plan</a>
+      <a href="/board">Board</a>
       <a href="#contact" class="nav-cta">Get Involved</a>
     </div>
   </div>
@@ -501,8 +523,13 @@ footer { background: var(--navy-dark); }
 <!-- HERO -->
 <section class="hero">
 
-  <div class="hero-accent"></div>
-  <div class="hero-accent2"></div>
+  <div class="hero-stats-bg" aria-hidden="true">
+    <span class="hero-bg-stat" style="top:18%; right:8%; font-size:clamp(4rem,8vw,7rem);">$59</span>
+    <span class="hero-bg-stat" style="top:38%; right:18%; font-size:clamp(3rem,6vw,5.5rem);">2029</span>
+    <span class="hero-bg-stat" style="top:55%; right:5%; font-size:clamp(3.5rem,7vw,6rem);">$750</span>
+  </div>
+  <div class="hero-accent" aria-hidden="true"></div>
+  <div class="hero-accent2" aria-hidden="true"></div>
   <div class="hero-content">
     <div class="hero-eyebrow">Utah Public Ski Area Pilot Project</div>
     <h1>The greatest snow<br>on earth should<br>belong to <span class="o">every Utahn.</span></h1>
@@ -510,36 +537,36 @@ footer { background: var(--navy-dark); }
     <div class="hero-btns">
       <button class="btn-primary" onclick="document.getElementById('newsletterModal').classList.add('open')" style="cursor:pointer;">Stay Informed</button>
       <a href="/financials" class="btn-outline-white">View financial plan</a>
-      <a href="#proposal" class="btn-outline-white" style="border-color:var(--orange); color:var(--orange);">Read the proposal</a>
+      <a href="#proposal" class="btn-outline-orange">Read the proposal</a>
     </div>
   </div>
 </section>
 
 <!-- ECON BANNER -->
-<div class="div-stripe"><div class="n" style="flex:1"></div><div class="o" style="width:120px"></div><div class="n" style="flex:1"></div></div>
+<div class="div-stripe"><div class="n" style="flex:1"></div><div class="o" style="width:160px"></div><div class="n" style="flex:1"></div></div>
 <div class="econ-banner">
   <div class="econ-inner">
-    <div class="econ-stat">
+    <div class="econ-stat reveal">
       <div class="econ-num">$2.51B</div>
       <div class="econ-label">Skier spending in Utah 2024–25</div>
       <div class="econ-source">Kem C. Gardner Policy Institute</div>
     </div>
-    <div class="econ-stat">
+    <div class="econ-stat reveal">
       <div class="econ-num">43%</div>
       <div class="econ-label">Of skier days are Utah residents</div>
       <div class="econ-source">Gardner Institute, 2024–25</div>
     </div>
-    <div class="econ-stat">
+    <div class="econ-stat reveal">
       <div class="econ-num">$299</div>
       <div class="econ-label">Peak Utah resort day ticket 2024–25</div>
       <div class="econ-source">Powder Magazine, 2024</div>
     </div>
-    <div class="econ-stat">
+    <div class="econ-stat reveal">
       <div class="econ-num">–48%</div>
       <div class="econ-label">Per-capita resort access since 1990</div>
       <div class="econ-source">U.S. Census / Ski Utah</div>
     </div>
-    <div class="econ-stat">
+    <div class="econ-stat reveal">
       <div class="econ-num">$6.6B</div>
       <div class="econ-label">Projected 2034 Olympic economic output</div>
       <div class="econ-source">Gardner Institute, July 2024</div>
@@ -616,7 +643,7 @@ footer { background: var(--navy-dark); }
         </div>
         <div>
           <table class="supply-table">
-            <thead><tr><th>Metric</th><th>1990</th><th>2025</th><th>Change</th></tr></thead>
+            <thead><tr><th scope="col">Metric</th><th scope="col">1990</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead>
             <tbody>
               <tr><td>Utah Population</td><td>1.7M</td><td>3.5M</td><td class="change-pos">+106%</td></tr>
               <tr><td>Utah Ski Resorts</td><td>~14</td><td>~15</td><td>+7%</td></tr>
@@ -632,7 +659,7 @@ footer { background: var(--navy-dark); }
 </section>
 
 <!-- PROPOSAL -->
-<div class="div-stripe"><div class="n" style="flex:1"></div><div class="o" style="width:200px"></div><div class="n" style="flex:1"></div></div>
+<div class="div-stripe"><div class="n" style="flex:1"></div><div class="o" style="width:320px"></div><div class="n" style="flex:1"></div></div>
 <section class="proposal-section" id="proposal">
   <div class="container">
     <div class="eyebrow">The Proposal</div>
@@ -640,32 +667,32 @@ footer { background: var(--navy-dark); }
     <p class="section-body" style="max-width:680px;">Utah should commission a feasibility study and pilot program for a resident-first public ski area. Not another luxury destination — a mountain that prioritizes terrain, reliable snow, and prices that Utah families can actually afford.</p>
 
     <div class="pillars-grid">
-      <div class="pillar">
+      <div class="pillar reveal">
         <div class="pillar-num">01</div>
         <div class="pillar-title">Resident-first pricing</div>
         <p class="pillar-body">$59 adult day ticket for Utah residents — well below any comparable Utah mountain resort. $750 resident season pass for a resort with more terrain and vertical than any currently affordable Utah option.</p>
       </div>
-      <div class="pillar">
+      <div class="pillar reveal">
         <div class="pillar-num">02</div>
         <div class="pillar-title">Serious terrain</div>
         <p class="pillar-body">1,000 skiable acres with 2,500 ft of vertical drop in Phase 1. Base elevation ~7,200 ft ensures reliable snowpack. Five fixed-grip quad chairs plus a magic carpet — efficient, proven, cost-effective.</p>
       </div>
-      <div class="pillar">
+      <div class="pillar reveal">
         <div class="pillar-num">03</div>
         <div class="pillar-title">Simple infrastructure</div>
         <p class="pillar-body">~30,000 sq ft functional base lodge. Cafeteria-style food and beverage. Prior-season rental fleet. Costs are kept low by eliminating luxury amenities — what remains is what skiers actually care about.</p>
       </div>
-      <div class="pillar">
+      <div class="pillar reveal">
         <div class="pillar-num">04</div>
         <div class="pillar-title">School programs</div>
         <p class="pillar-body">Partnership with Utah public schools to deliver low-cost ski education at $15 per student. 5,000 participants projected in Year 1, growing 10% annually. Getting kids on skis young is the most reliable way to create lifelong participants.</p>
       </div>
-      <div class="pillar">
+      <div class="pillar reveal">
         <div class="pillar-num">05</div>
         <div class="pillar-title">Overcrowding relief</div>
         <p class="pillar-body">Adding resort capacity distributes demand across a broader base of terrain, reducing lift lines and congestion at Utah's existing resorts. Even visitors who never ski the public resort benefit from less crowded conditions at the mountains they already frequent.</p>
       </div>
-      <div class="pillar">
+      <div class="pillar reveal">
         <div class="pillar-num">06</div>
         <div class="pillar-title">Phased development</div>
         <p class="pillar-body">Phase 1 targets a 2029 opening with 3 lifts + magic carpet, ~500 acres, and full base lodge. Phase 2 adds 2 additional lifts and remaining terrain once financial sustainability is demonstrated. Reduces upfront state risk.</p>
@@ -683,7 +710,7 @@ footer { background: var(--navy-dark); }
         <h2 class="section-title">What it would actually cost to ski here</h2>
         <table class="pricing-table">
           <thead>
-            <tr><th>Ticket Type</th><th>Resident</th><th>Non-Resident</th></tr>
+            <tr><th scope="col">Ticket Type</th><th scope="col">Resident</th><th scope="col">Non-Resident</th></tr>
           </thead>
           <tbody>
             <tr><td>Adult Day Ticket</td><td class="highlight">$59</td><td>$119</td></tr>
@@ -722,7 +749,7 @@ footer { background: var(--navy-dark); }
     <p class="section-body" style="max-width:680px;">State-owned and municipally supported ski areas have operated successfully for decades. Utah need not invent this from scratch — and Utah has already voted for the underlying principle in two other recreation contexts.</p>
 
     <div class="precedent-cards">
-      <div class="prec-card">
+      <div class="prec-card reveal">
         <div class="prec-loc">New York State, USA</div>
         <div class="prec-name">Gore Mountain / ORDA</div>
         <ul class="prec-list">
@@ -733,7 +760,7 @@ footer { background: var(--navy-dark); }
           <li>Has operated successfully for decades in one of America's most populous states</li>
         </ul>
       </div>
-      <div class="prec-card">
+      <div class="prec-card reveal">
         <div class="prec-loc">Austria · France · Switzerland · Scandinavia</div>
         <div class="prec-name">European municipal ski areas</div>
         <ul class="prec-list">
@@ -747,11 +774,11 @@ footer { background: var(--navy-dark); }
     </div>
 
     <div class="analogy-strip">
-      <div class="analogy-card">
+      <div class="analogy-card reveal">
         <div class="analogy-title">Utah already does this — for golf</div>
         <p class="analogy-body">Cities and counties across Utah operate public golf courses at below-market rates to keep the sport accessible to local residents. Salt Lake County, Davis County, and Utah County all maintain publicly subsidized golf facilities. This proposal applies the identical operating model to skiing.</p>
       </div>
-      <div class="analogy-card">
+      <div class="analogy-card reveal">
         <div class="analogy-title">Utah already does this — for hunting</div>
         <p class="analogy-body">Utah's Division of Wildlife Resources uses a tiered pricing structure where residents pay significantly lower permit fees than out-of-state hunters and anglers. The policy rationale is identical: Utah's natural resources belong first to Utahns. A public ski area extends this well-established principle to winter recreation.</p>
       </div>
@@ -798,31 +825,31 @@ footer { background: var(--navy-dark); }
     <h2 class="section-title">This proposal asks Utah to take the first step</h2>
     <p class="section-body" style="max-width:680px;">This is not a request to immediately build a ski resort. It is a request for Utah's elected leaders to begin understanding whether this investment is feasible — and what form it should take.</p>
     <div class="steps-grid">
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">01</div>
         <div class="step-title">Feasibility study</div>
         <p class="step-body">Commission an independent study examining potential sites, capital costs, operating models, revenue projections, and legal frameworks.</p>
         <div class="step-timeline">12–18 months</div>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">02</div>
         <div class="step-title">Site identification</div>
         <p class="step-body">Identify candidate locations with sufficient elevation, vertical drop, and terrain variety. State or federal land ownership reduces capital requirements.</p>
         <div class="step-timeline">Concurrent with Step 1</div>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">03</div>
         <div class="step-title">Stakeholder engagement</div>
         <p class="step-body">Convene a working group of ski professionals, school districts, local governments, environmental stakeholders, and Utah families.</p>
         <div class="step-timeline">Months 6–18</div>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">04</div>
         <div class="step-title">Pilot program design</div>
         <p class="step-body">Design a phased pilot beginning with Phase 1 infrastructure — demonstrating the model before full capital commitment is required.</p>
         <div class="step-timeline">Months 12–24</div>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">05</div>
         <div class="step-title">Legislative pathway</div>
         <p class="step-body">Identify the appropriate legislative and funding vehicle to establish a public ski authority, drawing on Utah's existing outdoor recreation framework.</p>
@@ -833,15 +860,15 @@ footer { background: var(--navy-dark); }
 </section>
 
 <!-- CTA -->
-<div class="div-stripe"><div class="n" style="flex:1"></div><div class="o" style="width:240px"></div><div class="n" style="flex:1"></div></div>
+<div class="div-stripe"><div class="n" style="flex:1"></div><div class="o" style="width:320px"></div><div class="n" style="flex:1"></div></div>
 <section class="cta-section" id="contact" style="background:var(--orange); padding:6rem 3rem; text-align:center; position:relative; overflow:hidden;">
   <!-- large background wordmark -->
-  <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-family:var(--display); font-size:22vw; font-weight:900; color:rgba(255,255,255,0.07); white-space:nowrap; pointer-events:none; letter-spacing:-0.04em; line-height:1;">JOIN US</div>
+  <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-family:var(--display); font-size:16vw; font-weight:900; color:rgba(255,255,255,0.05); white-space:nowrap; pointer-events:none; letter-spacing:-0.04em; line-height:1;">JOIN US</div>
   <!-- angular accent -->
   <div style="position:absolute; bottom:40px; left:-60px; width:500px; height:4px; background:rgba(255,255,255,0.2); transform:rotate(-5deg); transform-origin:left center;"></div>
   <div class="container" style="position:relative; z-index:1;">
     <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:1rem; display:flex; align-items:center; justify-content:center; gap:0.75rem;"><span style="display:block; width:24px; height:3px; background:rgba(255,255,255,0.5);"></span>Get Involved<span style="display:block; width:24px; height:3px; background:rgba(255,255,255,0.5);"></span></div>
-    <h2 style="font-family:var(--display); font-size:clamp(4rem, 10vw, 8rem); font-weight:900; color:var(--white); letter-spacing:-0.02em; line-height:0.92; margin-bottom:1.5rem;">Join the<br>movement!</h2>
+    <h2 style="font-family:var(--display); font-size:clamp(3rem, 7vw, 6rem); font-weight:900; color:var(--white); letter-spacing:-0.02em; line-height:0.92; margin-bottom:1.5rem;">Join the<br>effort.</h2>
     <p style="font-size:1.05rem; color:rgba(255,255,255,0.88); max-width:580px; margin:0 auto 2.75rem; line-height:1.7; font-weight:300;">Utah families deserve access to the mountains they call home. Whether you're a legislator, a ski industry partner, a school administrator, or simply a Utahn who believes the Greatest Snow on Earth should belong to everyone — your voice matters.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
       <a href="mailto:info@skihere.org" style="display:inline-block; background:var(--white); color:var(--orange); font-family:var(--body); font-size:0.9rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:1rem 2.25rem; text-decoration:none; transition:background 0.15s;">Get in Touch</a>
@@ -865,6 +892,7 @@ footer { background: var(--navy-dark); }
       <a href="#proposal">The Proposal</a>
       <a href="#precedent">Precedent</a>
       <a href="/financials">Financial Plan</a>
+      <a href="/board">Board</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="footer-copy">Utah Public Ski Area Pilot Project</div>
@@ -902,20 +930,88 @@ footer { background: var(--navy-dark); }
 </div>
 
 <script>
-function handleNewsletterSubmit(e) {
+var APPS_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+async function handleNewsletterSubmit(e) {
   e.preventDefault();
-  const form = document.getElementById('newsletterForm');
-  const success = document.getElementById('newsletterSuccess');
-  form.style.display = 'none';
-  success.style.display = 'block';
-  setTimeout(() => {
-    document.getElementById('newsletterModal').classList.remove('open');
-    setTimeout(() => { form.style.display = ''; success.style.display = 'none'; form.reset(); }, 400);
-  }, 3000);
+  var form    = document.getElementById('newsletterForm');
+  var success = document.getElementById('newsletterSuccess');
+  var submit  = form.querySelector('.modal-submit');
+  var name    = document.getElementById('nlName').value.trim();
+  var email   = document.getElementById('nlEmail').value.trim();
+
+  // Disable button while request is in flight
+  submit.disabled = true;
+  submit.textContent = 'Signing up…';
+
+  try {
+    var res = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email })
+    });
+
+    var json = await res.json();
+
+    if (res.ok && json.success) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+      // Auto-close after 3 s and reset the form for next use
+      setTimeout(function() {
+        document.getElementById('newsletterModal').classList.remove('open');
+        setTimeout(function() {
+          form.style.display = '';
+          success.style.display = 'none';
+          form.reset();
+          submit.disabled = false;
+          submit.textContent = 'Sign me up';
+        }, 400);
+      }, 3000);
+    } else {
+      throw new Error(json.error || 'Submission failed');
+    }
+  } catch (err) {
+    submit.disabled = false;
+    submit.textContent = 'Sign me up';
+    // Show inline error below the button
+    var existing = form.querySelector('.modal-error');
+    if (!existing) {
+      var errorEl = document.createElement('p');
+      errorEl.className = 'modal-error';
+      errorEl.style.cssText = 'color:#c0392b;font-size:0.82rem;margin-top:0.6rem;text-align:center;';
+      form.appendChild(errorEl);
+      existing = errorEl;
+    }
+    existing.textContent = 'Something went wrong — please try again or email info@skihere.org.';
+  }
 }
+
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') document.getElementById('newsletterModal').classList.remove('open');
 });
+
+// SCROLL REVEAL — Intersection Observer with stagger by sibling index
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        // Find position among siblings with the same class group for stagger
+        var siblings = el.parentElement ? Array.from(el.parentElement.children).filter(function(c) {
+          return c.classList.contains('reveal');
+        }) : [];
+        var idx = siblings.indexOf(el);
+        el.style.transitionDelay = (idx >= 0 ? idx * 80 : 0) + 'ms';
+        el.classList.add('visible');
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    observer.observe(el);
+  });
+})();
 </script>
 
 </body>

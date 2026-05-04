@@ -21,7 +21,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Financial Plan — SKI HERE Utah Public Ski Area">
-<meta name="twitter:description" content="Capital, operations, revenue, and funding plan for SKI HERE. $73.6M total capital with $64.3M identified.">
+<meta name="twitter:description" content="Full financial plan for SKI HERE — Utah's proposed public ski area. $73.6M capital, $64.3M identified, Year 1 operating surplus, target opening 2029.">
 <meta name="twitter:image" content="https://skihere.org/og-card.png">
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -41,10 +41,13 @@
     },
     {
       "@type": "Article",
-      "headline": "SKI HERE — Financial Plan",
+      "headline": "SKI HERE — Financial Plan for Utah Public Ski Area",
       "description": "Capital costs, operating costs, revenue projections, funding sources, risks, and governance models for the SKI HERE Utah public ski area pilot project.",
       "url": "https://skihere.org/financials",
       "inLanguage": "en-US",
+      "datePublished": "2026-04-30",
+      "dateModified": "2026-04-30",
+      "keywords": "Utah public ski area, affordable skiing Utah, ski resort financial plan, Utah ski resort 2029, resident-first ski area",
       "isPartOf": { "@id": "https://skihere.org/#website" },
       "about": { "@id": "https://skihere.org/#organization" },
       "publisher": { "@id": "https://skihere.org/#organization" }
@@ -106,8 +109,8 @@
 :root {
   --navy: #002E5D;
   --navy-dark: #001f42;
-  --orange: #E45122;
-  --orange-hover: #c9411a;
+  --orange: #C8501F;
+  --orange-hover: #a83e18;
   --white: #FFFFFF;
   --snow: #F5F5F5;
   --powder: #D9E9F7;
@@ -126,7 +129,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .nav-stripe .o1 { width: 100px; background: var(--orange); }
 .nav-stripe .n2 { flex: 1; background: var(--navy); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 3rem; }
-.nav-logo { font-family: var(--display); font-size: 1.75rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; text-decoration: none; }
+.nav-logo { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; text-decoration: none; }
+.nav-logo-wrap { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
+.nav-logo-sub { font-family: var(--body); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 0.15rem; }
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.15s; }
 .nav-links a:hover { color: var(--white); }
@@ -148,7 +153,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .metric { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.2); flex: 1; min-width: 160px; }
 .metric:last-child { border-right: none; }
 .metric-num { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; line-height: 1; }
-.metric-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-top: 0.3rem; line-height: 1.4; }
+.metric-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-top: 0.3rem; line-height: 1.4; }
 
 /* SECTIONS */
 section { padding: 5rem 3rem; }
@@ -160,12 +165,12 @@ section { padding: 5rem 3rem; }
 /* FINANCIAL TABLES */
 .fin-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
 .fin-table thead tr { background: var(--navy); }
-.fin-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
+.fin-table th { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
 .fin-table th:not(:first-child) { text-align: right; }
 .fin-table td { font-size: 0.9rem; padding: 0.65rem 1rem; border-bottom: 1px solid var(--snow); color: var(--charcoal); vertical-align: top; }
 .fin-table td:not(:first-child) { text-align: right; font-weight: 700; color: var(--navy); }
 .fin-table tr.total td { border-top: 3px solid var(--navy); border-bottom: none; font-weight: 700; font-size: 0.95rem; padding-top: 0.85rem; background: var(--snow); }
-.fin-table tr.section-head td { background: var(--powder); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); padding: 0.5rem 1rem; }
+.fin-table tr.section-head td { background: var(--powder); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); padding: 0.5rem 1rem; }
 .fin-table tr.surplus td { background: rgba(0,46,93,0.05); color: var(--navy); font-weight: 700; }
 .fin-table tr.surplus td:not(:first-child) { color: var(--orange); }
 .fin-table tr.deficit td:not(:first-child) { color: #8B0000; }
@@ -176,15 +181,15 @@ section { padding: 5rem 3rem; }
 .phase-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
 .phase-card { padding: 2rem; border-top: 5px solid var(--navy); background: var(--snow); }
 .phase-card:nth-child(1) { border-top-color: var(--orange); background: var(--navy); }
-.phase-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.5rem; }
+.phase-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.5rem; }
 .phase-card:nth-child(1) .phase-label { color: var(--orange); }
 .phase-card:nth-child(2) .phase-label, .phase-card:nth-child(3) .phase-label { color: var(--navy); opacity: 0.6; }
-.phase-name { font-family: var(--display); font-size: 1.5rem; font-weight: 900; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.25rem; }
+.phase-name { font-family: var(--display); font-size: 1.5rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.25rem; }
 .phase-card:nth-child(1) .phase-name { color: var(--white); }
 .phase-cost { font-family: var(--display); font-size: 2.5rem; font-weight: 900; color: var(--orange); letter-spacing: -0.02em; line-height: 1; margin-bottom: 1rem; }
 .phase-desc { font-size: 0.85rem; color: var(--mid-gray); line-height: 1.6; }
 .phase-card:nth-child(1) .phase-desc { color: rgba(255,255,255,0.65); }
-.phase-timeline { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-top: 0.75rem; }
+.phase-timeline { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-top: 0.75rem; }
 
 /* FUNDING */
 .funding-section { background: var(--snow); }
@@ -198,7 +203,7 @@ section { padding: 5rem 3rem; }
 .funding-notes { font-size: 0.78rem; color: var(--mid-gray); min-width: 220px; }
 .funding-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
 .funding-table thead tr { background: var(--navy); }
-.funding-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
+.funding-table th { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
 .funding-table th:nth-child(2) { text-align: right; }
 .funding-table td { font-size: 0.88rem; padding: 0.7rem 1rem; border-bottom: 1px solid rgba(0,46,93,0.08); color: var(--charcoal); vertical-align: top; line-height: 1.5; }
 .funding-table td:nth-child(2) { text-align: right; font-weight: 700; color: var(--navy); white-space: nowrap; }
@@ -208,7 +213,7 @@ section { padding: 5rem 3rem; }
 /* RISK TABLE */
 .risk-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
 .risk-table thead tr { background: var(--navy); }
-.risk-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
+.risk-table th { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
 .risk-table td { font-size: 0.88rem; padding: 0.8rem 1rem; border-bottom: 1px solid var(--snow); vertical-align: top; line-height: 1.55; }
 .risk-table td:first-child { font-weight: 700; color: var(--navy); width: 35%; }
 .risk-table td:last-child { color: var(--mid-gray); }
@@ -218,8 +223,8 @@ section { padding: 5rem 3rem; }
 .hl-card-navy { background: var(--navy); padding: 2rem; }
 .hl-card-orange { background: var(--orange); padding: 2rem; }
 .hl-card-light { background: var(--snow); padding: 2rem; border-top: 4px solid var(--navy); }
-.hl-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.35rem; }
-.hl-card-navy .hl-label { color: rgba(255,255,255,0.5); }
+.hl-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.35rem; }
+.hl-card-navy .hl-label { color: rgba(255,255,255,0.55); }
 .hl-card-orange .hl-label { color: rgba(255,255,255,0.7); }
 .hl-card-light .hl-label { color: var(--orange); }
 .hl-num { font-family: var(--display); font-size: 3rem; font-weight: 900; letter-spacing: -0.02em; line-height: 1; margin-bottom: 0.5rem; }
@@ -234,7 +239,7 @@ section { padding: 5rem 3rem; }
 /* GOVERNANCE TABLE */
 .gov-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
 .gov-table thead tr { background: var(--navy); }
-.gov-table th { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
+.gov-table th { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); padding: 0.85rem 1rem; text-align: left; }
 .gov-table td { font-size: 0.85rem; padding: 0.8rem 1rem; border-bottom: 1px solid var(--snow); vertical-align: top; line-height: 1.55; color: var(--charcoal); }
 .gov-table td:first-child { font-weight: 700; color: var(--navy); }
 
@@ -284,13 +289,17 @@ footer { background: var(--navy-dark); }
 <nav>
   <div class="nav-stripe"><div class="n1"></div><div class="o1"></div><div class="n2"></div></div>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">SKI HERE</a>
+    <a href="/" class="nav-logo-wrap">
+      <span class="nav-logo">SKI HERE</span>
+      <span class="nav-logo-sub">Utah Public Ski Area</span>
+    </a>
     <div class="nav-links">
       <a href="/#problem">The Problem</a>
       <a href="/#proposal">The Proposal</a>
       <a href="/#precedent">Precedent</a>
       <a href="/#story">About</a>
       <a href="/financials" class="nav-active">Financial Plan</a>
+      <a href="/board">Board</a>
       <a href="/#contact" class="nav-cta">Get Involved</a>
     </div>
   </div>
@@ -345,7 +354,7 @@ footer { background: var(--navy-dark); }
 
     <div class="two-col">
       <table class="fin-table">
-        <thead><tr><th>Cost Item</th><th>Estimated Cost</th></tr></thead>
+        <thead><tr><th scope="col">Cost Item</th><th scope="col">Estimated Cost</th></tr></thead>
         <tbody>
           <tr><td>Land Acquisition (USFS SUP assumed)</td><td>$0</td></tr>
           <tr><td>Lift Installation (5 fixed-grip quads @ $4.5M)</td><td>$22,500,000</td></tr>
@@ -402,7 +411,7 @@ footer { background: var(--navy-dark); }
     <div class="section-note">Costs are structured into Controllable and Non-Controllable categories per industry best practice. Variable labor scales daily with skier visit counts, protecting margin in slow periods. All costs escalate at 3% annually.</div>
 
     <table class="fin-table">
-      <thead><tr><th>Operating Line Item</th><th>Year 1</th><th>Year 6 (Stabilized)</th></tr></thead>
+      <thead><tr><th scope="col">Operating Line Item</th><th scope="col">Year 1</th><th scope="col">Year 6 (Stabilized)</th></tr></thead>
       <tbody>
         <tr class="section-head"><td colspan="3">Controllable — Fixed Labor</td></tr>
         <tr><td>Fixed Labor (fully loaded, incl. benefits)</td><td>$774,090</td><td>$898,000</td></tr>
@@ -454,7 +463,7 @@ footer { background: var(--navy-dark); }
     <div style="margin-top:3rem;">
       <table class="fin-table">
         <thead>
-          <tr><th>Revenue Stream</th><th>Year 1</th><th>Year 5</th><th>Year 10</th></tr>
+          <tr><th scope="col">Revenue Stream</th><th scope="col">Year 1</th><th scope="col">Year 5</th><th scope="col">Year 10</th></tr>
         </thead>
         <tbody>
           <tr><td>Skier Visits</td><td>80,000</td><td>147,000</td><td>180,000</td></tr>
@@ -469,7 +478,7 @@ footer { background: var(--navy-dark); }
           <tr class="surplus"><td>Operating Surplus / (Deficit)</td><td>$940,000</td><td>$4,738,000</td><td>$5,939,000</td></tr>
         </tbody>
       </table>
-      <p style="font-size:0.7rem; color:var(--mid-gray); margin-top:0.75rem; font-style:italic;">Revenue figures are illustrative estimates from the companion Excel model. Financial sustainability target is Year 2–3. The Excel workbook allows full sensitivity testing on all assumptions.</p>
+      <p style="font-size:0.72rem; color:var(--mid-gray); margin-top:0.75rem; font-style:italic;">Revenue figures are illustrative estimates from the companion Excel model. Financial sustainability target is Year 2–3. The Excel workbook allows full sensitivity testing on all assumptions.</p>
     </div>
   </div>
 </section>
@@ -484,7 +493,7 @@ footer { background: var(--navy-dark); }
 
     <table class="funding-table">
       <thead>
-        <tr><th>Funding Source</th><th>Amount</th><th>Notes</th></tr>
+        <tr><th scope="col">Funding Source</th><th scope="col">Amount</th><th scope="col">Notes</th></tr>
       </thead>
       <tbody>
         <tr><td>State Legislative Appropriation / Bond</td><td>$25,000,000</td><td>Primary mechanism. Mirrors proven NY ORDA public ski area operating model.</td></tr>
@@ -509,7 +518,7 @@ footer { background: var(--navy-dark); }
     <h2 class="section-title">Key risks & mitigations</h2>
 
     <table class="risk-table">
-      <thead><tr><th>Risk</th><th>Mitigation</th></tr></thead>
+      <thead><tr><th scope="col">Risk</th><th scope="col">Mitigation</th></tr></thead>
       <tbody>
         <tr>
           <td>Low snowfall years</td>
@@ -549,10 +558,10 @@ footer { background: var(--navy-dark); }
     <p style="font-size:0.98rem; color:var(--mid-gray); max-width:680px; line-height:1.7; margin-bottom:2rem;">Three governance structures are worth evaluating in a formal feasibility study, each with different implications for state exposure, pricing flexibility, and long-term sustainability.</p>
 
     <table class="gov-table">
-      <thead><tr><th>Model</th><th>Description</th><th>Pros</th><th>Cons</th></tr></thead>
+      <thead><tr><th scope="col">Model</th><th scope="col">Description</th><th scope="col">Pros</th><th scope="col">Cons</th></tr></thead>
       <tbody>
         <tr>
-          <td>State Authority<br><span style="font-size:0.7rem; color:var(--orange); font-weight:700; letter-spacing:0.06em; text-transform:uppercase;">Recommended</span></td>
+          <td>State Authority<br><span style="font-size:0.72rem; color:var(--orange); font-weight:700; letter-spacing:0.06em; text-transform:uppercase;">Recommended</span></td>
           <td>State creates a public ski authority that owns and operates the resort with a professional management board. Mirrors ORDA/Gore Mountain model.</td>
           <td style="color:#1a6b36;">Full pricing control; mission-driven; access to state capital; strongest precedent</td>
           <td style="color:#8B0000;">State absorbs operating risk; requires legislative action</td>
@@ -577,7 +586,7 @@ footer { background: var(--navy-dark); }
 <!-- CTA -->
 <section style="background:var(--navy); padding:4rem 3rem; text-align:center;">
   <div class="container">
-    <div class="eyebrow" style="color:rgba(255,255,255,0.45);">Questions or feedback?</div>
+    <div class="eyebrow" style="color:rgba(255,255,255,0.55);">Questions or feedback?</div>
     <h2 style="font-family:var(--display); font-size:clamp(2rem,4vw,3.5rem); font-weight:900; color:var(--white); letter-spacing:-0.02em; margin-bottom:1rem;">The companion Excel model<br>is available on request</h2>
     <p style="font-size:0.98rem; color:rgba(255,255,255,0.6); max-width:520px; margin:0 auto 2.5rem; line-height:1.7;">All figures in this summary come from a fully editable Excel workbook with live formulas for sensitivity testing. Reach out to discuss the assumptions or request the working model.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
