@@ -389,9 +389,19 @@ footer { background: var(--navy-dark); }
   .pillars-grid { grid-template-columns: 1fr 1fr; }
   .steps-grid { grid-template-columns: 1fr 1fr; }
   .econ-stat { border-right: none; border-bottom: 1px solid rgba(0,46,93,0.1); }
+  .olympic-stats { gap: 2rem; }
+  .olympic-section { padding: 4rem 1.25rem; }
+  .supply-table, .pricing-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .footer-inner { padding: 1.5rem 1.25rem; }
+  .footer-nav { flex-wrap: wrap; gap: 0.75rem; }
 }
 @media (max-width: 580px) {
   .pillars-grid, .steps-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: clamp(3rem, 12vw, 4.5rem); }
+  .btn-take-action { font-size: 1.2rem; padding: 1rem 2rem; width: 100%; text-align: center; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .olympic-stats { gap: 1.5rem; }
+  .econ-inner { flex-direction: column; }
 }
 
 /* ANIMATIONS */
@@ -572,81 +582,101 @@ footer { background: var(--navy-dark); }
 <!-- PROBLEM -->
 <section class="problem-section" id="problem">
   <div class="container">
-    <div class="problem-intro">
+    <div class="problem-intro" style="margin-bottom:3rem;">
       <div class="eyebrow">Two problems, one solution</div>
-      <h2 class="section-title">Utah's ski industry is thriving.<br>Utah families are being left behind.</h2>
-      <p class="section-body">Over two decades, expensive lift tickets have risen at more than twice the rate of inflation — while Utah's population has nearly doubled with no new major resort to absorb the demand. High prices and overcrowding are two symptoms of the same market failure: demand has dramatically outgrown supply, and private operators have no incentive to fix it. And with the 2034 Winter Olympics returning to Utah, the contrast between world-class ski infrastructure and priced-out local families will be on full display for the world to see.</p>
+      <h2 class="section-title">Utah's ski industry is booming.<br>Utah families are being priced out.</h2>
+      <p class="section-body" style="max-width:680px;">Lift ticket prices have risen at more than twice the rate of inflation while Utah's population has nearly doubled — with no new major resort to absorb demand. When the 2034 Winter Olympics return to Utah, the contrast between world-class ski infrastructure and priced-out local families will be on display for the world to see.</p>
     </div>
 
-    <div class="two-col">
+    <div class="two-col reveal">
+      <!-- LEFT: Price problem + chart -->
       <div>
-        <div class="eyebrow" style="margin-bottom:1.5rem;">Problem 1 — The price barrier</div>
-        <p class="section-body" style="margin-bottom:1.5rem;">Utah's top resorts now charge up to $299 per day at peak season, with mid-tier options exceeding $159. Expensive skiing has become the norm — a family of four faces lift ticket costs alone exceeding $600 for a single day, before equipment, lessons, food, or travel.</p>
-        <p class="section-body" style="margin-bottom:1.5rem;">Bundle passes help frequent multi-resort skiers, but are designed for travelers — not the Utah family that wants to ski their home mountain a handful of times each winter. <strong style="color:var(--navy);">The model that generates revenue for the state has inadvertently priced out the residents who live closest to the mountains.</strong></p>
-        <p class="section-body">Existing affordable options serve beginners, but avid skiers won't bring their families there — the terrain doesn't challenge or inspire intermediate and advanced riders. These resorts also sit at low elevations, forcing closures in poor snow years precisely when budget-conscious families need them most.</p>
-      </div>
-      <div class="chart-card">
-        <div class="chart-corner"></div>
-        <div class="chart-label">Average Utah lift ticket vs. CPI inflation (2000–2025)</div>
-        <div class="chart-legend">
-          <div class="legend-item"><div class="legend-dot" style="background:var(--orange);"></div>Avg. window ticket price</div>
-          <div class="legend-item"><div class="legend-dot" style="background:rgba(217,233,247,0.5);"></div>If prices tracked CPI</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-yr">2000</div>
-          <div class="bar-track" style="flex:1;position:relative;">
-            <div class="bar-fill" style="width:26%; background:var(--orange);"><span style="color:white;">$48</span></div>
+        <div class="eyebrow" style="margin-bottom:1rem;">Problem 1 — The price barrier</div>
+        <p class="section-body" style="margin-bottom:1.5rem;">Utah's top resorts now charge up to $299 per day. A family of four faces lift tickets alone exceeding $600 — before equipment, lessons, food, or travel. The revenue model has priced out the residents who live closest to the mountains.</p>
+        <div class="chart-card reveal">
+          <div class="chart-corner"></div>
+          <div class="chart-label">Average Utah lift ticket vs. CPI inflation (2000–2025)</div>
+          <div class="chart-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:var(--orange);"></div>Avg. window ticket price</div>
+            <div class="legend-item"><div class="legend-dot" style="background:rgba(217,233,247,0.5);"></div>If prices tracked CPI</div>
           </div>
+          <div class="bar-row">
+            <div class="bar-yr">2000</div>
+            <div class="bar-track" style="flex:1;position:relative;">
+              <div class="bar-fill" style="width:26%; background:var(--orange);"><span style="color:white;">$48</span></div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-yr">2005</div>
+            <div class="bar-track"><div class="bar-fill" style="width:38%; background:var(--orange);"><span style="color:white;">$63</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-yr">2010</div>
+            <div class="bar-track"><div class="bar-fill" style="width:44%; background:var(--orange);"><span style="color:white;">$72</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-yr">2015</div>
+            <div class="bar-track"><div class="bar-fill" style="width:58%; background:var(--orange);"><span style="color:white;">$96</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-yr">2020</div>
+            <div class="bar-track"><div class="bar-fill" style="width:66%; background:var(--orange);"><span style="color:white;">$108</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-yr">2025</div>
+            <div class="bar-track"><div class="bar-fill" style="width:100%; background:var(--orange);"><span style="color:white;">$165</span></div></div>
+          </div>
+          <div style="height:1rem;"></div>
+          <div class="bar-row">
+            <div class="bar-yr" style="color:rgba(255,255,255,0.55);">CPI</div>
+            <div class="bar-track"><div class="bar-fill" style="width:55%; background:rgba(217,233,247,0.25);"><span style="color:rgba(255,255,255,0.5);">$90</span></div></div>
+          </div>
+          <div class="chart-note">Lift ticket prices up ~240% since 2000. CPI over the same period: ~87%. Sources: Resort pricing data; U.S. Bureau of Labor Statistics.</div>
         </div>
-        <div class="bar-row">
-          <div class="bar-yr">2005</div>
-          <div class="bar-track"><div class="bar-fill" style="width:38%; background:var(--orange);"><span style="color:white;">$63</span></div></div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-yr">2010</div>
-          <div class="bar-track"><div class="bar-fill" style="width:44%; background:var(--orange);"><span style="color:white;">$72</span></div></div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-yr">2015</div>
-          <div class="bar-track"><div class="bar-fill" style="width:58%; background:var(--orange);"><span style="color:white;">$96</span></div></div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-yr">2020</div>
-          <div class="bar-track"><div class="bar-fill" style="width:66%; background:var(--orange);"><span style="color:white;">$108</span></div></div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-yr">2025</div>
-          <div class="bar-track"><div class="bar-fill" style="width:100%; background:var(--orange);"><span style="color:white;">$165</span></div></div>
-        </div>
-        <div style="height:1rem;"></div>
-        <div class="bar-row">
-          <div class="bar-yr" style="color:rgba(255,255,255,0.55);">CPI</div>
-          <div class="bar-track"><div class="bar-fill" style="width:55%; background:rgba(217,233,247,0.25);"><span style="color:rgba(255,255,255,0.5);">$90</span></div></div>
-        </div>
-        <div class="chart-note">Lift ticket prices up ~240% since 2000. CPI over the same period: ~87%. Sources: Resort pricing data; U.S. Bureau of Labor Statistics.</div>
+      </div>
+
+      <!-- RIGHT: Supply problem + table -->
+      <div>
+        <div class="eyebrow" style="margin-bottom:1rem;">Problem 2 — The supply crisis</div>
+        <p class="section-body" style="margin-bottom:1.5rem;">Utah's population has grown from 1.7 million to 3.5 million since 1990 — yet the number of ski resorts has barely changed. Per capita, Utahns have half the resort access they had a generation ago. The average Utah skier is now 48. If nothing changes, the 2034 Olympics will showcase world-class skiing to an audience that can no longer afford to participate.</p>
+        <table class="supply-table reveal">
+          <thead><tr><th>Metric</th><th>1990</th><th>2025</th><th>Change</th></tr></thead>
+          <tbody>
+            <tr><td>Utah Population</td><td>1.7M</td><td>3.5M</td><td class="change-pos">+106%</td></tr>
+            <tr><td>Utah Ski Resorts</td><td>~14</td><td>~15</td><td>+7%</td></tr>
+            <tr><td>Resorts per 100K residents</td><td>0.82</td><td>0.43</td><td class="change-neg">–48%</td></tr>
+            <tr><td>Annual Skier Days</td><td>~3M</td><td>6.5M</td><td class="change-pos">+117%</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.65rem; color:var(--mid-gray); margin-top:0.75rem;">Sources: U.S. Census Bureau; Ski Utah; Kem C. Gardner Policy Institute.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div style="margin-top:4rem;">
-      <div class="eyebrow" style="margin-bottom:1.5rem;">Problem 2 — The supply crisis</div>
-      <div class="two-col">
-        <div>
-          <p class="section-body" style="margin-bottom:1.5rem;">Utah's population has grown from 1.7 million in 1990 to roughly 3.5 million today — yet the number of ski resorts has held nearly constant at approximately 15 statewide. Per capita, Utahns have half the resort access they did a generation ago, even as Utah mountains skiing has become world-famous and Ski Utah continues to draw record visitor numbers.</p>
-          <p class="section-body">The explosion in backcountry skiing, chronic powder-day overcrowding, and years of debate over canyon infrastructure upgrades are all symptoms of the same structural constraint: demand has far outgrown supply. Multi-resort pass models have compounded this further — directing large volumes of out-of-state traffic toward Utah's fixed mountain capacity.</p>
-          <p style="margin-top:1.25rem; font-size:0.88rem; font-style:italic; color:var(--mid-gray);">The average age of a Utah skier is now 48. If nothing changes, the 2034 Olympics will showcase world-class skiing to a Utah audience that can no longer afford to participate.</p>
-        </div>
-        <div>
-          <table class="supply-table">
-            <thead><tr><th scope="col">Metric</th><th scope="col">1990</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead>
-            <tbody>
-              <tr><td>Utah Population</td><td>1.7M</td><td>3.5M</td><td class="change-pos">+106%</td></tr>
-              <tr><td>Utah Ski Resorts</td><td>~14</td><td>~15</td><td>+7%</td></tr>
-              <tr><td>Resorts per 100K residents</td><td>0.82</td><td>0.43</td><td class="change-neg">–48%</td></tr>
-              <tr><td>Annual Skier Days</td><td>~3M</td><td>6.5M</td><td class="change-pos">+117%</td></tr>
-            </tbody>
-          </table>
-          <p style="font-size:0.65rem; color:var(--mid-gray); margin-top:0.75rem;">Sources: U.S. Census Bureau; Ski Utah; Kem C. Gardner Policy Institute.</p>
-        </div>
+<!-- OLYMPIC -->
+<section class="olympic-section" id="olympic">
+  <div class="olympic-bg">2034</div>
+  <div class="olympic-content">
+    <div class="olympic-eyebrow">2034 Winter Olympics</div>
+    <h2 class="olympic-title">Utah's moment — and a responsibility</h2>
+    <p class="olympic-body">When the 2002 Olympics came to Utah, most Utahns could see themselves in those athletes — because they skied too. The 2034 Games are coming back, bringing the world's eyes to the Greatest Snow on Earth. But if nothing changes, the Olympics will celebrate skiing that Utah families can no longer afford. A public ski area ensures that moment belongs to every Utahn — not just those who can pay $299 a day.</p>
+    <div class="olympic-stats">
+      <div>
+        <div class="oly-stat-num">$6.6B</div>
+        <div class="oly-stat-label">Projected Olympic<br>economic output</div>
+      </div>
+      <div>
+        <div class="oly-stat-num">42,000</div>
+        <div class="oly-stat-label">Job-years of<br>employment created</div>
+      </div>
+      <div>
+        <div class="oly-stat-num">–48%</div>
+        <div class="oly-stat-label">Drop in per-capita<br>resort access since 1990</div>
+      </div>
+      <div>
+        <div class="oly-stat-num">Now</div>
+        <div class="oly-stat-label">Time for Utah<br>to act</div>
       </div>
     </div>
   </div>
@@ -658,38 +688,38 @@ footer { background: var(--navy-dark); }
   <div class="container">
     <div class="eyebrow">The Proposal</div>
     <h2 class="section-title">A state-sponsored public ski area,<br>built for Utah families first</h2>
-    <p class="section-body" style="max-width:680px;">Utah should commission a feasibility study and pilot program for a resident-first public ski resort. Not another luxury destination — a community ski area that prioritizes ski terrain in the Wasatch, reliable snow, and prices that Utah families can actually afford.</p>
+    <p class="section-body" style="max-width:680px;">Utah should commission a feasibility study and pilot program for a resident-first public ski area — not another luxury destination, but a community mountain with serious Wasatch terrain and prices Utah families can actually afford.</p>
 
     <div class="pillars-grid">
       <div class="pillar reveal">
         <div class="pillar-num">01</div>
         <div class="pillar-title">Resident-first pricing</div>
-        <p class="pillar-body">$59 adult day ticket for Utah residents — well below any comparable Utah mountain resort. $750 resident season pass for a resort with more terrain and vertical than any currently affordable Utah option.</p>
+        <p class="pillar-body">$59 adult day ticket and $750 season pass for Utah residents — well below any comparable option in the state.</p>
       </div>
       <div class="pillar reveal">
         <div class="pillar-num">02</div>
         <div class="pillar-title">Serious terrain</div>
-        <p class="pillar-body">1,000 skiable acres with 2,500 ft of vertical drop in Phase 1. Base elevation ~7,200 ft ensures reliable snowpack. Five fixed-grip quad chairs plus a magic carpet — efficient, proven, cost-effective.</p>
+        <p class="pillar-body">1,000 skiable acres, 2,500 ft of vertical, and a ~7,200 ft base elevation for reliable snowpack. Five fixed-grip quads plus a magic carpet — efficient, proven, cost-effective.</p>
       </div>
       <div class="pillar reveal">
         <div class="pillar-num">03</div>
         <div class="pillar-title">Simple infrastructure</div>
-        <p class="pillar-body">~30,000 sq ft functional base lodge. Cafeteria-style food and beverage. Prior-season rental fleet. Costs are kept low by eliminating luxury amenities — what remains is what skiers actually care about.</p>
+        <p class="pillar-body">~30,000 sq ft base lodge with cafeteria-style dining and a rental fleet. Luxury amenities are cut — what remains is what skiers actually care about.</p>
       </div>
       <div class="pillar reveal">
         <div class="pillar-num">04</div>
         <div class="pillar-title">School programs</div>
-        <p class="pillar-body">Partnership with Utah public schools to deliver low-cost ski education at $15 per student. 5,000 participants projected in Year 1, growing 10% annually. Getting kids on skis young is the most reliable way to create lifelong participants.</p>
+        <p class="pillar-body">$15-per-student school program, with 5,000 participants projected in Year 1 growing 10% annually. Getting kids on skis young is the most reliable path to lifelong participation.</p>
       </div>
       <div class="pillar reveal">
         <div class="pillar-num">05</div>
         <div class="pillar-title">Overcrowding relief</div>
-        <p class="pillar-body">Adding resort capacity distributes demand across a broader base of terrain, reducing lift lines and congestion at Utah's existing resorts. Even visitors who never ski the public resort benefit from less crowded conditions at the mountains they already frequent.</p>
+        <p class="pillar-body">New capacity distributes demand, reducing lift lines at Utah's existing resorts. Even skiers who never visit the public area benefit from less crowded mountains.</p>
       </div>
       <div class="pillar reveal">
         <div class="pillar-num">06</div>
         <div class="pillar-title">Phased development</div>
-        <p class="pillar-body">Phase 1 targets a 2029 opening with 3 lifts + magic carpet, ~500 acres, and full base lodge. Phase 2 adds 2 additional lifts and remaining terrain once financial sustainability is demonstrated. Reduces upfront state risk.</p>
+        <p class="pillar-body">Phase 1 targets a 2029 opening with 3 lifts, a magic carpet, ~500 acres, and a full base lodge. Phase 2 adds 2 lifts and remaining terrain once sustainability is demonstrated, limiting upfront state risk.</p>
       </div>
     </div>
   </div>
@@ -714,7 +744,7 @@ footer { background: var(--navy-dark); }
           </tbody>
         </table>
         <p class="pricing-comparison">The most affordable quality-terrain day ticket and season pass available to Utah residents.</p>
-        <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--mid-gray);">Out-of-state visitors are welcome at market rates, funding operations and resident access. A state-sponsored resort would not cannibalize high-revenue tourist traffic — it would create an entirely new on-ramp for Utahns.</p>
+        <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--mid-gray);">Out-of-state visitors are welcome at market rates, funding operations and resident access. A public resort doesn't cannibalize tourist traffic — it creates an on-ramp for Utahns who've been priced out.</p>
       </div>
       <div>
         <div class="resort-profile">
@@ -740,29 +770,29 @@ footer { background: var(--navy-dark); }
   <div class="container">
     <div class="eyebrow">It has been done before</div>
     <h2 class="section-title">A proven model. Not a radical idea.</h2>
-    <p class="section-body" style="max-width:680px;">State-owned skiing and municipally supported ski areas have operated successfully for decades. Public access skiing is not a new idea — Utah need not invent this from scratch, and Utah has already voted for the underlying principle in two other recreation contexts.</p>
+    <p class="section-body" style="max-width:680px;">State-owned and municipally supported ski areas have operated successfully for decades. Public access skiing is not a new idea — and Utah has already embraced the underlying principle in other recreation contexts.</p>
 
     <div class="precedent-cards">
       <div class="prec-card reveal">
         <div class="prec-loc">United States</div>
         <div class="prec-name">States already do this</div>
         <ul class="prec-list">
-          <li>Multiple U.S. states operate publicly owned ski areas as recreational infrastructure — the same way Utah operates public golf courses, parks, and wildlife areas</li>
+          <li>Multiple U.S. states operate publicly owned ski areas the same way Utah operates public golf courses and wildlife areas</li>
           <li>These resorts are justified by regional economic impact and community access — not standalone profitability</li>
-          <li>Resident-first season pass programs and below-market day tickets are standard features of publicly operated mountains</li>
-          <li>Public ski areas in other states consistently rank among the top value destinations in the country</li>
-          <li>The model is proven, financially documented, and directly applicable to Utah's situation</li>
+          <li>Resident-first passes and below-market day tickets are standard features of publicly operated mountains</li>
+          <li>Public ski areas in other states consistently rank among the country's top value destinations</li>
+          <li>The model is proven, financially documented, and directly applicable to Utah</li>
         </ul>
       </div>
       <div class="prec-card reveal">
         <div class="prec-loc">Europe · Canada · Scandinavia · Japan</div>
         <div class="prec-name">The world already does this</div>
         <ul class="prec-list">
-          <li>Municipalities and regional governments across Europe, Canada, Scandinavia, and Japan have operated ski areas as public utilities for generations</li>
-          <li>Community ownership of ski infrastructure is the norm in many of the world's great ski nations — keeping the sport accessible to local residents regardless of tourism demand</li>
-          <li>These areas are built to serve the people who live in mountain communities, not to maximize per-ticket revenue from international visitors</li>
-          <li>Public ski infrastructure has been shown to build lasting sporting culture, drive youth participation, and support local economies across generations</li>
-          <li>If Austria, France, Canada, and Japan can do it — Utah, with the Greatest Snow on Earth and the 2034 Olympics on the horizon, has every reason to lead</li>
+          <li>Municipalities across Europe, Canada, Scandinavia, and Japan have run ski areas as public utilities for generations</li>
+          <li>Community ownership of ski infrastructure is the norm in many great ski nations — keeping the sport accessible regardless of tourism demand</li>
+          <li>These areas exist to serve local residents, not to maximize per-ticket revenue from international visitors</li>
+          <li>Public ski infrastructure builds lasting sporting culture, drives youth participation, and supports local economies across generations</li>
+          <li>If Austria, France, Canada, and Japan can do it — Utah, with the Greatest Snow on Earth and the 2034 Olympics, has every reason to lead</li>
         </ul>
       </div>
     </div>
@@ -770,11 +800,11 @@ footer { background: var(--navy-dark); }
     <div class="analogy-strip">
       <div class="analogy-card reveal">
         <div class="analogy-title">Utah already does this — for golf and hunting</div>
-        <p class="analogy-body">Utah operates public golf courses at below-market rates and uses resident-first pricing for hunting and fishing permits. The policy rationale is identical: Utah's natural resources belong first to Utahns. A public ski area extends this well-established principle to winter recreation in the Wasatch.</p>
+        <p class="analogy-body">Utah already operates public golf courses at below-market rates and uses resident-first pricing for hunting and fishing permits. A public ski area simply extends that same principle to winter recreation in the Wasatch.</p>
       </div>
       <div class="analogy-card reveal">
         <div class="analogy-title">Why should Utah be the exception?</div>
-        <p class="analogy-body">States and countries around the world have decided that ski access is part of the public good — a resource worth protecting for residents. Utah has the greatest snow on earth, the 2034 Winter Olympics, and a population that has been priced out of the mountains. The question isn't whether public skiing works. It's why Utah hasn't done it yet.</p>
+        <p class="analogy-body">States and countries worldwide have decided ski access is part of the public good. Utah has the greatest snow on earth, the 2034 Winter Olympics, and a population priced out of the mountains. The question isn't whether public skiing works — it's why Utah hasn't done it yet.</p>
       </div>
     </div>
 
@@ -784,69 +814,41 @@ footer { background: var(--navy-dark); }
   </div>
 </section>
 
-<!-- OLYMPIC -->
-<section class="olympic-section" id="olympic">
-  <div class="olympic-bg">2034</div>
-  <div class="olympic-content">
-    <div class="olympic-eyebrow">2034 Winter Olympics</div>
-    <h2 class="olympic-title">Utah's moment — and a responsibility</h2>
-    <p class="olympic-body">When the 2002 Olympics came to Utah, most Utahns could see themselves in those athletes — because they skied too. The 2034 Winter Olympics are coming back to Utah, bringing the world's eyes to the Greatest Snow on Earth. But if nothing changes, the Games will showcase world-class skiing to Utah families who can no longer afford a lift ticket. A public ski area would ensure that Utah's Olympic moment belongs to every Utahn — not just those who can afford $299 a day.</p>
-    <div class="olympic-stats">
-      <div>
-        <div class="oly-stat-num">$6.6B</div>
-        <div class="oly-stat-label">Projected Olympic<br>economic output</div>
-      </div>
-      <div>
-        <div class="oly-stat-num">42,000</div>
-        <div class="oly-stat-label">Job-years of<br>employment created</div>
-      </div>
-      <div>
-        <div class="oly-stat-num">–48%</div>
-        <div class="oly-stat-label">Drop in per-capita<br>resort access since 1990</div>
-      </div>
-      <div>
-        <div class="oly-stat-num">Now</div>
-        <div class="oly-stat-label">Time for Utah<br>to act</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- NEXT STEPS -->
 <section class="steps-section" id="steps">
   <div class="container">
     <div class="eyebrow">Proposed next steps</div>
     <h2 class="section-title">This proposal asks Utah to take the first step</h2>
-    <p class="section-body" style="max-width:680px;">This is not a request to immediately build a ski resort. It is a request for Utah's elected leaders to begin understanding whether this investment is feasible — and what form it should take. With the 2034 Winter Olympics less than a decade away, the window to act is narrow.</p>
+    <p class="section-body" style="max-width:680px;">This is not a request to immediately build a ski resort — it's a request for Utah's elected leaders to determine whether this investment is feasible and what form it should take. With the 2034 Olympics less than a decade away, the window to act is narrow.</p>
     <div class="steps-grid">
       <div class="step reveal">
         <div class="step-num">01</div>
         <div class="step-title">Feasibility study</div>
-        <p class="step-body">Commission an independent study examining potential sites, capital costs, operating models, revenue projections, and legal frameworks.</p>
+        <p class="step-body">Commission an independent study covering potential sites, capital costs, operating models, revenue projections, and legal frameworks.</p>
         <div class="step-timeline">12–18 months</div>
       </div>
       <div class="step reveal">
         <div class="step-num">02</div>
         <div class="step-title">Site identification</div>
-        <p class="step-body">Identify candidate locations with sufficient elevation, vertical drop, and terrain variety. State or federal land ownership reduces capital requirements.</p>
+        <p class="step-body">Identify candidate locations with sufficient elevation, vertical, and terrain variety — prioritizing state or federal land to reduce capital requirements.</p>
         <div class="step-timeline">Concurrent with Step 1</div>
       </div>
       <div class="step reveal">
         <div class="step-num">03</div>
         <div class="step-title">Stakeholder engagement</div>
-        <p class="step-body">Convene a working group of ski professionals, school districts, local governments, environmental stakeholders, and Utah families.</p>
+        <p class="step-body">Convene a working group spanning ski professionals, school districts, local governments, environmental stakeholders, and Utah families.</p>
         <div class="step-timeline">Months 6–18</div>
       </div>
       <div class="step reveal">
         <div class="step-num">04</div>
         <div class="step-title">Pilot program design</div>
-        <p class="step-body">Design a phased pilot beginning with Phase 1 infrastructure — demonstrating the model before full capital commitment is required.</p>
+        <p class="step-body">Design a phased pilot starting with Phase 1 infrastructure, proving the model before full capital commitment is required.</p>
         <div class="step-timeline">Months 12–24</div>
       </div>
       <div class="step reveal">
         <div class="step-num">05</div>
         <div class="step-title">Legislative pathway</div>
-        <p class="step-body">Identify the appropriate legislative and funding vehicle to establish a public ski authority, drawing on Utah's existing outdoor recreation framework.</p>
+        <p class="step-body">Identify the legislative and funding vehicle to establish a public ski authority, drawing on Utah's existing outdoor recreation framework.</p>
         <div class="step-timeline">Months 18–30</div>
       </div>
     </div>
@@ -863,7 +865,7 @@ footer { background: var(--navy-dark); }
   <div class="container" style="position:relative; z-index:1;">
     <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:1rem; display:flex; align-items:center; justify-content:center; gap:0.75rem;"><span style="display:block; width:24px; height:3px; background:rgba(255,255,255,0.5);"></span>Get Involved<span style="display:block; width:24px; height:3px; background:rgba(255,255,255,0.5);"></span></div>
     <h2 style="font-family:var(--body); font-size:clamp(3rem, 7vw, 6rem); font-weight:700; color:var(--white); letter-spacing:-0.01em; line-height:1.1; margin-bottom:1.5rem;">Join the<br>effort.</h2>
-    <p style="font-size:1.05rem; color:rgba(255,255,255,0.88); max-width:580px; margin:0 auto 2.75rem; line-height:1.7; font-weight:300;">Utah families deserve access to the mountains they call home. The 2034 Winter Olympics are Utah's moment to show the world what we stand for. Whether you're a legislator, a ski industry partner, a school administrator, or simply a Utahn who believes the Greatest Snow on Earth should belong to everyone — your voice matters.</p>
+    <p style="font-size:1.05rem; color:rgba(255,255,255,0.88); max-width:580px; margin:0 auto 2.75rem; line-height:1.7; font-weight:300;">Utah families deserve access to the mountains they call home. The 2034 Olympics are Utah's moment to show the world what we stand for. Legislator, ski industry partner, school administrator, or simply a Utahn who believes the Greatest Snow on Earth belongs to everyone — your voice matters.</p>
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
       <button onclick="document.getElementById('contactModal').classList.add('open')" style="display:inline-block; background:var(--white); color:var(--orange); font-family:var(--body); font-size:0.9rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:1rem 2.25rem; text-decoration:none; transition:background 0.15s; border:none; cursor:pointer;">Get in Touch</button>
       <a href="/financials" style="display:inline-block; background:transparent; color:var(--white); font-family:var(--body); font-size:0.9rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.98rem 2.25rem; border:2px solid rgba(255,255,255,0.5); text-decoration:none; transition:border-color 0.15s;">View Financial Plan</a>
