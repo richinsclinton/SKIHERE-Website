@@ -288,3 +288,12 @@ strong.w{color:#fff}
 .site-header .btn-sign,.wordmark span{white-space:nowrap}
 @media(max-width:899px){.wordmark.plate{font-size:20px;padding:10px 14px}.wordmark.plate span+span{font-size:9px;letter-spacing:.22em}}
 .tl-sub{font-size:14px;line-height:1.4;font-weight:600;color:var(--navy9);margin-top:-6px}
+/* Mobile fixes */
+section[id]{scroll-margin-top:88px}
+.menu-btn{flex:none}
+.modal-x{width:44px;height:44px}
+.topic{padding:12px 16px}
+.footer nav a{display:inline-block;padding:12px 0}
+.src a{display:inline-block;padding:6px 0}
+@media(max-width:899px){.site-header .btn-sign{padding:13px 16px}.credits{padding-bottom:110px}}
+@media(max-width:400px){.glass-card{width:180px;padding:14px 16px}.glass-card .price{font-size:64px}}

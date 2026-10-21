@@ -62,7 +62,7 @@
     io.observe(el.hasAttribute('data-draw') ? el.ownerSVGElement : el);
   });
 
-  var pEls = $$('[data-parallax]'), raf = null;
+  var pEls = matchMedia('(max-width:899px)').matches ? [] : $$('[data-parallax]'), raf = null;
   function onScroll() {
     if (raf) return;
     raf = requestAnimationFrame(function () {
