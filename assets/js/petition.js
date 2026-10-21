@@ -53,11 +53,21 @@
     })(t0);
   }
   if (window.UPS) { UPS.onReveal.counter = runCounter; }
+  // Backup trigger: if the scroll-reveal observer never fires, start the count-up whenever the card is on screen.
+  var joinEl = $('[data-counter]');
+  function checkCounter() {
+    if (counted || !joinEl) return;
+    var r = joinEl.getBoundingClientRect();
+    if (r.top < innerHeight * 0.9 && r.bottom > 0) runCounter();
+  }
+  addEventListener('scroll', checkCounter, { passive: true });
+  addEventListener('resize', checkCounter);
+  addEventListener('load', checkCounter);
   if (!window.UPS || UPS.reduced) { shown = count; counted = true; }
   paintShown(); paint();
   function setCount(n) {
     if (typeof n !== 'number' || n < count && signed) return;
-    count = n; goal = goalFor(count); if (counted) shown = count; paint(); paintShown();
+    count = n; goal = goalFor(count); if (counted) shown = count; paint(); paintShown(); checkCounter();
   }
   if (API) fetch(API).then(function (r) { return r.json(); }).then(function (d) { if (d && d.ok) setCount(d.count); }).catch(function () {});
 
