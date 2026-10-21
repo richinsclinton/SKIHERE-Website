@@ -244,3 +244,10 @@ strong.w{color:#fff}
 .fund-bar>div{min-width:0;border-radius:14px;display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;transform-origin:left center;color:var(--navy9)}
 .fund-note{margin-top:12px;font-size:13px;color:var(--mut-d2)}
 .rec-head{display:flex;flex-direction:column;gap:18px;padding:clamp(28px,4vw,48px)}
+.fund-total{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;margin-top:12px;border-radius:26px;overflow:hidden;background:var(--navy7);border:1px solid var(--navy7)}
+.fund-total>div{background:var(--navy9);padding:24px;display:flex;flex-direction:column;gap:12px}
+.fund-total>div:nth-child(2){background:var(--orange);color:var(--navy9)}
+.fund-total>div:nth-child(2) .label,.fund-total>div:nth-child(2) .l{color:var(--navy9)}
+.fund-total .v{font-size:clamp(44px,5vw,64px);line-height:.88}
+.fund-total .l{font-size:15px;line-height:1.45;color:var(--mut-d)}
+@media(max-width:700px){.fund-sm{display:none}}
