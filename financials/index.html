@@ -77,25 +77,28 @@
     <h2 class="h2" data-reveal style="margin:0;color:#fff">Where the money comes from.</h2>
     <p class="lead body-d" data-reveal style="max-width:520px;font-size:clamp(17px,1.5vw,19px)">The full build is $104.19M. Phase 1, the opening-day build, is $83.9M. Here is how the $86.75M funding request covers it. <strong class="w">Every line is a request. Nothing is secured.</strong></p>
   </div>
-  <div class="fund-bar" role="img" aria-label="Funding request: $38M state appropriation, $22M access road, $18M bonds repaid by the resort, $8.75M other sources">
-    <div data-bar style="flex:38;background:var(--orange)">$38M</div>
-    <div data-bar style="flex:22;background:#fff">$22M</div>
-    <div data-bar style="flex:18;background:var(--sky)">$18M</div>
-    <div data-bar style="flex:8.75;background:var(--navy7);color:#fff"><span class="fund-sm">$8.75M</span></div>
-  </div>
-  <div class="fund-note">Funding request by source, $86.75M total</div>
-  <div class="stats" style="margin-top:clamp(24px,3vw,36px)">
-    <div class="stat" data-reveal data-delay="0" style="border-top:4px solid var(--orange)"><div class="num v">$38M</div><div class="l">True state appropriation.</div></div>
-    <div class="stat" data-reveal data-delay="80" style="border-top:4px solid #fff"><div class="num v">$22M</div><div class="l">Cost of the access road, depending on the site.</div></div>
-    <div class="stat" data-reveal data-delay="160" style="border-top:4px solid var(--sky)"><div class="num v">$18M</div><div class="l">Bonds, paid back from the resort's own revenue.</div></div>
-    <div class="stat" data-reveal data-delay="240" style="border-top:4px solid var(--navy7)"><div class="num v">$8.75M</div><div class="l">Federal, tourism and state grants, and philanthropy.</div></div>
+  <div class="fund-groups">
+    <div class="fund-group state" data-reveal>
+      <div class="fg-head"><div><div class="label">Paid by the state</div><div class="fg-sub">The true state investment</div></div><div class="num fg-total">$60M</div></div>
+      <div class="fg-cards">
+        <div class="stat"><div class="num v">$38M</div><div class="l">State appropriation.</div></div>
+        <div class="stat"><div class="num v">$22M</div><div class="l">Access road, depending on the site.</div></div>
+      </div>
+    </div>
+    <div class="fund-group" data-reveal data-delay="120">
+      <div class="fg-head"><div><div class="label">Repaid or raised elsewhere</div><div class="fg-sub">Paid back by the resort or raised from others</div></div><div class="num fg-total">$26.75M</div></div>
+      <div class="fg-cards">
+        <div class="stat"><div class="num v">$18M</div><div class="l">Bonds, paid back from the resort's own revenue.</div></div>
+        <div class="stat"><div class="num v">$8.75M</div><div class="l">Grants, tourism partners and philanthropy.</div></div>
+      </div>
+    </div>
   </div>
   <div class="fund-total" data-reveal>
     <div><div class="label">Total request</div><div class="num v">$86.75M</div><div class="l">The four sources above.</div></div>
     <div><div class="label">Covers Phase 1</div><div class="num v">$83.9M</div><div class="l">The opening-day build. Fully covered if every request is granted.</div></div>
     <div><div class="label">Phase 2, later</div><div class="num v">$20.3M</div><div class="l">Lifts 4 and 5, paid for by the resort once demand is proven. Brings the full build to $104.19M.</div></div>
   </div>
-  <div class="src" style="margin-top:20px">Illustrative planning figures from the Utah Public Ski Area Coalition Financial Summary, Version 15. The direct state share is $56M: the $38M appropriation plus the $18M in bonds. The $104.19M estimate already includes an $18M construction contingency.</div>
+  <div class="src" style="margin-top:20px">Illustrative planning figures from the Utah Public Ski Area Coalition Financial Summary, Version 15. The $104.19M estimate already includes an $18M construction contingency.</div>
 </section>
 
 <section class="panel panel-light on-light">
@@ -103,11 +106,11 @@
     <div class="eyebrow" data-reveal>The ask in context</div>
     <div class="split">
       <h2 class="h2" data-reveal style="margin:0">A one-time investment.</h2>
-      <p class="lead" data-reveal style="color:var(--mut-l2);max-width:540px;font-size:clamp(17px,1.5vw,19px)"><strong style="color:var(--navy9)">Not a tax increase.</strong> The $56M direct state share is a one-time investment from existing revenue. In the 2024-25 season alone, skiing generated $342.6M in state and local tax. This is a small slice of that, paid once.</p>
+      <p class="lead" data-reveal style="color:var(--mut-l2);max-width:540px;font-size:clamp(17px,1.5vw,19px)"><strong style="color:var(--navy9)">Not a tax increase.</strong> The $60M state investment is a one-time cost paid from existing revenue. In the 2024-25 season alone, skiing generated $342.6M in state and local tax. This is a small slice of that, paid once.</p>
     </div>
     <div class="asks">
-      <div class="ask" data-reveal data-delay="80"><div class="t">Share of one season's ski tax</div><div class="num v">16%</div><div class="c">Of the $342.6M in state and local tax skiing generated in 2024-25. About two months' worth.</div></div>
-      <div class="ask" data-reveal data-delay="160"><div class="t">Share of one year's state budget</div><div class="num v">0.18%</div><div class="c">Utah's FY2027 budget totals $31.6 billion.</div></div></div>
+      <div class="ask" data-reveal data-delay="80"><div class="t">Share of one season's ski tax</div><div class="num v">17.5%</div><div class="c">Of the $342.6M in state and local tax skiing generated in 2024-25. About two months' worth.</div></div>
+      <div class="ask" data-reveal data-delay="160"><div class="t">Share of one year's state budget</div><div class="num v">0.19%</div><div class="c">Utah's FY2027 budget totals $31.6 billion.</div></div></div>
   </div>
 </section>
 
@@ -115,19 +118,25 @@
   <div class="eyebrow" data-reveal>Not a first for Utah</div>
   <div class="split">
     <h2 class="h2" data-reveal style="margin:0;color:#fff">The state already builds places to play.</h2>
-    <p class="lead body-d" data-reveal style="max-width:540px;font-size:clamp(17px,1.5vw,19px)">Utah regularly funds recreation infrastructure at this scale. The direct state share of this project, <strong class="w">$56M</strong>, is less than the <strong class="w">$60M</strong> approved for the Bear Lake marina alone.</p>
+    <p class="lead body-d" data-reveal style="max-width:540px;font-size:clamp(17px,1.5vw,19px)">Utah regularly funds recreation at this scale. The $60M state investment in this project is the same amount the Legislature approved for the Bear Lake marina alone.</p>
   </div>
-  <div class="card-dark rec-head" data-reveal style="margin-top:clamp(36px,5vw,64px)">
-    <div class="label">Parks and recreation, 2021 and 2022 sessions</div>
-    <div class="num" style="font-size:clamp(88px,15vw,220px);line-height:.85;color:#fff">$185M</div>
-    <p class="body-d" style="margin:0;max-width:640px;font-size:clamp(17px,1.5vw,20px);line-height:1.5">One-time funding from the Legislature across 31 state park, trail and recreation projects in just two sessions. <strong class="w">That's more than this project's full $104.19M build.</strong><sup>1</sup></p>
+  <div class="rec-heads">
+    <div class="card-dark rec-head" data-reveal>
+      <div class="label">Parks and recreation, 2021 and 2022</div>
+      <div class="num rec-num">$185M</div>
+      <p class="body-d">Approved by the Legislature for 31 state park, trail and recreation projects in two sessions. <strong class="w">More than the full $104.19M cost of this project.</strong><sup>1</sup></p>
+    </div>
+    <div class="card-dark rec-head" data-reveal data-delay="120">
+      <div class="label">Olympic winter sport venues</div>
+      <div class="num rec-num">$92M</div>
+      <p class="body-d">State funding for Utah's Olympic facilities as of 2023, projected to pass $140M by 2028. <strong class="w">Utah already invests in places to ski and train.</strong><sup>3</sup></p>
+    </div>
   </div>
-  <div class="label" data-reveal style="margin-top:clamp(28px,4vw,44px);color:var(--mut-d)">Examples of where that money went</div>
+  <div class="label" data-reveal style="margin-top:clamp(28px,4vw,44px);color:var(--mut-d)">Examples from the $185M</div>
   <div class="asks" style="margin-top:14px">
     <div class="ask" data-reveal data-delay="0"><div class="t">Bear Lake State Park marina</div><div class="num v">$60M</div><div class="c">A new marina, funded in the 2022 session, with construction through 2026.<sup>2</sup></div></div>
     <div class="ask" data-reveal data-delay="80"><div class="t">Utahraptor and Lost Creek</div><div class="num v">$36.5M</div><div class="c">Two new state parks created in 2021, near Moab and in Morgan County.<sup>1</sup></div></div>
   </div>
-  <p class="body-d" data-reveal style="margin:clamp(28px,4vw,44px) 0 0;max-width:760px;font-size:17px;line-height:1.5">Separately, the state has put about <strong class="w">$92M</strong> into Utah's Olympic winter sport venues, projected to pass $140M by 2028.<sup>3</sup></p>
   <div class="src" style="margin-top:20px">Sources: <sup>1</sup> <a href="https://budget.utah.gov/putting-the-fun-in-funding/" target="_blank" rel="noopener">Utah Legislature budget office, Putting the Fun in Funding (Oct 2022)</a>. <sup>2</sup> <a href="https://le.utah.gov/interim/2024/pdf/00003262.pdf" target="_blank" rel="noopener">Bear Lake Marina Expansion Project Update to the Legislature (Sept 2024)</a>. <sup>3</sup> <a href="https://www.ksl.com/article/50683696/heres-how-much-money-utah-taxpayers-are-spending-on-the-states-olympic-venues" target="_blank" rel="noopener">Deseret News via KSL, state spending on Olympic venues (July 2023)</a>.</div>
 </section>
 

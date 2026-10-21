@@ -251,3 +251,15 @@ strong.w{color:#fff}
 .fund-total .v{font-size:clamp(44px,5vw,64px);line-height:.88}
 .fund-total .l{font-size:15px;line-height:1.45;color:var(--mut-d)}
 @media(max-width:700px){.fund-sm{display:none}}
+.fund-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:12px;margin-top:clamp(32px,4vw,48px)}
+.fund-group{border:1px solid var(--navy7);border-radius:30px;padding:12px}
+.fund-group.state{border:2px solid var(--orange);background:rgba(242,106,46,.08)}
+.fg-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:12px 12px 16px}
+.fg-sub{margin-top:6px;font-size:15px;color:var(--mut-d)}
+.fg-total{font-size:clamp(40px,5vw,64px);line-height:.88;color:#fff}
+.fund-group.state .label,.fund-group.state .fg-total{color:var(--orange)}
+.fg-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px}
+.fg-cards .stat{min-height:160px}
+.rec-heads{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:12px;margin-top:clamp(36px,5vw,64px)}
+.rec-head p{margin:0;font-size:clamp(16px,1.3vw,18px);line-height:1.5}
+.rec-num{font-size:clamp(64px,8vw,112px);line-height:.85;color:#fff}
