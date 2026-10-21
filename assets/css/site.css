@@ -243,5 +243,3 @@ strong.w{color:#fff}
 .fund-bar{display:flex;gap:4px;height:64px;margin-top:clamp(32px,4vw,48px)}
 .fund-bar>div{min-width:0;border-radius:14px;display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;transform-origin:left center;color:var(--navy9)}
 .fund-note{margin-top:12px;font-size:13px;color:var(--mut-d2)}
-.fund-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin-top:12px}
-.fund-facts .card-dark p{margin:0;font-size:16px;line-height:1.5}
