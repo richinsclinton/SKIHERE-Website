@@ -287,3 +287,4 @@ strong.w{color:#fff}
 }
 .site-header .btn-sign,.wordmark span{white-space:nowrap}
 @media(max-width:899px){.wordmark.plate{font-size:20px;padding:10px 14px}.wordmark.plate span+span{font-size:9px;letter-spacing:.22em}}
+.tl-sub{font-size:14px;line-height:1.4;font-weight:600;color:var(--navy9);margin-top:-6px}
