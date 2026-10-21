@@ -4,6 +4,24 @@
   var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
   window.UPS = { reduced: reduced, ease: E, $$: $$, onReveal: {} };
+  // Header: solid backdrop once scrolled, and a menu button for small screens.
+  var hdr = document.querySelector('.site-header'), nav = hdr && hdr.querySelector('.nav-pill');
+  if (hdr) {
+    var onHdr = function () { hdr.classList.toggle('scrolled', scrollY > 24); };
+    addEventListener('scroll', onHdr, { passive: true }); onHdr();
+  }
+  if (hdr && nav) {
+    if (!nav.id) nav.id = 'primary-nav';
+    var mb = document.createElement('button');
+    mb.className = 'menu-btn'; mb.type = 'button';
+    mb.setAttribute('aria-label', 'Menu'); mb.setAttribute('aria-expanded', 'false'); mb.setAttribute('aria-controls', nav.id);
+    mb.innerHTML = '<span></span>';
+    hdr.appendChild(mb);
+    var setMenu = function (open) { hdr.classList.toggle('menu-open', open); mb.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+    mb.addEventListener('click', function () { setMenu(!hdr.classList.contains('menu-open')); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+    addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+  }
   if (reduced) return;
 
   $$('[data-hero-line]').forEach(function (el, i) { el.animate([{ transform: 'translateY(110%)' }, { transform: 'none' }], { duration: 1300, delay: 150 + i * 150, easing: E, fill: 'backwards' }); });
