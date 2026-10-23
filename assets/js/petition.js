@@ -91,18 +91,25 @@
     errEl.hidden = true;
     var btn = $('.submit', form); btn.disabled = true;
     var payload = { type: 'pledge', name: name, email: email, zip: zip, consent: !!(cb && cb.checked) };
-    var done = function () {
-      count += 1; goal = goalFor(count); if (counted) shown = count; paint(); paintShown(); signed = true;
-      $('.signed-n', modal).textContent = fmt(count);
+    var done = function (dup) {
+      if (dup) {
+        $('.done-label', modal).hidden = true;
+        $('.done-h', modal).textContent = 'Already signed.';
+        $('.done-p', modal).textContent = "This email has already signed the petition. Thank you! Help us grow it by sending it to the people you ski with.";
+      } else {
+        count += 1; goal = goalFor(count); if (counted) shown = count; paint(); paintShown();
+        $('.signed-n', modal).textContent = fmt(count);
+      }
+      signed = true;
       $('.state-form', modal).hidden = true; $('.state-done', modal).hidden = false;
       $('.bar-btn-label .long').textContent = 'Signed ✓'; $('.bar-btn-label .short').textContent = 'Signed ✓';
       btn.disabled = false;
     };
-    if (!API) { done(); return; }
+    if (!API) { done(false); return; }
     fetch(API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
       .then(function (r) { return r.json(); })
-      .then(function (d) { done(); if (d && d.ok && typeof d.count === 'number') { setCount(d.count); $('.signed-n', modal).textContent = fmt(count); } })
-      .catch(done);
+      .then(function (d) { var dup = !!(d && d.duplicate); done(dup); if (d && d.ok && typeof d.count === 'number') { signed = false; setCount(d.count); signed = true; if (!dup) $('.signed-n', modal).textContent = fmt(count); } })
+      .catch(function () { done(false); });
   });
   var shareBtn = $('.share-btn', modal);
   shareBtn.addEventListener('click', function () {
