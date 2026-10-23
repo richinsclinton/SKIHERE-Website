@@ -278,7 +278,7 @@
       <div class="counter-card" data-reveal data-delay="150">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
           <div class="num" style="font-size:56px;line-height:.9" data-shown>0</div>
-          <div style="font-size:13px;font-weight:600;color:var(--mut-l2);text-align:right">Goal: <span data-goal></span></div>
+          <div style="font-size:13px;font-weight:600;color:var(--mut-l2);text-align:right">of <span data-goal></span> goal</div>
         </div>
         <div style="font-size:14px;font-weight:600;color:var(--mut-l2);margin-top:-8px">Utahns have signed</div>
         <div class="progress"><div data-shown-pct style="width:0"></div></div>
@@ -297,7 +297,7 @@
 
 <div class="bar" id="petition-bar">
   <div class="bar-in">
-    <div class="bar-txt"><div><strong style="font-weight:800" data-count></strong> Utahns signed <span class="goal-tag">Goal: <span data-goal></span></span></div><div class="bar-prog"><div data-pct></div></div></div>
+    <div class="bar-txt"><div><strong style="font-weight:800" data-count></strong> of <span data-goal></span> Utahns signed</div><div class="bar-prog"><div data-pct></div></div></div>
     <button class="btn btn-primary" data-open-petition><span class="bar-btn-label"><span class="long">Sign the Powder Petition</span><span class="short">Sign</span></span> <span class="chip">↗</span></button>
   </div>
 </div>
@@ -309,7 +309,7 @@
       <div class="label">The Powder Petition</div>
       <h3 id="pm-title">Help unlock the funding.</h3>
       <p>Every signature strengthens our grant application with the Outdoor Adventure Commission and the regional councils that decide it.</p>
-      <div class="m-prog"><div class="progress"><div data-pct></div></div><b><span data-count></span> signed <span class="goal-tag">Goal: <span data-goal></span></span></b></div>
+      <div class="m-prog"><div class="progress"><div data-pct></div></div><b><span data-count></span> / <span data-goal></span></b></div>
       <form class="form" style="margin-top:22px" novalidate>
         <input required name="name" placeholder="Your name" autocomplete="name" aria-label="Your name">
         <input required type="email" name="email" placeholder="Email address" autocomplete="email" aria-label="Email address">
