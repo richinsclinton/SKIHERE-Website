@@ -5,7 +5,7 @@
  * Editing the existing deployment keeps the same /exec URL the site uses.
  *
  * GET  /exec                                            -> { ok, count }
- * POST /exec {type:"pledge",name,email,zip}             -> Signups tab (one row per email)
+ * POST /exec {type:"pledge",name,email,zip,consent:true} -> Signups tab (one row per email)
  * POST /exec {type:"contact",topic,name,email,message}  -> Contact tab
  */
 var SIGNUPS = 'Signups', CONTACT = 'Contact';
@@ -32,6 +32,7 @@ function doPost(e) {
       return json({ ok: true });
     }
 
+    if (d.consent !== true) return json({ ok: false, error: 'consent' });
     var email = clean(d.email).toLowerCase();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ ok: false, error: 'email' });
 

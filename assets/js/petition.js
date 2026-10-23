@@ -86,9 +86,11 @@
     form.querySelectorAll('input').forEach(function (i) { i.removeAttribute('aria-invalid'); });
     bad.forEach(function (n) { form.elements[n].setAttribute('aria-invalid', 'true'); });
     if (bad.length) { errEl.textContent = 'Please check your ' + bad.join(', ') + '.'; errEl.hidden = false; form.elements[bad[0]].focus(); return; }
+    var cb = form.elements.consent;
+    if (cb && !cb.checked) { cb.setAttribute('aria-invalid', 'true'); errEl.textContent = 'Please check the box to confirm your support.'; errEl.hidden = false; cb.focus(); return; }
     errEl.hidden = true;
     var btn = $('.submit', form); btn.disabled = true;
-    var payload = { type: 'pledge', name: name, email: email, zip: zip, consent: true };
+    var payload = { type: 'pledge', name: name, email: email, zip: zip, consent: !!(cb && cb.checked) };
     var done = function () {
       count += 1; goal = goalFor(count); if (counted) shown = count; paint(); paintShown(); signed = true;
       $('.signed-n', modal).textContent = fmt(count);
